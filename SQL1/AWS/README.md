@@ -1,4 +1,4 @@
-##The holy grail of creating free instance of MySQL in AWS Cloud
+## The holy grail of creating free instance of MySQL in AWS Cloud
 
 1. Login to AWS
 
