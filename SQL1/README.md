@@ -92,6 +92,11 @@ Select certain field(s)
 
 `SELECT airline,cost FROM birdstrikes`
 
+# Creating a free instance of MySQL in AWS Cloud
+
+[AWS CLoud help](https://github.com/salacika/DE1SQL/tree/master/SQL1/AWS)
+
+
 # Dumping a database with MySQL Workbench
 
 ![alt text](https://github.com/salacika/DE1SQL/blob/master/SQL1/dump.png?raw=true)
