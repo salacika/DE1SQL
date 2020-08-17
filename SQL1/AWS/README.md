@@ -1,4 +1,4 @@
-# The holy grail of creating free instance of MySQL in AWS Cloud
+# 10 steps to the holy grail of creating free instance of MySQL in AWS Cloud
 
 ## 1. Login to AWS
 
@@ -37,7 +37,7 @@ Notes:
 
 ![alt text](https://github.com/salacika/DE1SQL/blob/master/SQL1/AWS/6.png?raw=true)
 
-## 9. Now you are set! It is time to check from MySQL workbench. For this you need the DB endpoint . Open the DB configration again and copy the DB endpoint
+## 10. Now you are set! It is time to check from MySQL workbench. For this you need the DB endpoint . Open the DB configration again and copy the DB endpoint
 
 ![alt text](https://github.com/salacika/DE1SQL/blob/master/SQL1/AWS/7.png?raw=true)
 
