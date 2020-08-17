@@ -1,4 +1,4 @@
-Table of content:
+# Session content:
 
 [SQL in 5 Minutes](#5mins)
 
@@ -12,7 +12,7 @@ Table of content:
 
 [Replicating a database from local to AWS with MySQL Workbench](#replicate)
 
-[HOMEWORK](#homework)  
+[Homework](#homework)  
 
 
 
