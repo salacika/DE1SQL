@@ -12,6 +12,7 @@
 Notes: 
 - you might need to wait a few seconds until "Free Tier" is offered (sneaky Amazon) 
 - naturally use your name as database name (not mine)  
+- make sure, you remember the password you set
 - I know, it is a long setup, stay strong - you can do it!
 
 ![alt text](https://github.com/salacika/DE1SQL/blob/master/SQL1/AWS/1.png?raw=true)
