@@ -1,8 +1,8 @@
-## The holy grail of creating free instance of MySQL in AWS Cloud
+### The holy grail of creating free instance of MySQL in AWS Cloud
 
-1. Login to AWS
+## 1. Login to AWS
 
-2. Select RDS (Relational Database Service) as Service 
+## 2. Select RDS (Relational Database Service) as Service 
 
 3. Create a new database
 ![alt text](https://github.com/salacika/DE1SQL/blob/master/SQL1/AWS/0.png?raw=true)
