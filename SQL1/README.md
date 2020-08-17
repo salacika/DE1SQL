@@ -135,15 +135,15 @@ Select certain field(s)
 
 # Homework
 
-1. Delete your AWS instance without backup
+-1. Delete your AWS instance without backup
 
 Using mysql console:
-2. Purge birdstrikes table (hint: TRUNCATE)
-3. Delete birdstrikes table (hint: DROP)
-4. Delete schema 
+-2. Purge birdstrikes table (hint: TRUNCATE)
+-3. Delete birdstrikes table (hint: DROP)
+-4. Delete schema 
 
 Using MySQL workbench:
-5. Import a datafile of your choosing into your local instance
+-5. Import a datafile of your choosing into your local instance
 
 
 
