@@ -94,3 +94,10 @@ Select certain field(s)
 
 # Dumping a database with MySQL Workbench
 
+![alt text](https://github.com/salacika/DE1SQL/blob/master/SQL1/dump.png?raw=true)
+
+
+# Replicating a database from local to AWS
+
+![alt text](https://github.com/salacika/DE1SQL/blob/master/SQL1/replicate.png?raw=true)
+
