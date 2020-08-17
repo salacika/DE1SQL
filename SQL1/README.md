@@ -92,3 +92,5 @@ Select certain field(s)
 
 `SELECT airline,cost FROM birdstrikes`
 
+# Dumping a database with MySQL Workbench
+
