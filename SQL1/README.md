@@ -1,3 +1,9 @@
+# SQL in 5 minutes
+
+Browse to https://www.w3schools.com/sql/trysql.asp?filename=trysql_op_in
+
+
+
 # Basic SQL statements
 
 
