@@ -1,0 +1,1000 @@
+id;aircraft;flight_date;damage;airline;state;phase_of_flight;reported_date;bird_size;cost;feet_above_ground
+2;Airplane;2000-01-01;No damage;CONTINENTAL AIRLINES;New Jersey;Take-off run;;Medium;0;0
+3;Airplane;2000-01-01;No damage;UNITED AIRLINES;;;;Medium;0;
+4;Airplane;2000-01-01;No damage;UNITED AIRLINES;Colorado;Climb;;Medium;0;
+5;Airplane;2000-01-01;No damage;UNITED AIRLINES;Illinois;Approach;;Medium;0;
+6;;2000-01-01;No damage;UNKNOWN;New York;;;Medium;0;
+7;Airplane;2000-01-01;Caused damage;US CUSTOMS AND BORDER PROTECTION;Florida;En Route;;Large;0;1000
+8;Airplane;2000-01-01;No damage;AMERICAN AIRLINES;;Take-off run;2000-01-01;Small;0;0
+9;Airplane;2000-01-02;No damage;BUSINESS;Ohio;Landing Roll;;Small;0;0
+10;Airplane;2000-01-02;No damage;BUSINESS;Florida;Approach;;Medium;0;2000
+11;Airplane;2000-01-02;No damage;UNITED AIRLINES;California;Take-off run;;Small;0;0
+12;Airplane;2000-01-02;No damage;DELTA AIR LINES;Utah;Landing Roll;2000-01-02;Small;0;0
+13;;2000-01-02;No damage;UNKNOWN;Florida;;2000-01-02;Small;0;
+14;Airplane;2000-01-02;Caused damage;BUSINESS;Florida;Approach;2000-01-06;Medium;120273;200
+15;Airplane;2000-01-02;No damage;TRANS WORLD AIRLINES;Missouri;Approach;2000-02-06;Large;0;350
+16;Airplane;2000-01-03;No damage;US AIRWAYS*;Tennessee;Climb;;Small;0;800
+17;Airplane;2000-01-03;No damage;SOUTHWEST AIRLINES;Texas;Climb;;Medium;0;
+18;Airplane;2000-01-03;Caused damage;DELTA AIR LINES;Utah;Approach;;Small;0;
+19;Airplane;2000-01-03;No damage;COMAIR AIRLINES;Florida;Landing Roll;2000-01-03;;0;0
+20;Airplane;2000-01-03;No damage;BUSINESS;Rhode Island;Approach;2000-01-03;;0;500
+21;Airplane;2000-01-03;Caused damage;AIRTRAN AIRWAYS;Georgia;Climb;2000-01-03;Medium;0;1800
+22;Airplane;2000-01-04;No damage;SOUTHWEST AIRLINES;Maryland;Climb;;Medium;0;50
+23;Airplane;2000-01-04;No damage;AMERICAN AIRLINES;California;Climb;;Large;26727;100
+24;Airplane;2000-01-04;No damage;SOUTHWEST AIRLINES;Texas;Approach;;Medium;0;1400
+25;Airplane;2000-01-04;No damage;UNITED AIRLINES;;;;Medium;0;
+26;Airplane;2000-01-04;No damage;BUSINESS;New Jersey;Climb;2000-01-04;Large;0;50
+27;Airplane;2000-01-04;No damage;CONTINENTAL AIRLINES;Louisiana;Approach;2000-01-04;Small;0;100
+28;Helicopter;2000-01-04;No damage;PHI INC;;Approach;2000-01-04;;0;100
+29;;2000-01-04;No damage;UNKNOWN;North Carolina;;2000-01-04;Small;0;
+30;Airplane;2000-01-05;No damage;CAPE AIR;Puerto Rico;Landing Roll;;;0;0
+31;Airplane;2000-01-05;No damage;NORTHWEST AIRLINES;California;Take-off run;;Medium;0;0
+32;Airplane;2000-01-05;No damage;MESA AIRLINES;Connecticut;Take-off run;;;0;0
+33;Airplane;2000-01-05;No damage;DELTA AIR LINES;Ohio;Take-off run;2000-01-05;Medium;0;0
+34;Airplane;2000-01-05;Caused damage;EXPRESSJET (CONTINENTAL EXPRS);Ohio;Take-off run;2000-01-05;Large;0;0
+35;;2000-01-05;No damage;UNKNOWN;DC;;2000-01-21;Medium;0;
+36;Airplane;2000-01-06;No damage;EL AL;New York;Take-off run;;Small;0;0
+37;Airplane;2000-01-06;No damage;HAWAIIAN AIR;;;;Medium;0;
+38;Airplane;2000-01-06;No damage;SOUTHWEST AIRLINES;Missouri;Landing Roll;;Small;0;0
+39;Airplane;2000-01-06;No damage;AIRTRAN AIRWAYS;Georgia;Take-off run;2000-01-06;Small;0;0
+40;Airplane;2000-01-06;No damage;AMERICA WEST AIRLINES;California;Approach;2000-01-06;Small;0;
+41;Airplane;2000-01-07;No damage;AIRTOURS INTL;Florida;Landing Roll;;Small;0;0
+42;Airplane;2000-01-07;No damage;DELTA AIR LINES;Florida;Landing Roll;;Medium;0;0
+43;;2000-01-07;No damage;UNKNOWN;Florida;;2000-01-07;;0;
+44;Airplane;2000-01-07;No damage;DELTA AIR LINES;New York;Climb;2000-01-09;Small;0;100
+45;;2000-01-07;No damage;MILITARY;Texas;Approach;2002-02-19;Medium;0;800
+46;Airplane;2000-01-08;No damage;AMERICAN AIRLINES;New York;Take-off run;;Small;0;0
+47;Airplane;2000-01-08;No damage;TRANS WORLD AIRLINES;New York;Take-off run;;Small;0;0
+48;Airplane;2000-01-08;No damage;MESABA AIRLINES;Michigan;Approach;;Small;0;200
+49;Airplane;2000-01-08;No damage;NORTHWEST AIRLINES;Wisconsin;Approach;;Medium;0;50
+50;Airplane;2000-01-08;No damage;UNITED AIRLINES;California;Take-off run;;Medium;0;0
+51;Airplane;2000-01-08;No damage;HORIZON AIR;Oregon;Approach;;Medium;0;300
+52;Airplane;2000-01-08;No damage;UNITED AIRLINES;;;;Medium;0;
+53;Airplane;2000-01-08;Caused damage;PRIVATELY OWNED;Colorado;Landing Roll;;Large;66544;0
+54;Airplane;2000-01-08;No damage;AMERICAN AIRLINES;Texas;Landing Roll;2000-01-08;Medium;0;0
+55;Airplane;2000-01-08;No damage;AMERICA WEST AIRLINES;California;Approach;2000-01-08;Small;0;200
+56;Airplane;2000-01-08;No damage;AMERICAN EAGLE AIRLINES;Florida;Climb;2000-01-08;Large;0;800
+57;Airplane;2000-01-08;No damage;TRANS STATES AIRLINES;Missouri;Approach;2000-01-08;Small;0;100
+58;;2000-01-08;No damage;UNKNOWN;Florida;;2000-01-08;Large;0;
+59;Airplane;2000-01-09;No damage;NORTHWEST AIRLINES;Texas;Landing Roll;;Medium;0;0
+60;Airplane;2000-01-09;No damage;UNITED AIRLINES;Utah;Take-off run;;Medium;0;0
+61;Airplane;2000-01-09;No damage;DELTA AIR LINES;Tennessee;Climb;;;0;800
+62;Airplane;2000-01-09;No damage;DELTA AIR LINES;;;;Medium;0;
+63;Airplane;2000-01-09;No damage;UNITED AIRLINES;;;;Medium;0;
+64;Airplane;2000-01-09;Caused damage;BUSINESS;California;Approach;;;0;500
+65;Airplane;2000-01-09;Caused damage;BUSINESS;Indiana;Take-off run;;Large;0;0
+66;Airplane;2000-01-09;No damage;ALLEGHENYAIRLINES;Maryland;Climb;2000-01-09;Medium;0;5
+67;Airplane;2000-01-09;No damage;AMERICAN EAGLE AIRLINES;Nevada;Approach;2000-01-10;Small;0;700
+68;Airplane;2000-01-10;No damage;AMERICAN AIRLINES;New York;Landing Roll;;Medium;0;0
+69;Airplane;2000-01-10;No damage;HORIZON AIR;Oregon;Landing Roll;;Medium;0;0
+70;Airplane;2000-01-10;No damage;PSA AIRLINES;Maine;Landing Roll;;;0;0
+71;Airplane;2000-01-10;No damage;UNITED AIRLINES;;;;Medium;0;
+72;;2000-01-10;No damage;UNKNOWN;New York;;;Medium;0;
+73;Airplane;2000-01-10;Caused damage;UNITED AIRLINES;;;;Medium;0;
+74;Airplane;2000-01-10;No damage;BUSINESS;Ohio;Climb;2000-01-10;;0;
+75;Airplane;2000-01-10;No damage;PIEDMONT AIRLINES;North Carolina;Climb;2000-01-11;;0;200
+76;;2000-01-10;No damage;MILITARY;Alabama;Climb;2001-01-29;Large;6818;1000
+77;Airplane;2000-01-11;No damage;BUSINESS;Florida;Approach;;Large;0;5
+78;Airplane;2000-01-11;No damage;NORTHWEST AIRLINES;Tennessee;Take-off run;;Medium;0;0
+79;Airplane;2000-01-11;No damage;UNITED AIRLINES;New York;Approach;;Medium;0;150
+80;Airplane;2000-01-11;No damage;UNITED AIRLINES;California;Approach;;Medium;0;
+81;;2000-01-11;No damage;UNKNOWN;New York;;;Medium;0;
+82;Airplane;2000-01-11;Caused damage;BUSINESS;California;Landing Roll;;;0;0
+83;Airplane;2000-01-11;Caused damage;UNITED AIRLINES;;;;Medium;0;
+84;Airplane;2000-01-11;Caused damage;UNITED AIRLINES;DC;Approach;;Medium;0;
+85;Airplane;2000-01-11;No damage;TRANS WORLD AIRLINES;Ohio;Landing Roll;2000-01-11;Medium;0;0
+86;Airplane;2000-01-11;No damage;BUSINESS;Connecticut;Climb;2000-01-11;;0;30
+87;;2000-01-11;No damage;UNKNOWN;Oregon;;2000-03-07;Medium;0;
+88;;2000-01-11;No damage;MILITARY;Mississippi;;2002-01-16;Small;0;
+89;Airplane;2000-01-12;No damage;BUSINESS;Michigan;Take-off run;;Medium;0;0
+90;Airplane;2000-01-12;No damage;DELTA AIR LINES;New York;Landing Roll;;;0;0
+91;Airplane;2000-01-12;No damage;UNITED AIRLINES;DC;Landing Roll;;Medium;0;0
+92;Airplane;2000-01-12;No damage;FEDEX EXPRESS;Tennessee;Landing Roll;;Medium;0;0
+93;Airplane;2000-01-12;No damage;HAWAIIAN AIR;Hawaii;Landing Roll;;;0;0
+94;Airplane;2000-01-12;No damage;UNITED AIRLINES;;;;Medium;0;
+95;Airplane;2000-01-12;No damage;BUSINESS;California;Approach;;;0;
+96;Airplane;2000-01-12;Caused damage;GOVERNMENT;Florida;Approach;;Medium;0;600
+97;Airplane;2000-01-12;Caused damage;BUSINESS;South Carolina;Approach;;Medium;0;1300
+98;Airplane;2000-01-12;No damage;AMERICAN EAGLE AIRLINES;Texas;Approach;2000-01-13;;0;5
+99;Airplane;2000-01-12;Caused damage;FEDEX EXPRESS;California;Approach;2000-01-19;Medium;668;
+100;Airplane;2000-01-12;Caused damage;WESTAIR;California;Approach;2003-02-17;;0;500
+101;Airplane;2000-01-13;No damage;AMERICAN AIRLINES;;Climb;;;0;12
+102;Airplane;2000-01-13;No damage;UNKNOWN;Massachusetts;Take-off run;;;0;0
+103;Airplane;2000-01-13;No damage;NORTHWEST AIRLINES;Alaska;Climb;;Medium;0;21000
+104;Airplane;2000-01-13;No damage;UNITED AIRLINES;;Take-off run;;Medium;0;0
+105;Airplane;2000-01-13;No damage;UNITED AIRLINES;Colorado;Approach;;Medium;0;
+106;Airplane;2000-01-13;Caused damage;BUSINESS;Mississippi;Approach;;Medium;9488;1000
+107;Airplane;2000-01-13;No damage;BUSINESS;Florida;Approach;2000-01-14;Small;0;3
+108;Airplane;2000-01-13;No damage;BUSINESS;New Jersey;Approach;2000-01-18;;1336;500
+109;Airplane;2000-01-13;No damage;MILITARY;Arizona;Climb;2001-02-26;Medium;0;7000
+110;Airplane;2000-01-14;No damage;BUSINESS;Arizona;Climb;;;0;500
+111;Airplane;2000-01-14;No damage;UNITED AIRLINES;Colorado;Climb;;Medium;0;250
+112;Airplane;2000-01-14;No damage;FEDEX EXPRESS;Connecticut;Climb;;;0;50
+113;Airplane;2000-01-14;No damage;AMERICAN EAGLE AIRLINES;North Carolina;Approach;2000-01-14;Small;0;10
+114;;2000-01-14;No damage;UNKNOWN;Florida;;2000-01-14;Small;0;
+115;Helicopter;2000-01-14;Caused damage;BUSINESS;California;Approach;2000-01-15;;1438;800
+116;;2000-01-14;No damage;MILITARY;New Hampshire;;2002-01-16;Small;0;
+117;Airplane;2000-01-15;No damage;NORTHWEST AIRLINES;Florida;Take-off run;;Medium;0;0
+118;Airplane;2000-01-15;No damage;UNITED AIRLINES;;Take-off run;;Medium;0;0
+119;Airplane;2000-01-15;No damage;ATLANTIC COAST AIRLINES;New York;Landing Roll;;Small;0;0
+120;Airplane;2000-01-15;No damage;UNITED AIRLINES;California;Approach;;Medium;0;
+121;;2000-01-15;No damage;UNKNOWN;Florida;;2000-01-15;Small;0;
+122;Airplane;2000-01-15;Caused damage;PRIVATELY OWNED;California;Landing Roll;2000-01-15;Large;16705;0
+123;Airplane;2000-01-16;No damage;US AIRWAYS*;Florida;Climb;2000-01-16;Medium;0;40
+124;Airplane;2000-01-17;No damage;PRIVATELY OWNED;California;Approach;;;0;1000
+125;Airplane;2000-01-17;No damage;HORIZON AIR;Oregon;Take-off run;;Large;0;0
+126;Airplane;2000-01-17;No damage;UNITED AIRLINES;DC;Descent;;Medium;0;
+127;Airplane;2000-01-17;No damage;BUSINESS;Florida;Climb;2000-01-17;Medium;0;2000
+128;Airplane;2000-01-17;No damage;ATLANTIC COAST AIRLINES;Alabama;Take-off run;2000-01-17;Small;0;0
+129;Airplane;2000-01-17;No damage;AIRTRAN AIRWAYS;Florida;Approach;2000-01-17;Small;0;10
+130;Airplane;2000-01-17;No damage;AMERICAN AIRLINES;California;Climb;2000-01-17;Small;0;2000
+131;;2000-01-17;No damage;UNKNOWN;Florida;;2000-01-17;Small;0;
+132;Airplane;2000-01-17;Caused damage;AMERICA WEST AIRLINES;California;Approach;2000-01-28;Small;0;
+133;Airplane;2000-01-18;No damage;POLAR AIR CARGO;California;Approach;;Medium;0;
+134;Airplane;2000-01-18;No damage;DELTA AIR LINES;Louisiana;Approach;;Medium;0;
+135;;2000-01-18;No damage;UNKNOWN;Pennsylvania;;2000-01-18;Small;0;
+136;Airplane;2000-01-18;No damage;HORIZON AIR;Washington;Approach;2000-01-19;;0;100
+137;Airplane;2000-01-18;No damage;MILITARY;Alabama;Approach;2001-01-29;Medium;0;2000
+138;Airplane;2000-01-18;No damage;MILITARY;California;Take-off run;2002-01-16;Small;0;0
+139;Airplane;2000-01-19;No damage;NORTHWEST AIRLINES;Minnesota;Approach;;Medium;0;200
+140;Airplane;2000-01-19;No damage;NORTHWEST AIRLINES;Texas;Landing Roll;;Medium;0;0
+141;Airplane;2000-01-19;No damage;SKYWEST AIRLINES;California;Landing Roll;;Small;0;0
+142;Airplane;2000-01-19;No damage;UNITED AIRLINES;;;;Medium;0;
+143;Airplane;2000-01-19;No damage;UNITED AIRLINES;;;;Medium;0;
+144;Airplane;2000-01-19;No damage;BUSINESS;Connecticut;Climb;2000-01-19;Medium;0;100
+145;Airplane;2000-01-19;Caused damage;UPS AIRLINES;Texas;Climb;2000-01-20;;0;20
+146;Airplane;2000-01-19;Caused damage;FEDEX EXPRESS;Tennessee;Approach;2000-01-20;Medium;668;
+147;;2000-01-19;No damage;UNKNOWN;Washington;;2002-07-14;Medium;0;
+148;Airplane;2000-01-20;No damage;SOUTHWEST AIRLINES;Oregon;Landing Roll;;;0;0
+149;Airplane;2000-01-20;No damage;UNITED AIRLINES;;;;Medium;0;
+150;Airplane;2000-01-20;No damage;UNITED AIRLINES;;Climb;;Small;0;
+151;Airplane;2000-01-20;Caused damage;BUSINESS;Virginia;Take-off run;;Medium;112255;0
+152;Airplane;2000-01-20;Caused damage;AMERICAN AIRLINES;Illinois;Approach;;Large;0;1700
+153;Airplane;2000-01-20;Caused damage;UNITED AIRLINES;;;;Medium;0;
+154;Airplane;2000-01-20;No damage;HORIZON AIR;Oregon;Approach;2000-01-21;;0;300
+155;Airplane;2000-01-20;Caused damage;BUSINESS;California;Landing Roll;2000-01-29;Large;66818;0
+156;Airplane;2000-01-21;No damage;DELTA AIR LINES;New Jersey;Landing Roll;;Small;0;0
+157;Airplane;2000-01-21;No damage;SOUTHWEST AIRLINES;California;Approach;;Medium;0;
+158;Airplane;2000-01-21;Caused damage;EMPIRE AIRLINES;Washington;Climb;2000-01-21;Medium;134;400
+159;Airplane;2000-01-21;Caused damage;AMERICA WEST AIRLINES;Arizona;Approach;2000-01-21;Small;0;300
+160;Airplane;2000-01-22;No damage;UNITED AIRLINES;;;;Small;0;200
+161;Airplane;2000-01-22;No damage;DELTA AIR LINES;New Jersey;;;Small;0;
+162;;2000-01-22;No damage;UNKNOWN;New Jersey;;;Large;0;
+163;Airplane;2000-01-22;Caused damage;AIR TRANSPORT INTL;;;;Medium;0;
+164;Airplane;2000-01-22;No damage;PRIVATELY OWNED;Alaska;Approach;2000-01-22;Small;0;50
+165;Airplane;2000-01-23;No damage;DELTA AIR LINES;Texas;Landing Roll;;Medium;0;0
+166;Airplane;2000-01-23;No damage;DELTA AIR LINES;New York;Landing Roll;;Medium;0;0
+167;;2000-01-23;No damage;UNKNOWN;Pennsylvania;;2000-01-23;Small;0;
+168;Airplane;2000-01-24;No damage;UNITED AIRLINES;;;;Medium;0;
+169;Airplane;2000-01-24;Caused damage;AMERICAN EAGLE AIRLINES;Oklahoma;Landing Roll;;;0;0
+170;Airplane;2000-01-24;No damage;AMERICAN AIRLINES;Texas;Climb;2000-01-24;;0;500
+171;Airplane;2000-01-24;No damage;UNITED AIRLINES;;;2003-02-03;Medium;0;
+172;Airplane;2000-01-25;Caused damage;AMERICA WEST AIRLINES;California;Climb;;Medium;80182;1000
+173;Airplane;2000-01-25;Caused damage;MILITARY;Florida;Climb;2000-04-03;Large;32827;400
+174;Airplane;2000-01-26;No damage;DELTA AIR LINES;Massachusetts;Approach;;;0;350
+175;Airplane;2000-01-26;No damage;EXECUTIVE JET AVIATION;Texas;Approach;;Small;0;50
+176;Airplane;2000-01-26;No damage;UNKNOWN;Arizona;Approach;;Medium;0;20
+177;Airplane;2000-01-26;No damage;DELTA AIR LINES;Texas;Approach;;Small;0;100
+178;Airplane;2000-01-26;No damage;UNITED AIRLINES;;;;Small;0;
+179;;2000-01-26;No damage;UNKNOWN;Arizona;;;Small;0;
+180;Airplane;2000-01-26;Caused damage;AMERICAN AIRLINES;New Jersey;Take-off run;;Medium;0;0
+181;Airplane;2000-01-26;Caused damage;UNITED AIRLINES;Oregon;Climb;;Medium;0;
+182;Airplane;2000-01-26;Caused damage;ALASKA AIRLINES;California;Approach;2000-01-26;Medium;2005;100
+183;Airplane;2000-01-27;No damage;US AIRWAYS*;Tennessee;Approach;;;0;200
+184;Airplane;2000-01-27;No damage;UNITED AIRLINES;Colorado;Landing Roll;;Medium;0;0
+185;Airplane;2000-01-27;No damage;FEDEX EXPRESS;California;Approach;;;0;200
+186;Airplane;2000-01-27;No damage;COMMUTAIR;New York;Landing Roll;;Large;0;0
+187;Airplane;2000-01-27;No damage;UNITED AIRLINES;Colorado;Approach;;Medium;0;
+188;Airplane;2000-01-27;No damage;HORIZON AIR;Washington;Approach;;Medium;0;
+189;Airplane;2000-01-27;Caused damage;BUSINESS;Florida;Climb;;;0;550
+190;Airplane;2000-01-27;Caused damage;TRANS WORLD AIRLINES;Colorado;Climb;;Large;0;800
+191;;2000-01-27;Caused damage;BUSINESS;Florida;Approach;;;1906;700
+192;Airplane;2000-01-27;Caused damage;SOUTHWEST AIRLINES;Kentucky;Approach;;Medium;0;
+193;Airplane;2000-01-27;No damage;AMERICAN AIRLINES;;Approach;2000-01-28;Small;0;200
+194;Airplane;2000-01-27;Caused damage;CONTINENTAL AIRLINES;;;2001-12-31;Medium;0;
+195;Airplane;2000-01-27;No damage;US AIRWAYS*;;;2002-12-05;Medium;0;
+196;Airplane;2000-01-28;No damage;UNITED AIRLINES;;;;Medium;0;
+197;Airplane;2000-01-28;No damage;UNITED AIRLINES;Texas;Approach;;Medium;0;
+198;Airplane;2000-01-28;No damage;UNITED AIRLINES;California;Approach;;Medium;0;
+199;Airplane;2000-01-28;No damage;UNITED AIRLINES;;;;Medium;0;
+200;Airplane;2000-01-28;No damage;SOUTHWEST AIRLINES;Oklahoma;Take-off run;2000-01-28;Medium;0;0
+201;Airplane;2000-01-28;No damage;MILITARY;Alabama;Take-off run;2000-12-11;Medium;0;0
+202;Airplane;2000-01-29;No damage;PRIVATELY OWNED;Alaska;Climb;;Small;0;300
+203;Airplane;2000-01-29;No damage;UNITED AIRLINES;;;;Medium;0;
+204;Airplane;2000-01-29;No damage;BUSINESS;Kansas;Approach;2000-01-29;;0;150
+205;;2000-01-29;No damage;UNKNOWN;Oregon;;2000-03-07;;0;
+206;Airplane;2000-01-30;No damage;BUSINESS;Connecticut;Landing Roll;;Small;0;0
+207;Airplane;2000-01-30;No damage;EXECUTIVE JET AVIATION;Missouri;Approach;;Small;0;1800
+208;Airplane;2000-01-30;No damage;MESABA AIRLINES;Michigan;;;Small;0;
+209;Airplane;2000-01-30;No damage;NORTHWEST AIRLINES;Tennessee;Climb;;;0;50
+210;Airplane;2000-01-30;No damage;NORTHWEST AIRLINES;Tennessee;Climb;;Medium;0;
+211;Airplane;2000-01-30;No damage;AMERICA WEST AIRLINES;California;Approach;2000-01-30;Large;0;200
+212;Airplane;2000-01-30;No damage;US AIRWAYS*;Rhode Island;Approach;2000-01-30;Small;0;50
+213;Airplane;2000-01-31;No damage;EXECUTIVE JET AVIATION;California;Climb;;Small;148178;300
+214;Airplane;2000-01-31;No damage;UNITED AIRLINES;;Take-off run;;Small;0;0
+215;Airplane;2000-01-31;No damage;NORTHWEST AIRLINES;Ohio;Approach;;Small;0;200
+216;Airplane;2000-01-31;Caused damage;AMERICAN AIRLINES;;Climb;;Medium;0;10
+217;Airplane;2000-01-31;Caused damage;HORIZON AIR;California;Climb;2000-01-31;Medium;0;1500
+218;Airplane;2000-02-01;No damage;TRANS WORLD AIRLINES;Missouri;Approach;;Large;0;500
+219;Airplane;2000-02-01;No damage;UNITED AIRLINES;Colorado;Climb;;Medium;0;500
+220;;2000-02-01;No damage;BUSINESS;Colorado;Approach;;Medium;0;
+221;Airplane;2000-02-01;No damage;UNITED AIRLINES;;;;Medium;0;
+222;;2000-02-01;No damage;UNKNOWN;Oregon;;2000-03-07;;0;
+223;Airplane;2000-02-02;No damage;US AIRWAYS*;New York;Approach;;;0;100
+224;Airplane;2000-02-02;Caused damage;SOUTHWEST AIRLINES;California;Approach;;Medium;1336;3000
+225;Airplane;2000-02-02;No damage;US AIRWAYS*;Florida;Landing Roll;2000-02-02;;0;0
+226;;2000-02-02;No damage;UNKNOWN;Kentucky;;2000-02-08;Small;0;
+227;Airplane;2000-02-02;No damage;MILITARY;Massachusetts;Landing Roll;2000-12-11;Large;0;0
+228;Airplane;2000-02-03;No damage;AMERICAN AIRLINES;California;Approach;;Medium;0;70
+229;Airplane;2000-02-03;No damage;GREAT LAKES AIRLINES;Illinois;Landing Roll;;Small;0;0
+230;Airplane;2000-02-03;No damage;PRIVATELY OWNED;California;Approach;;Small;0;400
+231;Airplane;2000-02-03;No damage;FEDEX EXPRESS;California;En Route;2000-02-03;Small;0;700
+232;Airplane;2000-02-03;Caused damage;BUSINESS;Arizona;Climb;2000-02-04;Medium;33275;200
+233;Airplane;2000-02-03;Caused damage;BUSINESS;California;Climb;2000-02-08;;72164;800
+234;Airplane;2000-02-04;No damage;SKYWEST AIRLINES;California;Take-off run;;Large;0;0
+235;Airplane;2000-02-04;No damage;BUSINESS;Florida;En Route;;Small;0;800
+236;Airplane;2000-02-04;No damage;AMERICAN AIRLINES;California;Climb;;Small;0;50
+237;Airplane;2000-02-04;No damage;UNITED AIRLINES;;;;Medium;0;
+238;Airplane;2000-02-04;No damage;UNITED AIRLINES;;;;Medium;0;
+239;Airplane;2000-02-04;No damage;DELTA AIR LINES;Pennsylvania;Approach;2000-02-04;Small;0;
+240;Airplane;2000-02-04;No damage;SOUTHWEST AIRLINES;Tennessee;Approach;2000-02-04;;0;100
+241;Airplane;2000-02-05;No damage;AMERICA WEST AIRLINES;Arizona;Climb;;Small;0;300
+242;Airplane;2000-02-05;No damage;TRANS WORLD AIRLINES;California;Approach;;Medium;0;500
+243;Airplane;2000-02-05;No damage;UNITED AIRLINES;California;Landing Roll;;Medium;0;0
+244;Airplane;2000-02-05;No damage;UNITED AIRLINES;;;;Medium;0;
+245;Airplane;2000-02-05;No damage;US AIRWAYS*;North Carolina;Landing Roll;2000-02-05;Medium;0;0
+246;Airplane;2000-02-05;No damage;AMERICAN AIRLINES;Texas;Approach;2000-02-05;Small;0;5
+247;Airplane;2000-02-05;No damage;AMERICAN AIRLINES;;Climb;2000-02-05;Small;0;100
+248;Airplane;2000-02-05;No damage;SOUTHWEST AIRLINES;Florida;Climb;2000-02-07;Medium;0;7000
+249;Airplane;2000-02-05;No damage;MILITARY;Vermont;Climb;2000-05-25;Medium;0;50
+250;Airplane;2000-02-06;No damage;EXPRESSJET (CONTINENTAL EXPRS);Texas;Approach;;;0;700
+251;Airplane;2000-02-06;No damage;AMERICA WEST AIRLINES;Ohio;Approach;;Small;0;10
+252;;2000-02-06;No damage;UNKNOWN;New Hampshire;;2000-02-06;Small;0;
+253;;2000-02-06;No damage;UNKNOWN;DC;;2000-02-14;Large;0;
+254;;2000-02-06;No damage;UNKNOWN;Oregon;;2000-03-07;;0;
+255;Airplane;2000-02-06;No damage;MILITARY;Arkansas;Approach;2001-07-16;Small;0;200
+256;Airplane;2000-02-07;No damage;DELTA AIR LINES;California;Approach;;;0;150
+257;Airplane;2000-02-07;No damage;UNITED AIRLINES;Arizona;Take-off run;;Medium;0;0
+258;Airplane;2000-02-07;No damage;UNITED AIRLINES;;Take-off run;;Small;0;0
+259;Airplane;2000-02-07;No damage;AIR CANADA;New York;Approach;;Medium;0;
+260;;2000-02-07;No damage;UNKNOWN;California;;;;0;
+261;Airplane;2000-02-07;Caused damage;FEDEX EXPRESS;;Climb;;Small;4101844;250
+262;;2000-02-07;No damage;UNKNOWN;Florida;;2000-02-07;;0;
+263;;2000-02-07;No damage;UNKNOWN;Ohio;;2000-03-29;Large;0;
+264;Airplane;2000-02-07;No damage;AMERICAN EAGLE AIRLINES;Puerto Rico;Climb;2000-05-01;Medium;0;400
+265;Airplane;2000-02-07;No damage;MILITARY;Colorado;;2002-01-16;Small;0;
+266;Airplane;2000-02-08;No damage;SOUTHWEST AIRLINES;Texas;Climb;;Medium;0;150
+267;Airplane;2000-02-08;No damage;EXPRESSJET (CONTINENTAL EXPRS);New Hampshire;Landing Roll;;Small;0;0
+268;Airplane;2000-02-08;No damage;ALOHA AIRLINES;Hawaii;Landing Roll;;Small;0;0
+269;Airplane;2000-02-08;No damage;AMERICAN EAGLE AIRLINES;Texas;Climb;;Medium;0;4000
+270;Airplane;2000-02-08;No damage;UNITED AIRLINES;;;;Medium;0;
+271;Airplane;2000-02-08;No damage;BUSINESS;Washington;Climb;;Medium;0;
+272;Airplane;2000-02-08;Caused damage;SOUTHWEST AIRLINES;California;Climb;;;0;400
+273;Airplane;2000-02-08;No damage;DELTA AIR LINES;Florida;Climb;2000-02-08;Medium;0;300
+274;;2000-02-08;No damage;UNKNOWN;Florida;;2000-02-08;;0;
+275;Airplane;2000-02-08;No damage;MILITARY;Texas;Climb;2000-12-11;Medium;0;1500
+276;Airplane;2000-02-08;No damage;MILITARY;Indiana;;2002-01-15;Small;0;
+277;Airplane;2000-02-09;No damage;TRANS WORLD AIRLINES;Illinois;Approach;;;0;400
+278;Airplane;2000-02-09;No damage;SOUTHWEST AIRLINES;Tennessee;Approach;;Small;0;100
+279;Airplane;2000-02-09;No damage;FEDEX EXPRESS;Tennessee;Approach;;Small;0;500
+280;Airplane;2000-02-09;No damage;BUSINESS;California;Approach;;Small;0;10
+281;Airplane;2000-02-09;No damage;DELTA AIR LINES;Tennessee;Climb;;;0;1500
+282;Airplane;2000-02-09;No damage;UNITED AIRLINES;New York;Approach;;Medium;0;
+283;;2000-02-09;No damage;UNKNOWN;New York;;;Medium;0;
+284;Airplane;2000-02-09;No damage;DELTA AIR LINES;Georgia;Approach;2000-02-09;;0;10
+285;Airplane;2000-02-09;No damage;US AIRWAYS*;Pennsylvania;Approach;2000-02-09;;0;38
+286;Airplane;2000-02-09;No damage;COMAIR AIRLINES;Kentucky;Climb;2000-02-09;Medium;0;30
+287;Airplane;2000-02-10;Caused damage;ALOHA AIRLINES;Hawaii;Take-off run;;Medium;0;0
+288;Airplane;2000-02-10;No damage;AIR TRANSAT;Florida;Climb;2000-02-10;Small;0;20
+289;Airplane;2000-02-10;Caused damage;MILITARY;Texas;Approach;2000-04-12;Small;29424;2081
+290;Airplane;2000-02-10;No damage;MILITARY;Mississippi;Take-off run;2001-02-01;Medium;0;0
+291;Airplane;2000-02-11;No damage;HAWAIIAN AIR;Hawaii;Take-off run;;Small;0;0
+292;;2000-02-11;No damage;UNKNOWN;Colorado;;;Medium;0;
+293;;2000-02-11;No damage;UNKNOWN;New Jersey;;;Large;0;
+294;Airplane;2000-02-11;No damage;DELTA AIR LINES;DC;Climb;2000-02-11;;0;1000
+295;Airplane;2000-02-11;Caused damage;AMERICAN AIRLINES;Texas;Climb;2000-02-12;Large;0;800
+296;;2000-02-11;No damage;UNKNOWN;California;;2000-02-14;Small;0;
+297;Airplane;2000-02-12;No damage;WESTAIR;California;Taxi;;Medium;0;0
+298;Airplane;2000-02-12;Caused damage;UNITED AIRLINES;Hawaii;Landing Roll;;Medium;0;0
+299;Airplane;2000-02-12;Caused damage;BRITISH AIRWAYS;New York;Climb;;Medium;0;2500
+300;Airplane;2000-02-12;No damage;COMAIR AIRLINES;Florida;Approach;2000-02-12;Medium;0;300
+301;Airplane;2000-02-12;No damage;US AIRWAYS*;Maryland;Take-off run;2000-02-12;Medium;0;0
+302;Airplane;2000-02-12;No damage;AMERICA WEST AIRLINES;Arizona;Landing Roll;2000-02-12;Small;0;0
+303;Airplane;2000-02-12;No damage;US AIRWAYS*;Tennessee;Climb;2000-02-12;Small;0;100
+304;Airplane;2000-02-12;Caused damage;BUSINESS;Louisiana;En Route;2000-02-12;Large;5545;2000
+305;Airplane;2000-02-13;No damage;UNITED AIRLINES;;;;Medium;0;
+306;Airplane;2000-02-13;No damage;UNITED AIRLINES;;Approach;;Medium;0;
+307;;2000-02-13;Caused damage;UNKNOWN;Ohio;;;Large;10691;
+308;Airplane;2000-02-13;No damage;AMERICAN AIRLINES;Texas;Climb;2000-02-13;Medium;0;200
+309;Airplane;2000-02-13;No damage;AMERICAN EAGLE AIRLINES;Oklahoma;Approach;2000-02-13;Small;0;10
+310;Airplane;2000-02-13;No damage;AMERICAN AIRLINES;Nebraska;Landing Roll;2000-02-13;Small;0;0
+311;Airplane;2000-02-13;Caused damage;BUSINESS;Florida;Approach;2000-02-14;;21;200
+312;Airplane;2000-02-14;No damage;US AIRWAYS*;Pennsylvania;Climb;;Small;0;100
+313;Airplane;2000-02-14;No damage;SOUTHWEST AIRLINES;California;Climb;;Large;0;400
+314;Airplane;2000-02-14;No damage;UNITED AIRLINES;Puerto Rico;Take-off run;;Small;0;0
+315;;2000-02-14;No damage;UNKNOWN;Georgia;Landing Roll;;Medium;0;0
+316;Airplane;2000-02-14;Caused damage;UNITED AIRLINES;California;Landing Roll;;Small;0;0
+317;Airplane;2000-02-14;No damage;AMERICAN EAGLE AIRLINES;Louisiana;Take-off run;2000-02-14;;0;0
+318;Airplane;2000-02-14;No damage;MILITARY;Arizona;Landing Roll;2001-02-26;Medium;0;0
+319;Airplane;2000-02-15;No damage;US AIRWAYS*;Florida;Take-off run;;Medium;0;0
+320;Airplane;2000-02-15;No damage;UNITED AIRLINES;Colorado;Landing Roll;;Medium;0;0
+321;Airplane;2000-02-15;No damage;NORTHWEST AIRLINES;;;;Medium;0;
+322;Airplane;2000-02-15;No damage;UNITED AIRLINES;;;;Medium;0;
+323;Airplane;2000-02-15;No damage;UNITED AIRLINES;;;;Medium;0;
+324;Airplane;2000-02-15;No damage;US AIRWAYS*;DC;Landing Roll;2000-02-15;Medium;0;0
+325;;2000-02-15;No damage;UNKNOWN;California;;2000-02-15;Large;0;
+326;Airplane;2000-02-15;Caused damage;AMERICAN AIRLINES;Texas;Approach;2000-02-15;;0;200
+327;Airplane;2000-02-15;No damage;MILITARY;Texas;Approach;2002-02-13;Medium;0;10
+328;Airplane;2000-02-16;No damage;BUSINESS;Washington;Approach;;Medium;0;34
+329;Airplane;2000-02-16;No damage;UNITED AIRLINES;;Take-off run;;Small;0;0
+330;;2000-02-16;No damage;UNKNOWN;Illinois;;;Medium;0;
+331;;2000-02-16;No damage;UNKNOWN;New York;;;Small;0;
+332;Airplane;2000-02-16;Caused damage;PRIVATELY OWNED;California;Climb;;Large;0;3
+333;Airplane;2000-02-17;No damage;UNITED AIRLINES;;Take-off run;;Medium;0;0
+334;Airplane;2000-02-17;No damage;SOUTHWEST AIRLINES;California;Take-off run;;;0;0
+335;;2000-02-17;No damage;UNKNOWN;Illinois;;;Large;0;
+336;Airplane;2000-02-17;Caused damage;SOUTHWEST AIRLINES;California;Approach;;;0;1200
+337;Airplane;2000-02-17;Caused damage;ALASKA AIRLINES;California;Approach;;Medium;0;
+338;Airplane;2000-02-17;No damage;BUSINESS;California;Approach;2000-02-17;Medium;0;900
+339;Airplane;2000-02-17;No damage;CONTINENTAL AIRLINES;;Approach;2000-02-17;Medium;0;300
+340;Airplane;2000-02-17;No damage;BUSINESS;California;Climb;2000-02-17;Small;0;1600
+341;Helicopter;2000-02-17;Caused damage;BUSINESS;Alabama;Approach;2000-02-17;;67;500
+342;;2000-02-17;No damage;MILITARY;Washington;Climb;2000-12-11;Medium;0;
+343;Airplane;2000-02-18;No damage;BUSINESS;California;Landing Roll;;;0;0
+344;Airplane;2000-02-18;No damage;UNITED AIRLINES;California;Climb;;Medium;0;800
+345;Airplane;2000-02-18;No damage;ATLAS AIR;;;;Medium;0;
+346;Airplane;2000-02-18;Caused damage;AMERICAN EAGLE AIRLINES;Texas;Climb;;Medium;0;
+347;Airplane;2000-02-18;No damage;US AIRWAYS*;Tennessee;Climb;2000-02-18;Small;0;800
+348;Airplane;2000-02-18;No damage;ABX AIR;Tennessee;Approach;2000-02-18;;0;800
+349;Airplane;2000-02-18;Caused damage;BUSINESS;New Jersey;Landing Roll;2000-02-18;Large;136309;0
+350;Airplane;2000-02-19;No damage;BUSINESS;California;Take-off run;;Small;0;0
+351;Airplane;2000-02-19;No damage;DELTA AIR LINES;Virginia;Approach;;;0;100
+352;Airplane;2000-02-19;No damage;AIR CANADA;DC;Approach;;Medium;0;100
+353;Airplane;2000-02-19;No damage;SOUTHWEST AIRLINES;Texas;Approach;;Medium;0;1000
+354;Airplane;2000-02-19;No damage;NORTHWEST AIRLINES;;Landing Roll;;Medium;0;0
+355;Airplane;2000-02-19;Caused damage;UNITED AIRLINES;;;;Medium;0;
+356;Airplane;2000-02-19;Caused damage;SOUTHWEST AIRLINES;Illinois;Climb;;Medium;0;10
+357;Airplane;2000-02-19;No damage;BUSINESS;Florida;Climb;2000-02-19;;0;200
+358;Airplane;2000-02-19;No damage;UNITED AIRLINES;DC;Approach;2000-02-19;Medium;0;50
+359;;2000-02-19;No damage;UNKNOWN;California;;2000-02-19;Large;0;
+360;Airplane;2000-02-19;Caused damage;DELTA AIR LINES;Florida;Approach;2000-02-19;;0;125
+361;Airplane;2000-02-19;No damage;SOUTHWEST AIRLINES;California;Approach;2000-02-20;;0;40
+362;Airplane;2000-02-20;No damage;ATLANTIC COAST AIRLINES;DC;Approach;;Medium;0;800
+363;Airplane;2000-02-20;No damage;AIRTRAN AIRWAYS;Georgia;Approach;;Large;0;1200
+364;Airplane;2000-02-20;No damage;BUSINESS;Illinois;Approach;;;0;
+365;Airplane;2000-02-20;Caused damage;US AIRWAYS*;Pennsylvania;Take-off run;2000-02-20;;0;0
+366;Airplane;2000-02-21;No damage;AMERICA WEST AIRLINES;;;;Medium;0;
+367;Airplane;2000-02-21;No damage;NORTHWEST AIRLINES;Ohio;Approach;;Medium;0;1200
+368;Airplane;2000-02-21;No damage;UNITED AIRLINES;;Approach;;Medium;0;
+369;;2000-02-21;No damage;UNKNOWN;Illinois;;;Medium;0;
+370;Airplane;2000-02-21;Caused damage;US AIRWAYS*;North Carolina;Climb;;Medium;0;75
+371;Airplane;2000-02-21;Caused damage;NORTHWEST AIRLINES;California;Take-off run;;;209660;0
+372;Airplane;2000-02-21;Caused damage;AMERICAN EAGLE AIRLINES;California;Take-off run;;;0;0
+373;Airplane;2000-02-21;Caused damage;UNITED AIRLINES;Illinois;Landing Roll;;Medium;0;0
+374;Airplane;2000-02-21;Caused damage;UNITED AIRLINES;;Approach;;Medium;0;
+375;Helicopter;2000-02-21;No damage;GOVERNMENT;Nebraska;En Route;2000-02-23;;0;1900
+376;Airplane;2000-02-22;No damage;DELTA AIR LINES;New York;Take-off run;;Small;0;0
+377;Airplane;2000-02-22;No damage;BUSINESS;Missouri;Climb;;;0;1800
+378;Airplane;2000-02-22;No damage;UNITED AIRLINES;Illinois;Climb;;Medium;0;11000
+379;Airplane;2000-02-22;No damage;NORTHWEST AIRLINES;Tennessee;Climb;;Medium;0;1500
+380;Airplane;2000-02-22;No damage;UNITED AIRLINES;;;;Medium;0;
+381;Airplane;2000-02-22;No damage;UNITED AIRLINES;;;;Medium;0;
+382;;2000-02-22;No damage;UNKNOWN;California;;;;0;
+383;Airplane;2000-02-22;No damage;MURRAY AVIATION;New York;Landing Roll;2000-02-22;Medium;0;0
+384;;2000-02-22;No damage;UNKNOWN;Florida;;2000-02-22;Small;0;
+385;;2000-02-22;No damage;UNKNOWN;California;;2000-02-22;Medium;0;
+386;Airplane;2000-02-22;Caused damage;BUSINESS;Florida;En Route;2000-02-22;Large;11493;1500
+387;Airplane;2000-02-22;Caused damage;US AIRWAYS*;Pennsylvania;Climb;2000-02-22;Large;3367644;1000
+388;Airplane;2000-02-22;No damage;MILITARY;Oklahoma;Climb;2000-12-11;Medium;0;
+389;Airplane;2000-02-22;No damage;AMERICAN AIRLINES;Texas;;2001-02-15;Large;0;0
+390;Airplane;2000-02-23;No damage;AMERICA WEST AIRLINES;Arizona;Approach;;Small;0;500
+391;Airplane;2000-02-23;No damage;AMERICAN AIRLINES;Texas;Take-off run;;Medium;0;0
+392;Airplane;2000-02-23;No damage;UNITED AIRLINES;Illinois;Descent;;Medium;0;5000
+393;Airplane;2000-02-23;No damage;AIR WISCONSIN AIRLINES;Colorado;Approach;;Medium;0;
+394;Airplane;2000-02-23;Caused damage;BUSINESS;Arizona;En Route;;Medium;6014;6000
+395;Airplane;2000-02-23;Caused damage;BUSINESS;South Carolina;Climb;2000-02-23;Small;0;500
+396;;2000-02-23;No damage;UNKNOWN;Kentucky;;2000-02-24;Small;0;
+397;Airplane;2000-02-23;Caused damage;BUSINESS;Virginia;En Route;2000-03-02;Medium;2673;2500
+398;Airplane;2000-02-23;No damage;MILITARY;Florida;Approach;2002-01-14;Medium;0;300
+399;Airplane;2000-02-23;No damage;MILITARY;Florida;Approach;2002-01-15;Large;0;300
+400;Airplane;2000-02-24;No damage;UNITED AIRLINES;Colorado;Landing Roll;;Medium;0;0
+401;Airplane;2000-02-24;No damage;UNITED AIRLINES;South Dakota;Climb;;Medium;0;
+402;Airplane;2000-02-24;Caused damage;UNITED AIRLINES;California;Take-off run;;Small;0;0
+403;Airplane;2000-02-24;No damage;US AIRWAYS*;Pennsylvania;Approach;2000-02-24;;0;700
+404;;2000-02-24;No damage;UNKNOWN;Arizona;;2000-02-24;Small;0;
+405;;2000-02-24;No damage;UNKNOWN;Arizona;;2000-02-24;Small;0;
+406;;2000-02-24;No damage;UNKNOWN;Arizona;;2000-02-24;Small;0;
+407;;2000-02-24;No damage;UNKNOWN;Arizona;;2000-02-24;Small;0;
+408;Airplane;2000-02-24;Caused damage;BUSINESS;Missouri;Landing Roll;2000-02-24;Large;196446;0
+409;Airplane;2000-02-24;Caused damage;DELTA AIR LINES;North Carolina;Approach;2000-02-24;Large;0;2300
+410;;2000-02-24;No damage;MILITARY;Alabama;Climb;2001-02-01;Small;0;5
+411;Airplane;2000-02-24;No damage;MILITARY;Colorado;Approach;2002-01-15;Small;0;
+412;Airplane;2000-02-24;No damage;MILITARY;Colorado;Approach;2002-01-23;Medium;0;
+413;Airplane;2000-02-24;No damage;MILITARY;Louisiana;Approach;2002-02-12;Medium;0;2000
+414;Airplane;2000-02-25;No damage;ISLAND AIR;Hawaii;Take-off run;;Small;0;0
+415;Airplane;2000-02-25;No damage;AMERICA WEST AIRLINES;Utah;Take-off run;;Small;0;0
+416;Airplane;2000-02-25;No damage;UNITED AIRLINES;Illinois;Climb;;Medium;0;5000
+417;Airplane;2000-02-25;No damage;AMERICAN EAGLE AIRLINES;Arkansas;Approach;;Small;0;
+418;Airplane;2000-02-25;No damage;TRANS WORLD AIRLINES;Texas;Landing Roll;;Medium;0;0
+419;Airplane;2000-02-25;No damage;NORTHWEST AIRLINES;Florida;Climb;;Medium;0;8000
+420;Airplane;2000-02-25;No damage;UNITED AIRLINES;;;;Medium;0;5000
+421;Airplane;2000-02-25;No damage;UNITED AIRLINES;;;;Medium;0;
+422;Airplane;2000-02-25;No damage;AMERICAN EAGLE AIRLINES;Texas;Climb;2000-02-25;Medium;0;50
+423;Airplane;2000-02-25;No damage;AMERICAN EAGLE AIRLINES;Arkansas;Climb;2000-02-25;Small;0;50
+424;Airplane;2000-02-25;No damage;US AIRWAYS*;Pennsylvania;Approach;2000-02-25;;0;500
+425;Airplane;2000-02-25;No damage;AMERICAN AIRLINES;Texas;Landing Roll;2000-02-25;Small;0;0
+426;Airplane;2000-02-25;Caused damage;TRANS WORLD AIRLINES;South Dakota;Approach;2000-02-27;;40091;2970
+427;Airplane;2000-02-26;No damage;AMERICAN AIRLINES;Florida;Take-off run;;;0;0
+428;Airplane;2000-02-26;No damage;SOUTHWEST AIRLINES;California;Climb;;Medium;0;4000
+429;Airplane;2000-02-26;No damage;AMERICAN AIRLINES;New York;Landing Roll;;Medium;0;0
+430;Airplane;2000-02-26;No damage;AMERICAN AIRLINES;Texas;Landing Roll;;Medium;0;0
+431;Airplane;2000-02-26;No damage;UNITED AIRLINES;Colorado;Take-off run;;Medium;0;0
+432;Airplane;2000-02-26;No damage;DELTA AIR LINES;Kentucky;Climb;;Small;0;100
+433;Airplane;2000-02-26;No damage;BUSINESS;DC;Approach;;;0;400
+434;Airplane;2000-02-26;No damage;UNITED AIRLINES;;;;Medium;0;
+435;Airplane;2000-02-26;No damage;SOUTHWEST AIRLINES;California;Approach;;Medium;0;
+436;Airplane;2000-02-26;Caused damage;BREEZE;Ohio;Landing Roll;;Large;0;0
+437;Airplane;2000-02-26;Caused damage;BUSINESS;Florida;Climb;;Large;0;1600
+438;Airplane;2000-02-26;Caused damage;ALASKA AIRLINES;Alaska;Landing Roll;2000-02-26;Large;0;0
+439;Airplane;2000-02-26;No damage;AMERICAN AIRLINES;New York;Take-off run;2000-02-27;Small;0;0
+440;Airplane;2000-02-26;No damage;FEDEX EXPRESS;Tennessee;Approach;2000-03-01;Small;0;500
+441;Airplane;2000-02-27;No damage;US AIRWAYS*;Pennsylvania;Take-off run;;;0;0
+442;Airplane;2000-02-27;No damage;UNITED AIRLINES;Colorado;Take-off run;;Medium;0;0
+443;Airplane;2000-02-27;No damage;UNITED AIRLINES;Colorado;Take-off run;;Medium;0;0
+444;Airplane;2000-02-27;Caused damage;AMERICAN EAGLE AIRLINES;California;Climb;;;0;2000
+445;Airplane;2000-02-28;No damage;UNITED AIRLINES;Illinois;Take-off run;;Small;0;0
+446;Airplane;2000-02-28;No damage;UNITED AIRLINES;;;;Medium;0;
+447;Airplane;2000-02-28;Caused damage;BUSINESS;Missouri;En Route;;Medium;0;5000
+448;Airplane;2000-02-28;Caused damage;AMERICAN EAGLE AIRLINES;Texas;Approach;;Small;0;2000
+449;Airplane;2000-02-28;No damage;AMERICAN EAGLE AIRLINES;California;Take-off run;2000-02-28;Small;0;0
+450;Airplane;2000-02-28;No damage;US AIRWAYS*;Pennsylvania;Landing Roll;2000-02-28;;0;0
+451;Airplane;2000-02-28;Caused damage;BUSINESS;New Jersey;Climb;2000-02-28;;0;50
+452;Airplane;2000-02-28;Caused damage;BUSINESS;Michigan;Landing Roll;2000-02-28;Large;412;0
+453;Airplane;2000-02-28;Caused damage;BUSINESS;Minnesota;Approach;2000-02-28;Large;0;2300
+454;;2000-02-28;No damage;UNKNOWN;DC;;2000-03-02;Medium;0;
+455;Airplane;2000-02-29;No damage;ABX AIR;;En Route;;Medium;0;
+456;Airplane;2000-02-29;No damage;AMERICAN AIRLINES;Louisiana;Landing Roll;;Large;0;0
+457;Airplane;2000-02-29;No damage;UNITED AIRLINES;Washington;Approach;;Medium;0;500
+458;Airplane;2000-02-29;No damage;AMERICAN AIRLINES;California;Approach;;Medium;0;1000
+459;Airplane;2000-02-29;No damage;OMNI AIR INTL;California;Take-off run;;Large;0;0
+460;Airplane;2000-02-29;No damage;CENTRAL AIR SOUTHWEST;Missouri;Descent;;Large;0;3300
+461;Airplane;2000-02-29;No damage;DELTA AIR LINES;DC;Climb;;Medium;0;1500
+462;Airplane;2000-02-29;Caused damage;UNITED AIRLINES;California;Landing Roll;;Medium;0;0
+463;Airplane;2000-02-29;No damage;AIR TRANSAT;Florida;Landing Roll;2000-02-29;Large;0;0
+464;;2000-02-29;No damage;UNKNOWN;DC;;2000-02-29;Large;0;
+465;Airplane;2000-02-29;No damage;BUSINESS EXPRESS;Maine;Take-off run;2000-03-02;Small;0;0
+466;Airplane;2000-02-29;Caused damage;BUSINESS;Minnesota;Climb;2000-03-02;;0;15
+467;Airplane;2000-02-29;No damage;MILITARY;Missouri;Approach;2001-07-17;Large;0;1000
+468;Airplane;2000-02-29;No damage;MILITARY;Texas;Take-off run;2002-01-15;Small;21;0
+469;Airplane;2000-02-29;No damage;MILITARY;Louisiana;Approach;2002-02-12;Medium;0;
+470;Airplane;2000-03-01;No damage;UNITED AIRLINES;Illinois;Landing Roll;;Medium;0;0
+471;Airplane;2000-03-01;No damage;NORTHWEST AIRLINES;Colorado;Climb;;Small;0;200
+472;Airplane;2000-03-01;No damage;UNITED AIRLINES;Florida;Approach;;Medium;0;
+473;Airplane;2000-03-01;No damage;UNITED AIRLINES;;;;Medium;0;
+474;;2000-03-01;No damage;UNKNOWN;Illinois;;;Medium;0;
+475;Airplane;2000-03-01;Caused damage;UNKNOWN;Florida;Take-off run;;;0;0
+476;Airplane;2000-03-01;Caused damage;UNKNOWN;Florida;Take-off run;;Medium;0;0
+477;;2000-03-01;No damage;UNKNOWN;DC;;2000-03-02;Medium;0;
+478;Airplane;2000-03-01;No damage;MILITARY;Rhode Island;Landing Roll;2000-05-23;;0;0
+479;Airplane;2000-03-01;Caused damage;SINGAPORE AIRLINES;;;2000-07-03;Medium;0;
+480;Airplane;2000-03-02;No damage;AIR JAMAICA;New York;Take-off run;;Small;0;0
+481;Airplane;2000-03-02;No damage;PRIVATELY OWNED;Minnesota;Climb;;Medium;0;75
+482;Airplane;2000-03-02;No damage;EXECUTIVE JET AVIATION;New Jersey;Approach;2000-03-02;;13417;800
+483;Airplane;2000-03-02;No damage;COMAIR AIRLINES;Pennsylvania;Approach;2000-03-02;;0;1000
+484;Airplane;2000-03-02;Caused damage;BUSINESS;Minnesota;Descent;2000-03-03;Large;526529;3000
+485;Airplane;2000-03-02;Caused damage;UNITED AIRLINES;Oregon;Climb;2000-05-02;Large;0;
+486;Airplane;2000-03-02;No damage;MILITARY;Florida;Take-off run;2000-07-06;Medium;539026;0
+487;Airplane;2000-03-03;No damage;BUSINESS;Colorado;Climb;;Small;0;30
+488;Airplane;2000-03-03;No damage;NORTHWEST AIRLINES;Michigan;Take-off run;;Medium;0;0
+489;Airplane;2000-03-03;No damage;UNITED AIRLINES;;;;Medium;0;
+490;Airplane;2000-03-03;No damage;UNITED AIRLINES;Massachusetts;Approach;;Medium;0;
+491;Airplane;2000-03-03;No damage;UNITED AIRLINES;California;Climb;;Medium;0;
+492;Airplane;2000-03-04;No damage;UNITED AIRLINES;Arizona;Take-off run;;Medium;0;0
+493;Airplane;2000-03-04;No damage;UNITED AIRLINES;;;;Medium;0;
+494;Airplane;2000-03-04;No damage;MESABA AIRLINES;South Dakota;Climb;2000-03-04;Small;0;2000
+495;Airplane;2000-03-05;No damage;AMERICA WEST AIRLINES;Arizona;Take-off run;;Small;0;0
+496;Airplane;2000-03-05;No damage;HAWAIIAN AIR;Hawaii;Climb;;Small;0;10
+497;Airplane;2000-03-05;No damage;ABX AIR;Alabama;Approach;;Small;0;30
+498;Airplane;2000-03-05;No damage;AMERICA WEST AIRLINES;Arizona;En Route;;Medium;0;6000
+499;Airplane;2000-03-05;No damage;UNITED AIRLINES;;;;Medium;0;
+500;Airplane;2000-03-05;No damage;UNITED AIRLINES;;;;Medium;0;
+501;Airplane;2000-03-05;Caused damage;BUSINESS;Illinois;Take-off run;;Medium;0;0
+502;Airplane;2000-03-05;Caused damage;NORTHWEST AIRLINES;Kansas;Climb;;Medium;596002;2500
+503;Airplane;2000-03-05;No damage;AIRTRAN AIRWAYS;Georgia;Climb;2000-03-05;Small;0;5
+504;Airplane;2000-03-05;Caused damage;BUSINESS;New York;En Route;2000-03-06;;2673;2500
+505;Airplane;2000-03-06;No damage;NORTHWEST AIRLINES;Florida;Approach;;;0;500
+506;Airplane;2000-03-06;No damage;CONTINENTAL AIRLINES;New Jersey;Landing Roll;;Small;0;0
+507;Airplane;2000-03-06;No damage;EXECUTIVE JET AVIATION;Kentucky;Climb;;Medium;2908;100
+508;Airplane;2000-03-06;No damage;EXECUTIVE JET AVIATION;Colorado;Approach;;Small;8600;20
+509;Airplane;2000-03-06;No damage;UNITED AIRLINES;;;;Medium;0;
+510;Airplane;2000-03-06;Caused damage;TRANS WORLD AIRLINES;Missouri;Approach;;Small;0;1500
+511;Airplane;2000-03-06;Caused damage;BUSINESS;Ohio;;;Medium;9420;
+512;Airplane;2000-03-06;No damage;UNKNOWN;California;Landing Roll;2000-03-06;;0;0
+513;Airplane;2000-03-06;No damage;AMERICAN AIRLINES;Minnesota;Climb;2000-03-09;Small;0;200
+514;Airplane;2000-03-06;No damage;MILITARY;Texas;Climb;2000-05-26;Medium;21;50
+515;Airplane;2000-03-06;No damage;AMERICAN EAGLE AIRLINES;Texas;Approach;2001-02-15;Small;0;50
+516;Airplane;2000-03-07;No damage;AMERICAN EAGLE AIRLINES;California;Approach;;Small;0;500
+517;Airplane;2000-03-07;No damage;FEDEX EXPRESS;Pennsylvania;Approach;;Small;0;
+518;Airplane;2000-03-07;No damage;AIR CANADA;Florida;Take-off run;;Medium;0;0
+519;Airplane;2000-03-07;No damage;UNITED AIRLINES;;;;Medium;0;
+520;Airplane;2000-03-07;No damage;UNITED AIRLINES;DC;Approach;;Medium;0;
+521;Airplane;2000-03-07;No damage;UNITED AIRLINES;New York;Approach;;Medium;0;
+522;Airplane;2000-03-07;No damage;ALOHA AIRLINES;Hawaii;Landing Roll;;Small;0;0
+523;;2000-03-07;No damage;UNKNOWN;DC;;;Medium;0;
+524;;2000-03-07;No damage;UNKNOWN;Pennsylvania;;;Small;0;
+525;;2000-03-07;No damage;UNKNOWN;DC;;;Medium;0;
+526;Airplane;2000-03-07;Caused damage;COMMUTAIR;New Jersey;Approach;;Large;0;2000
+527;Airplane;2000-03-07;No damage;BUSINESS;Ohio;Landing Roll;2000-03-07;Large;0;0
+528;Airplane;2000-03-07;No damage;NORTHWEST AIRLINES;Minnesota;Approach;2000-03-07;Small;0;75
+529;;2000-03-07;No damage;UNKNOWN;Michigan;;2000-03-07;Small;0;
+530;Airplane;2000-03-07;No damage;MILITARY;Louisiana;Climb;2000-05-26;Medium;21;50
+531;Airplane;2000-03-07;No damage;MILITARY;Texas;Approach;2001-04-02;Small;21;
+532;Airplane;2000-03-08;No damage;EXPRESSJET (CONTINENTAL EXPRS);Arkansas;Climb;;Medium;0;700
+533;Airplane;2000-03-08;No damage;ATLANTIC COAST AIRLINES;DC;Approach;;Medium;0;2000
+534;;2000-03-08;No damage;UNKNOWN;Arizona;Climb;;Medium;0;50
+535;Airplane;2000-03-08;No damage;UNITED AIRLINES;Colorado;Landing Roll;;Medium;0;0
+536;Airplane;2000-03-08;No damage;UNITED AIRLINES;Colorado;Landing Roll;;Medium;0;0
+537;Airplane;2000-03-08;No damage;UNITED AIRLINES;New Jersey;Descent;;Medium;0;3000
+538;Airplane;2000-03-08;No damage;CONTINENTAL AIRLINES;;;;Medium;0;
+539;Airplane;2000-03-08;No damage;UNITED AIRLINES;;;;Medium;0;
+540;;2000-03-08;No damage;UNKNOWN;New York;;;Medium;0;
+541;Airplane;2000-03-08;Caused damage;FEDEX EXPRESS;Louisiana;Approach;;Small;0;5000
+542;Airplane;2000-03-08;No damage;UNITED AIRLINES;North Dakota;Approach;2000-03-08;;0;1700
+543;Airplane;2000-03-08;Caused damage;AMERICAN AIRLINES;California;Approach;2000-03-09;Medium;0;300
+544;Airplane;2000-03-08;No damage;MILITARY;Arizona;Climb;2000-05-26;Medium;21;50
+545;Airplane;2000-03-08;Caused damage;BUSINESS;DC;Climb;2000-08-08;Medium;151009;1500
+546;Airplane;2000-03-09;Caused damage;BUSINESS;Florida;Climb;;Medium;0;1000
+547;Airplane;2000-03-09;Caused damage;FEDEX EXPRESS;;En Route;;Medium;0;
+548;Airplane;2000-03-09;Caused damage;UNITED AIRLINES;New Jersey;Climb;;;0;1000
+549;Airplane;2000-03-09;Caused damage;BUSINESS;Florida;Climb;;Large;0;2000
+550;Airplane;2000-03-09;Caused damage;MILITARY;South Dakota;Approach;2000-04-05;Medium;668;1500
+551;Airplane;2000-03-10;No damage;BUSINESS;Alabama;Climb;;Small;0;400
+552;Airplane;2000-03-10;No damage;AMERICA WEST AIRLINES;Nevada;Landing Roll;;Small;0;0
+553;Airplane;2000-03-10;No damage;UNITED AIRLINES;;;;Medium;0;
+554;Airplane;2000-03-10;No damage;UNITED AIRLINES;;;;Medium;0;
+555;Airplane;2000-03-10;No damage;UNITED AIRLINES;;Approach;;Medium;0;
+556;Airplane;2000-03-10;No damage;DELTA AIR LINES;Florida;Approach;2000-03-10;Large;0;400
+557;Airplane;2000-03-10;No damage;SPIRIT AIRLINES;New Jersey;Take-off run;2000-03-10;Small;0;0
+558;Airplane;2000-03-10;Caused damage;DELTA AIR LINES;Kentucky;Approach;2000-03-13;;0;1300
+559;Airplane;2000-03-10;No damage;BUSINESS;California;Climb;2000-03-20;;0;5
+560;Airplane;2000-03-11;No damage;EXECUTIVE JET AVIATION;New Jersey;Climb;;Medium;0;1000
+561;Airplane;2000-03-11;No damage;BUSINESS;Colorado;Approach;;Small;0;10
+562;Airplane;2000-03-11;No damage;NORTHWEST AIRLINES;Nevada;Climb;;Medium;0;600
+563;Airplane;2000-03-11;No damage;UNITED AIRLINES;Tennessee;Climb;;Medium;0;250
+564;Airplane;2000-03-11;No damage;UNITED AIRLINES;Oregon;Landing Roll;;Medium;0;0
+565;;2000-03-11;No damage;UNKNOWN;Illinois;;;Medium;0;
+566;;2000-03-11;No damage;UNKNOWN;Illinois;;;Medium;0;
+567;Airplane;2000-03-11;No damage;AMERICAN AIRLINES;Florida;Landing Roll;2000-03-11;;0;0
+568;Airplane;2000-03-11;No damage;ALASKA AIRLINES;;;2000-03-11;;0;
+569;Airplane;2000-03-11;Caused damage;UNITED AIRLINES;Indiana;Climb;2000-03-11;Small;0;200
+570;Airplane;2000-03-11;No damage;SOUTHWEST AIRLINES;Florida;Approach;2000-03-12;Medium;0;500
+571;Airplane;2000-03-11;No damage;MESABA AIRLINES;South Dakota;Approach;2000-03-12;Small;0;500
+572;Airplane;2000-03-12;No damage;CHAUTAUQUA AIRLINES;Virginia;Landing Roll;;;0;0
+573;Airplane;2000-03-12;No damage;UNITED AIRLINES;DC;Landing Roll;;Medium;0;0
+574;Airplane;2000-03-12;No damage;UNITED AIRLINES;;;;Medium;0;
+575;;2000-03-12;No damage;UNKNOWN;California;;;Large;0;
+576;Airplane;2000-03-12;Caused damage;US AIRWAYS*;Pennsylvania;Landing Roll;;;0;0
+577;Airplane;2000-03-12;Caused damage;UNITED AIRLINES;California;Approach;;Medium;0;5000
+578;Airplane;2000-03-12;No damage;CHAUTAUQUA AIRLINES;Pennsylvania;Landing Roll;2000-03-12;Medium;0;0
+579;Airplane;2000-03-12;No damage;DELTA AIR LINES;Virginia;Take-off run;2000-03-12;;0;0
+580;Airplane;2000-03-12;Caused damage;DELTA AIR LINES;Virginia;Approach;2000-03-13;;0;100
+581;Airplane;2000-03-12;Caused damage;BUSINESS;Massachusetts;Take-off run;2000-03-13;;0;0
+582;Airplane;2000-03-12;Caused damage;BUSINESS;Nebraska;Approach;2000-03-21;Large;93546;
+583;Airplane;2000-03-13;No damage;AMERICAN AIRLINES;Pennsylvania;Approach;;;0;600
+584;Airplane;2000-03-13;No damage;NORTHWEST AIRLINES;Michigan;Approach;;Medium;0;200
+585;Airplane;2000-03-13;No damage;ATLANTIC SOUTHEAST;Texas;Landing Roll;;Medium;0;0
+586;Airplane;2000-03-13;No damage;UNITED AIRLINES;DC;Take-off run;;Medium;0;0
+587;Airplane;2000-03-13;No damage;SOUTHWEST AIRLINES;California;Approach;;;0;10
+588;Airplane;2000-03-13;No damage;AMERICAN AIRLINES;;;;Medium;0;
+589;Airplane;2000-03-13;Caused damage;BUSINESS;Florida;Descent;;;0;
+590;Airplane;2000-03-13;No damage;CONTINENTAL AIRLINES;New York;Climb;2000-03-13;Medium;0;10
+591;Airplane;2000-03-13;No damage;ABX AIR;Alabama;Descent;2000-03-13;Small;0;5000
+592;;2000-03-13;No damage;UNKNOWN;;;2000-03-13;;0;
+593;;2000-03-13;No damage;UNKNOWN;New Jersey;;2000-03-13;Small;0;
+594;;2000-03-13;No damage;UNKNOWN;DC;;2000-03-17;Large;0;
+595;Airplane;2000-03-14;No damage;US AIRWAYS*;New York;Approach;;Medium;0;4000
+596;Airplane;2000-03-14;No damage;NORTHWEST AIRLINES;New Jersey;Approach;;Medium;0;3000
+597;Airplane;2000-03-14;No damage;UNITED AIRLINES;;;;Medium;0;
+598;Airplane;2000-03-14;No damage;UNITED AIRLINES;;;;Medium;0;
+599;Airplane;2000-03-14;No damage;BUSINESS;Kentucky;Climb;2000-03-14;;0;20
+600;Airplane;2000-03-14;No damage;US AIRWAYS*;New York;Approach;2000-03-14;;0;400
+601;Airplane;2000-03-14;No damage;AIRTRAN AIRWAYS;Georgia;Approach;2000-03-14;Medium;0;1000
+602;Airplane;2000-03-14;No damage;COMAIR AIRLINES;Florida;Approach;2000-03-14;;0;9
+603;Airplane;2000-03-14;No damage;AMERICAN AIRLINES;New Jersey;Approach;2000-03-14;Medium;0;5000
+604;Airplane;2000-03-14;No damage;CANADIAN REGIONAL AIRLINES;New York;Approach;2000-03-15;Medium;0;2000
+605;Airplane;2000-03-14;No damage;AMERICAN AIRLINES;Texas;Landing Roll;2000-03-16;;0;0
+606;Airplane;2000-03-15;No damage;AIR WISCONSIN AIRLINES;Indiana;Taxi;;Large;0;0
+607;Airplane;2000-03-15;No damage;HAWAIIAN AIR;Hawaii;Approach;;Small;0;100
+608;Airplane;2000-03-15;No damage;SOUTHWEST AIRLINES;Texas;Approach;;Small;0;300
+609;;2000-03-15;No damage;UNKNOWN;Illinois;;;Small;0;
+610;Airplane;2000-03-15;Caused damage;ABX AIR;Ohio;Climb;;Medium;0;
+611;Airplane;2000-03-15;No damage;COMAIR AIRLINES;Florida;Approach;2000-03-15;;0;200
+612;Airplane;2000-03-15;No damage;BUSINESS;Missouri;Climb;2000-03-15;;0;300
+613;;2000-03-15;No damage;UNKNOWN;Ohio;Landing Roll;2000-03-15;Medium;0;0
+614;Airplane;2000-03-15;No damage;BUSINESS;Ohio;Landing Roll;2000-03-15;;0;0
+615;Airplane;2000-03-15;No damage;MIDWAY AIRLINES;Louisiana;Take-off run;2000-03-15;;0;0
+616;Airplane;2000-03-15;No damage;AMERICAN AIRLINES;Texas;Descent;2000-03-15;Medium;0;5000
+617;Airplane;2000-03-15;Caused damage;AMERICAN AIRLINES;Oklahoma;Approach;2000-03-15;;52118;2500
+618;Airplane;2000-03-15;Caused damage;DELTA AIR LINES;New York;Approach;2000-03-15;Medium;0;1300
+619;Airplane;2000-03-15;Caused damage;HAWAIIAN AIR;;Landing Roll;2000-03-16;Medium;0;0
+620;Airplane;2000-03-16;No damage;PRO AIR;New Jersey;Landing Roll;;;0;0
+621;Airplane;2000-03-16;No damage;UNITED AIRLINES;California;Approach;;Medium;0;200
+622;Airplane;2000-03-16;No damage;UNITED AIRLINES;Illinois;Take-off run;;Medium;0;0
+623;Airplane;2000-03-16;No damage;UNITED AIRLINES;California;Approach;;Medium;0;
+624;;2000-03-16;No damage;UNKNOWN;New York;;;Small;0;
+625;Airplane;2000-03-16;Caused damage;PRIVATELY OWNED;Oregon;Approach;;Large;0;15
+626;;2000-03-16;No damage;UNKNOWN;New Hampshire;;2000-03-16;Small;0;
+627;;2000-03-16;No damage;UNKNOWN;Oregon;;2000-05-02;Large;0;
+628;Airplane;2000-03-16;No damage;MILITARY;Texas;Climb;2000-05-26;Medium;21;50
+629;Airplane;2000-03-17;No damage;MESABA AIRLINES;Minnesota;Take-off run;;Small;0;0
+630;Airplane;2000-03-17;No damage;ABX AIR;;En Route;;Medium;0;
+631;Airplane;2000-03-17;No damage;DELTA AIR LINES;DC;Landing Roll;;Medium;0;0
+632;Airplane;2000-03-17;No damage;UNITED AIRLINES;;;;Medium;0;
+633;Airplane;2000-03-17;No damage;DELTA AIR LINES;Massachusetts;Climb;2000-03-17;;0;500
+634;;2000-03-17;No damage;UNKNOWN;DC;;2000-03-17;Small;0;
+635;;2000-03-17;No damage;UNKNOWN;Florida;;2000-03-17;Small;0;
+636;Airplane;2000-03-17;Caused damage;US AIRWAYS*;Pennsylvania;Approach;2000-03-17;;40091;300
+637;;2000-03-18;No damage;TRANS STATES AIRLINES;Kentucky;Approach;;Small;0;500
+638;Airplane;2000-03-18;No damage;UNITED AIRLINES;;;;Medium;0;
+639;;2000-03-18;No damage;UNKNOWN;New York;;;Small;0;
+640;Airplane;2000-03-18;No damage;AMERICAN EAGLE AIRLINES;Florida;Take-off run;2000-03-18;Medium;0;0
+641;;2000-03-18;No damage;UNKNOWN;Florida;;2000-03-18;;0;
+642;;2000-03-18;No damage;UNKNOWN;California;;2000-03-18;;0;
+643;Airplane;2000-03-18;No damage;TRANS WORLD AIRLINES;Missouri;Landing Roll;2000-03-23;Small;0;0
+644;Airplane;2000-03-18;No damage;ALASKA AIRLINES;Alaska;Landing Roll;2000-04-05;Large;0;0
+645;Airplane;2000-03-19;No damage;UNITED AIRLINES;Oklahoma;Climb;;Medium;0;
+646;Airplane;2000-03-19;No damage;CONTINENTAL AIRLINES;Florida;Take-off run;2000-03-19;Large;0;0
+647;Airplane;2000-03-20;No damage;NORTHWEST AIRLINES;British Columbia;Approach;;Medium;0;200
+648;Airplane;2000-03-20;No damage;AIR CANADA;California;Approach;;Medium;0;200
+649;Airplane;2000-03-20;No damage;DELTA AIR LINES;Kentucky;Climb;;Small;0;100
+650;Airplane;2000-03-20;Caused damage;DELTA AIR LINES;California;Climb;;Medium;0;
+651;Airplane;2000-03-20;No damage;AMERICAN AIRLINES;Texas;Descent;2000-03-20;Small;0;11000
+652;;2000-03-20;No damage;UNKNOWN;New Jersey;;2000-03-20;;0;
+653;;2000-03-20;No damage;UNKNOWN;New Jersey;;2000-03-20;Medium;0;
+654;;2000-03-20;No damage;UNKNOWN;Arizona;;2000-03-20;Small;0;
+655;Airplane;2000-03-20;No damage;AMERICAN AIRLINES;Oklahoma;Descent;2000-03-21;;0;5000
+656;Airplane;2000-03-20;No damage;MILITARY;Arkansas;Landing Roll;2001-01-19;Medium;0;
+657;Airplane;2000-03-20;No damage;MILITARY;Arkansas;Approach;2001-07-17;Medium;0;50
+658;Airplane;2000-03-21;No damage;COMMUTAIR;DC;Approach;;Medium;0;100
+659;Airplane;2000-03-21;No damage;BUSINESS;North Carolina;Climb;;Small;0;150
+660;Airplane;2000-03-21;No damage;AMERICAN AIRLINES;Texas;Approach;;Small;0;100
+661;Airplane;2000-03-21;No damage;AMERICA WEST AIRLINES;Wisconsin;Climb;2000-03-21;;0;50
+662;Airplane;2000-03-21;No damage;MILITARY;Oklahoma;Approach;2000-05-25;Small;0;100
+663;Airplane;2000-03-22;No damage;AMERICAN EAGLE AIRLINES;California;Approach;;Small;0;1000
+664;Airplane;2000-03-22;No damage;UNITED AIRLINES;Iowa;Approach;;Large;0;3000
+665;Airplane;2000-03-22;No damage;US AIRWAYS*;South Carolina;Descent;;Small;0;
+666;Airplane;2000-03-22;No damage;NORTHWEST AIRLINES;Maryland;Climb;;;0;600
+667;Airplane;2000-03-22;No damage;BUSINESS;Pennsylvania;Approach;;;0;5
+668;Airplane;2000-03-22;Caused damage;PRIVATELY OWNED;Illinois;Landing Roll;;Large;0;0
+669;Airplane;2000-03-22;Caused damage;US AIRWAYS*;South Carolina;Landing Roll;;Large;0;0
+670;Airplane;2000-03-22;No damage;AMERICAN EAGLE AIRLINES;Florida;Take-off run;2000-03-22;Large;0;0
+671;Airplane;2000-03-22;No damage;MESABA AIRLINES;Iowa;Approach;2000-03-22;Medium;0;2000
+672;;2000-03-22;No damage;UNKNOWN;New York;;2000-03-22;;0;
+673;Airplane;2000-03-22;No damage;AMERICAN AIRLINES;Texas;Descent;2000-03-23;Medium;0;7000
+674;Airplane;2000-03-22;Caused damage;TRANS WORLD AIRLINES;Missouri;Approach;2000-03-27;Medium;0;1500
+675;Airplane;2000-03-23;No damage;UPS AIRLINES;Kentucky;Descent;;Medium;0;8500
+676;Airplane;2000-03-23;No damage;GREAT LAKES AIRLINES;Iowa;En Route;;Small;0;6000
+677;Airplane;2000-03-23;No damage;DELTA AIR LINES;Kentucky;En Route;;Small;0;7000
+678;Airplane;2000-03-23;No damage;ABX AIR;Ohio;Approach;;Medium;0;
+679;Airplane;2000-03-23;No damage;DELTA AIR LINES;Texas;Landing Roll;;Medium;0;0
+680;Airplane;2000-03-23;No damage;AMERICA WEST AIRLINES;Texas;Landing Roll;;Medium;0;0
+681;Airplane;2000-03-23;No damage;US AIRWAYS*;Rhode Island;Approach;;;0;500
+682;;2000-03-23;No damage;UNKNOWN;Colorado;;;Medium;0;
+683;Airplane;2000-03-23;Caused damage;PRIVATELY OWNED;;En Route;;Large;0;
+684;Airplane;2000-03-23;Caused damage;NORTHWEST AIRLINES;Minnesota;Climb;;Large;35146;800
+685;Airplane;2000-03-23;No damage;EXECUTIVE JET AVIATION;Ohio;Approach;2000-03-23;Medium;0;300
+686;Airplane;2000-03-23;No damage;BUSINESS;Arkansas;Climb;2000-03-23;Medium;0;300
+687;Airplane;2000-03-23;No damage;BUSINESS;Ohio;Landing Roll;2000-03-23;Small;5079;0
+688;Airplane;2000-03-23;No damage;NORTHWEST AIRLINES;Alabama;Approach;2000-03-23;Large;134;3000
+689;Airplane;2000-03-23;Caused damage;DELTA AIR LINES;Alabama;Approach;2000-03-23;Small;0;300
+690;Airplane;2000-03-23;Caused damage;UNITED AIRLINES;Massachusetts;Approach;2000-03-23;;0;400
+691;Airplane;2000-03-23;No damage;AMERICAN EAGLE AIRLINES;Louisiana;Climb;2000-03-24;Small;0;1000
+692;Airplane;2000-03-23;No damage;DELTA AIR LINES;Ohio;Approach;2000-03-25;Small;0;1000
+693;Airplane;2000-03-23;No damage;MESABA AIRLINES;Illinois;Approach;2000-04-23;Small;0;5
+694;Airplane;2000-03-24;No damage;MESABA AIRLINES;Michigan;Climb;;Small;0;500
+695;Airplane;2000-03-24;No damage;BUSINESS;Missouri;Take-off run;;Small;0;0
+696;Airplane;2000-03-24;No damage;UNITED AIRLINES;Washington;Descent;;Medium;0;9000
+697;Airplane;2000-03-24;No damage;NORTHWEST AIRLINES;Michigan;Approach;;Medium;0;
+698;Airplane;2000-03-24;No damage;UNITED AIRLINES;Oklahoma;Approach;;Medium;0;
+699;;2000-03-24;No damage;UNKNOWN;Illinois;;;Medium;0;
+700;Airplane;2000-03-24;Caused damage;EMPIRE AIRLINES;Washington;Approach;;;0;10
+701;Airplane;2000-03-24;Caused damage;ABX AIR;;;;Medium;0;
+702;;2000-03-24;No damage;UNKNOWN;Louisiana;;2000-03-24;;0;
+703;;2000-03-24;No damage;UNKNOWN;New Hampshire;;2000-03-24;Small;0;
+704;Airplane;2000-03-24;Caused damage;BUSINESS;New Jersey;En Route;2000-03-24;;0;3000
+705;Airplane;2000-03-24;No damage;AMERICAN AIRLINES;;;2000-03-28;Medium;0;
+706;Airplane;2000-03-24;No damage;MILITARY;Connecticut;Approach;2000-04-10;;0;1000
+707;Airplane;2000-03-25;No damage;ABX AIR;Ohio;Approach;;Medium;0;900
+708;Airplane;2000-03-25;No damage;AIR TRANSPORT INTL;Ohio;Climb;;Large;0;50
+709;Airplane;2000-03-25;No damage;MESA AIRLINES;Pennsylvania;Approach;;Medium;0;150
+710;Airplane;2000-03-25;No damage;NORTHWEST AIRLINES;Pennsylvania;Descent;;Medium;0;8000
+711;Airplane;2000-03-25;No damage;UNITED AIRLINES;;;;Medium;0;
+712;Airplane;2000-03-25;Caused damage;CONTINENTAL AIRLINES;New Jersey;Climb;;Large;126237;2500
+713;Airplane;2000-03-25;No damage;AMERICAN AIRLINES;Texas;Climb;2000-03-25;Small;0;10
+714;Airplane;2000-03-25;No damage;AMERICAN AIRLINES;California;Descent;2000-03-25;Small;0;
+715;Airplane;2000-03-25;No damage;EXPRESSJET (CONTINENTAL EXPRS);Ohio;Approach;2000-03-27;Small;0;1500
+716;Airplane;2000-03-26;No damage;NORTHWEST AIRLINES;Tennessee;Landing Roll;;Medium;0;0
+717;Airplane;2000-03-26;No damage;UNITED AIRLINES;Virginia;Take-off run;;;0;0
+718;Airplane;2000-03-26;No damage;US AIRWAYS*;Pennsylvania;Climb;;Medium;0;5
+719;Airplane;2000-03-26;No damage;NORTHWEST AIRLINES;Minnesota;Climb;;Medium;0;
+720;Airplane;2000-03-26;Caused damage;GREAT LAKES AIRLINES;Iowa;Approach;;Large;0;450
+721;Airplane;2000-03-26;Caused damage;FEDEX EXPRESS;New Jersey;Approach;;;668;1500
+722;Airplane;2000-03-26;No damage;DELTA AIR LINES;Florida;Approach;2000-03-28;Small;0;
+723;Airplane;2000-03-26;Caused damage;BUSINESS;Arizona;Take-off run;2000-03-29;Large;63477;0
+724;Airplane;2000-03-26;Caused damage;MILITARY;Oregon;Approach;2000-03-31;Medium;5720;800
+725;Airplane;2000-03-27;No damage;UNION FLIGHTS;;;;Medium;0;
+726;Airplane;2000-03-27;Caused damage;NORTHWEST AIRLINES;Wisconsin;Take-off run;;Medium;0;0
+727;Airplane;2000-03-27;No damage;US AIRWAYS*;;;2000-03-27;Medium;0;
+728;;2000-03-27;No damage;UNKNOWN;California;;2000-03-27;Small;0;
+729;Airplane;2000-03-28;No damage;BANKAIR;Pennsylvania;Approach;;;0;50
+730;Airplane;2000-03-28;No damage;BUSINESS;New York;Take-off run;;;0;0
+731;Airplane;2000-03-28;No damage;ABX AIR;Arkansas;Climb;;Medium;0;2100
+732;Airplane;2000-03-28;No damage;UNITED AIRLINES;Indiana;Take-off run;;Medium;0;0
+733;Airplane;2000-03-28;No damage;BUSINESS;Massachusetts;Take-off run;;;0;0
+734;Airplane;2000-03-28;No damage;US AIRWAYS*;Connecticut;Approach;;Large;0;
+735;Airplane;2000-03-28;Caused damage;EXECUTIVE JET AVIATION;Louisiana;Approach;;Medium;184956;1500
+736;Airplane;2000-03-28;Caused damage;FEDEX EXPRESS;Michigan;Approach;;Medium;668183;
+737;Airplane;2000-03-28;No damage;DELTA AIR LINES;Florida;Approach;2000-03-28;Small;0;700
+738;Airplane;2000-03-28;No damage;CONTINENTAL AIRLINES;;;2000-03-28;Small;0;
+739;Airplane;2000-03-28;Caused damage;AMERICAN AIRLINES;DC;Take-off run;2000-03-28;Small;86864;0
+740;;2000-03-28;No damage;UNKNOWN;Oregon;;2000-05-02;Medium;0;
+741;Airplane;2000-03-28;No damage;MILITARY;Michigan;Approach;2001-01-23;Medium;0;20
+742;Airplane;2000-03-28;No damage;MILITARY;Michigan;Landing Roll;2001-07-16;Medium;0;
+743;Airplane;2000-03-29;No damage;HORIZON AIR;British Columbia;Descent;;Small;0;3000
+744;Airplane;2000-03-29;No damage;UNITED AIRLINES;Illinois;Approach;;Medium;0;
+745;Airplane;2000-03-29;Caused damage;EXECUTIVE JET AVIATION;Ohio;Climb;;Medium;4188;400
+746;Airplane;2000-03-29;Caused damage;AMERICAN AIRLINES;;Approach;;Large;0;50
+747;Airplane;2000-03-29;Caused damage;UNITED AIRLINES;Arizona;Approach;;Medium;0;5000
+748;Airplane;2000-03-29;No damage;SOUTHWEST AIRLINES;Nevada;Approach;2000-03-29;Small;0;200
+749;;2000-03-29;No damage;UNKNOWN;New Jersey;;2000-03-29;;0;
+750;Airplane;2000-03-29;Caused damage;AMERICAN AIRLINES;DC;Take-off run;2000-03-29;Small;0;0
+751;Airplane;2000-03-29;Caused damage;US AIRWAYS*;Ohio;Approach;2000-03-29;Large;44100;2500
+752;Airplane;2000-03-29;No damage;ABX AIR;Ohio;Descent;2000-03-31;Large;0;
+753;Airplane;2000-03-29;No damage;MILITARY;California;Approach;2000-04-05;Small;0;40
+754;Airplane;2000-03-29;Caused damage;MILITARY;South Carolina;Climb;2000-04-21;Medium;0;700
+755;Airplane;2000-03-29;No damage;MILITARY;Florida;Approach;2001-01-23;Small;0;2000
+756;Airplane;2000-03-30;No damage;US AIRWAYS*;New York;Approach;;Medium;0;300
+757;Airplane;2000-03-30;No damage;UNITED AIRLINES;Colorado;Climb;;Large;0;600
+758;Airplane;2000-03-30;No damage;UNITED AIRLINES;;;;Medium;0;
+759;Airplane;2000-03-30;No damage;UNITED AIRLINES;;;;Medium;0;
+760;Airplane;2000-03-30;No damage;UNITED AIRLINES;;;;Medium;0;
+761;Airplane;2000-03-30;No damage;UNITED AIRLINES;New Jersey;Approach;;Medium;0;
+762;Airplane;2000-03-30;No damage;DELTA AIR LINES;Mississippi;Approach;;Medium;0;
+763;Airplane;2000-03-30;Caused damage;NORTHWEST AIRLINES;Minnesota;Approach;;Medium;0;
+764;Airplane;2000-03-30;No damage;US AIRWAYS*;Florida;Climb;2000-03-30;Medium;0;7000
+765;Airplane;2000-03-30;Caused damage;PRIVATELY OWNED;Washington;Approach;2000-03-30;Medium;0;30
+766;Airplane;2000-03-31;No damage;US AIRWAYS*;Florida;Take-off run;;;0;0
+767;Airplane;2000-03-31;No damage;AMERICAN AIRLINES;Texas;Approach;;Small;0;200
+768;Airplane;2000-03-31;No damage;UNITED AIRLINES;Washington;Approach;;;0;500
+769;Airplane;2000-03-31;No damage;UNITED AIRLINES;;;;Medium;0;
+770;Airplane;2000-03-31;No damage;UNITED AIRLINES;;;;Medium;0;
+771;Airplane;2000-03-31;Caused damage;GOVERNMENT;Minnesota;Approach;;Large;0;2
+772;Airplane;2000-03-31;Caused damage;US CUSTOMS AND BORDER PROTECTION;Texas;En Route;;;1137;600
+773;;2000-03-31;No damage;UNKNOWN;Pennsylvania;;2000-03-31;Small;0;
+774;Airplane;2000-03-31;No damage;AMERICAN EAGLE AIRLINES;Texas;Approach;2000-04-01;Medium;0;1200
+775;Airplane;2000-03-31;Caused damage;AMERICAN EAGLE AIRLINES;Texas;Approach;2000-04-05;Medium;0;3000
+776;Airplane;2000-04-01;No damage;US AIRWAYS*;DC;Approach;;Small;0;1000
+777;Airplane;2000-04-01;No damage;ABX AIR;Ohio;;;Medium;0;
+778;Airplane;2000-04-01;No damage;ABX AIR;Ohio;;;Medium;0;
+779;Airplane;2000-04-01;No damage;UNITED AIRLINES;California;Landing Roll;;Medium;0;0
+780;Airplane;2000-04-01;No damage;PRIVATELY OWNED;Idaho;Climb;;Medium;0;50
+781;Airplane;2000-04-01;No damage;SCANDANAVIAN AIRLINES;Illinois;Landing Roll;;Small;0;0
+782;Airplane;2000-04-01;No damage;UNITED AIRLINES;;;;Medium;0;
+783;Airplane;2000-04-01;No damage;UNITED AIRLINES;;;;Medium;0;
+784;Airplane;2000-04-01;No damage;UNITED AIRLINES;;;;Medium;0;
+785;Airplane;2000-04-01;Caused damage;SOUTHWEST AIRLINES;Texas;Climb;;;0;100
+786;Airplane;2000-04-01;Caused damage;UNKNOWN;Ohio;Descent;;Large;0;5000
+787;Airplane;2000-04-01;Caused damage;PRIVATELY OWNED;Utah;Descent;;Medium;0;1500
+788;Airplane;2000-04-01;No damage;ATLANTIC SOUTHEAST;Florida;Landing Roll;2000-04-01;;0;0
+789;Airplane;2000-04-01;No damage;MILITARY;Florida;Approach;2000-05-01;Large;4009;1500
+790;Airplane;2000-04-01;No damage;MILITARY;Wisconsin;Approach;2001-01-29;Small;4677;500
+791;Airplane;2000-04-02;No damage;AMERICAN EAGLE AIRLINES;Wisconsin;Landing Roll;;;0;0
+792;Airplane;2000-04-02;No damage;DELTA AIR LINES;California;Climb;;Medium;0;1000
+793;Airplane;2000-04-02;No damage;US AIRWAYS*;Florida;Approach;;;0;100
+794;Airplane;2000-04-02;No damage;AIR CANADA;New York;Approach;;Medium;0;300
+795;Airplane;2000-04-02;No damage;UNITED AIRLINES;Nevada;Landing Roll;;Medium;0;0
+796;Airplane;2000-04-02;No damage;UNITED AIRLINES;;;;Medium;0;
+797;Airplane;2000-04-02;No damage;UNITED AIRLINES;;;;Medium;0;
+798;Airplane;2000-04-02;No damage;UNITED AIRLINES;;;;Small;0;
+799;;2000-04-02;No damage;UNKNOWN;Pennsylvania;;;Small;0;
+800;Airplane;2000-04-02;No damage;BUSINESS;Ohio;Take-off run;2000-04-02;;0;0
+801;Airplane;2000-04-02;No damage;NORTHWEST AIRLINES;California;Take-off run;2000-04-02;Small;0;0
+802;Airplane;2000-04-02;Caused damage;BUSINESS;Ohio;Climb;2000-04-02;;0;10
+803;;2000-04-02;No damage;UNKNOWN;New Jersey;;2000-04-04;Medium;0;
+804;Airplane;2000-04-03;No damage;COMAIR AIRLINES;Florida;Take-off run;;Medium;0;0
+805;Airplane;2000-04-03;No damage;UNITED AIRLINES;;Take-off run;;Medium;0;0
+806;Airplane;2000-04-03;No damage;UNITED AIRLINES;;;;Medium;0;
+807;Airplane;2000-04-03;No damage;UNITED AIRLINES;;;;Medium;0;
+808;Airplane;2000-04-03;No damage;UNITED AIRLINES;;;;Medium;0;
+809;Airplane;2000-04-03;No damage;UNITED AIRLINES;New York;Approach;;Medium;0;
+810;;2000-04-03;No damage;UNKNOWN;Illinois;;;Large;0;
+811;;2000-04-03;No damage;UNKNOWN;Illinois;;;Medium;0;
+812;Airplane;2000-04-03;No damage;AMERICA WEST AIRLINES;;;2000-04-03;Medium;0;
+813;;2000-04-03;No damage;UNKNOWN;Ohio;;2000-04-03;Large;0;
+814;Airplane;2000-04-03;Caused damage;MESABA AIRLINES;Michigan;Climb;2000-04-03;Large;100228;2400
+815;Airplane;2000-04-03;Caused damage;MILITARY;New York;Approach;2000-04-18;Small;6014;140
+816;Airplane;2000-04-03;Caused damage;ROYAL JORDANIAN;Tennessee;Climb;2001-12-31;Medium;0;
+817;Airplane;2000-04-04;No damage;AMERICAN AIRLINES;New York;Landing Roll;;;0;0
+818;Airplane;2000-04-04;No damage;BUSINESS;Pennsylvania;Landing Roll;;;0;0
+819;Airplane;2000-04-04;No damage;UNITED AIRLINES;New Jersey;Landing Roll;;Medium;0;0
+820;Airplane;2000-04-04;No damage;UNITED AIRLINES;;;;Medium;0;
+821;;2000-04-04;No damage;UNKNOWN;New York;;;Small;0;
+822;Airplane;2000-04-04;Caused damage;AMERICAN EAGLE AIRLINES;Texas;Descent;;Small;0;5000
+823;Airplane;2000-04-04;No damage;AIRTRAN AIRWAYS;Florida;Climb;2000-04-04;Small;0;50
+824;Airplane;2000-04-04;No damage;MESABA AIRLINES;Wisconsin;Approach;2000-04-04;Small;0;50
+825;Airplane;2000-04-04;No damage;AMERICAN AIRLINES;Texas;Approach;2000-04-04;Medium;0;300
+826;;2000-04-04;No damage;UNKNOWN;New Jersey;;2000-04-04;Small;0;
+827;;2000-04-04;No damage;UNKNOWN;New Jersey;;2000-04-04;;0;
+828;Airplane;2000-04-04;Caused damage;BUSINESS;Nevada;En Route;2000-04-05;Medium;5346;2000
+829;Airplane;2000-04-04;No damage;UNITED AIRLINES;;;2003-02-03;Medium;0;
+830;Airplane;2000-04-05;No damage;BUSINESS;South Carolina;Landing Roll;;Small;0;0
+831;Airplane;2000-04-05;No damage;ASTAR AIR CARGO;Kentucky;Approach;;Medium;0;300
+832;Airplane;2000-04-05;No damage;PRIVATELY OWNED;Virginia;Take-off run;;;0;0
+833;Airplane;2000-04-05;No damage;MESA AIRLINES;Indiana;Descent;;Small;0;1800
+834;Airplane;2000-04-05;No damage;SPIRIT AIRLINES;South Carolina;Approach;;Small;0;
+835;Airplane;2000-04-05;No damage;UNITED AIRLINES;Texas;Climb;;Medium;0;
+836;Airplane;2000-04-05;No damage;DELTA AIR LINES;Utah;Approach;;Small;0;
+837;Airplane;2000-04-05;No damage;UNITED AIRLINES;California;Approach;;Small;1203;
+838;Airplane;2000-04-05;Caused damage;EXECUTIVE JET AVIATION;Pennsylvania;Landing Roll;;;0;0
+839;Airplane;2000-04-05;No damage;COMAIR AIRLINES;New York;Take-off run;2000-04-05;;0;0
+840;Airplane;2000-04-05;No damage;BUSINESS;New York;Take-off run;2000-04-05;;0;0
+841;;2000-04-05;No damage;UNKNOWN;Pennsylvania;;2000-04-05;;0;
+842;;2000-04-05;No damage;UNKNOWN;Louisiana;;2000-04-05;Small;0;
+843;Airplane;2000-04-05;Caused damage;SOUTHWEST AIRLINES;California;Descent;2000-04-06;Medium;0;6000
+844;Airplane;2000-04-05;No damage;DELTA AIR LINES;Oregon;Landing Roll;2000-05-11;Medium;0;0
+845;Airplane;2000-04-06;No damage;US AIRWAYS*;New York;Approach;;Large;0;5
+846;Airplane;2000-04-06;No damage;ABX AIR;;;;Medium;0;
+847;Airplane;2000-04-06;No damage;ABX AIR;Ohio;;;Medium;0;
+848;Airplane;2000-04-06;No damage;UNITED AIRLINES;Florida;Landing Roll;;Medium;0;0
+849;Airplane;2000-04-06;No damage;BUSINESS;Michigan;Approach;2000-04-06;;0;200
+850;Airplane;2000-04-06;No damage;BUSINESS;Connecticut;Approach;2000-04-06;Small;0;50
+851;Airplane;2000-04-06;No damage;SUPERIOR AVIATION;North Dakota;Climb;2000-04-06;;0;50
+852;;2000-04-06;No damage;UNKNOWN;Arizona;;2000-04-06;Small;0;
+853;;2000-04-06;No damage;UNKNOWN;New Hampshire;;2000-04-06;Small;0;
+854;Airplane;2000-04-06;No damage;AMERICAN EAGLE AIRLINES;Texas;Approach;2000-04-07;Small;0;1500
+855;Airplane;2000-04-06;No damage;ABX AIR;Oregon;Landing Roll;2000-05-11;Medium;0;0
+856;Airplane;2000-04-06;No damage;MILITARY;Louisiana;Approach;2000-05-17;Medium;0;1000
+857;Airplane;2000-04-06;No damage;SOUTHWEST AIRLINES;California;Take-off run;2000-06-04;Small;0;0
+858;Airplane;2000-04-07;No damage;TRANS WORLD AIRLINES;California;Approach;;;0;200
+859;Airplane;2000-04-07;No damage;AIRTRAN AIRWAYS;;Descent;;Medium;0;5000
+860;Airplane;2000-04-07;No damage;ABX AIR;Texas;Approach;;Medium;0;
+861;Airplane;2000-04-07;No damage;UNITED AIRLINES;;;;Medium;0;
+862;Airplane;2000-04-07;No damage;UNITED AIRLINES;;;;Medium;0;
+863;Airplane;2000-04-07;No damage;UNITED AIRLINES;;;;Medium;0;
+864;Airplane;2000-04-07;No damage;UNITED AIRLINES;Illinois;Approach;;Medium;0;
+865;;2000-04-07;No damage;UNKNOWN;Illinois;;;Small;0;
+866;Airplane;2000-04-07;Caused damage;UNITED AIRLINES;;;;Medium;0;
+867;;2000-04-07;No damage;UNKNOWN;Rhode Island;;2000-04-07;Small;0;
+868;Airplane;2000-04-07;Caused damage;PRIVATELY OWNED;Florida;Descent;2000-04-07;;14522;1500
+869;Airplane;2000-04-07;Caused damage;PRIVATELY OWNED;Florida;Descent;2000-04-07;Large;0;2000
+870;Airplane;2000-04-07;No damage;AMERICAN AIRLINES;Texas;Approach;2000-04-08;;0;1000
+871;Airplane;2000-04-07;No damage;DELTA AIR LINES;Massachusetts;Approach;2000-04-08;Large;0;
+872;Airplane;2000-04-07;Caused damage;RYAN INTL AIRLINES;Georgia;Approach;2000-04-08;;10023;600
+873;Airplane;2000-04-07;No damage;FEDEX EXPRESS;Texas;Climb;2000-04-12;Small;0;4200
+874;Airplane;2000-04-07;No damage;ALASKA AIRLINES;Oregon;Approach;2000-04-13;Small;0;10
+875;Airplane;2000-04-08;No damage;BUSINESS;Texas;Approach;;Small;0;15
+876;Airplane;2000-04-08;No damage;UNITED AIRLINES;Illinois;Take-off run;;Medium;0;0
+877;Airplane;2000-04-08;No damage;AMERICA WEST AIRLINES;;;;Medium;0;
+878;;2000-04-08;No damage;UNKNOWN;Pennsylvania;;;;0;
+879;Airplane;2000-04-08;Caused damage;US AIRWAYS*;Michigan;Climb;;Medium;0;100
+880;Airplane;2000-04-08;No damage;US AIRWAYS*;Pennsylvania;Take-off run;2000-04-08;;0;0
+881;Airplane;2000-04-08;Caused damage;US AIRWAYS*;DC;Landing Roll;2000-04-08;;0;0
+882;Airplane;2000-04-08;Caused damage;ATLANTIC COAST AIRLINES;DC;Approach;2000-04-13;Small;2673;
+883;Airplane;2000-04-08;No damage;MILITARY;Mississippi;Approach;2001-07-31;Medium;0;100
+884;Airplane;2000-04-08;Caused damage;ATA AIRLINES;Maryland;Climb;2002-12-05;Medium;0;
+885;Airplane;2000-04-09;No damage;UNKNOWN;New Jersey;Take-off run;;Medium;0;0
+886;Airplane;2000-04-09;No damage;DELTA AIR LINES;Louisiana;Take-off run;;Small;0;0
+887;Airplane;2000-04-09;No damage;AIRTRAN AIRWAYS;Georgia;Approach;;Small;0;75
+888;Airplane;2000-04-09;No damage;AIRTRAN AIRWAYS;South Carolina;Climb;;Small;0;100
+889;Airplane;2000-04-09;No damage;BUSINESS;New Jersey;Landing Roll;;Medium;0;0
+890;Airplane;2000-04-09;No damage;ALASKA AIRLINES;Washington;Take-off run;;Medium;0;0
+891;Airplane;2000-04-09;No damage;UNITED AIRLINES;Utah;Landing Roll;;Medium;0;0
+892;Airplane;2000-04-09;No damage;ALASKA AIRLINES;Washington;Approach;;Small;0;1000
+893;Airplane;2000-04-09;No damage;EXPRESSJET (CONTINENTAL EXPRS);Ohio;Approach;;;0;20
+894;Airplane;2000-04-09;No damage;DELTA AIR LINES;Kentucky;Approach;;Small;0;30
+895;Airplane;2000-04-09;No damage;NORTHWEST AIRLINES;Tennessee;Approach;;Medium;0;1500
+896;Airplane;2000-04-09;No damage;AIR CANADA;Pennsylvania;Approach;;Medium;0;
+897;Airplane;2000-04-09;No damage;UNITED AIRLINES;;;;Medium;0;
+898;Airplane;2000-04-09;No damage;UNITED AIRLINES;;;;Medium;0;
+899;Airplane;2000-04-09;No damage;UNITED AIRLINES;;;;Medium;0;
+900;Airplane;2000-04-09;No damage;ALASKA AIRLINES;California;;;Medium;0;
+901;Airplane;2000-04-09;No damage;UNITED AIRLINES;;;;Medium;0;
+902;Airplane;2000-04-09;No damage;NORTHWEST AIRLINES;Louisiana;Approach;;Small;0;
+903;;2000-04-09;No damage;UNKNOWN;Colorado;;;Medium;0;
+904;Airplane;2000-04-09;Caused damage;BUSINESS;New Jersey;Take-off run;;Medium;0;0
+905;Airplane;2000-04-09;No damage;AMERICA WEST AIRLINES;;;2000-04-09;Medium;0;
+906;;2000-04-09;No damage;UNKNOWN;New Hampshire;;2000-04-09;Small;0;
+907;Airplane;2000-04-10;No damage;AIR MIDWEST;Nebraska;Landing Roll;;Small;0;0
+908;Airplane;2000-04-10;No damage;AIR CANADA;New York;Approach;;Medium;0;1600
+909;Airplane;2000-04-10;No damage;UNITED AIRLINES;;;;Medium;0;
+910;Airplane;2000-04-10;No damage;UNITED AIRLINES;;;;Medium;0;
+911;Airplane;2000-04-10;No damage;US AIRWAYS*;North Carolina;Approach;;Medium;0;
+912;;2000-04-10;No damage;UNKNOWN;Washington;;;Small;0;
+913;Airplane;2000-04-10;No damage;MILITARY;Tennessee;;2001-03-21;Small;0;
+914;Airplane;2000-04-11;No damage;SOUTHWEST AIRLINES;Texas;Climb;;Small;0;7000
+915;Airplane;2000-04-11;No damage;ABX AIR;Ohio;Approach;;Medium;0;
+916;Airplane;2000-04-11;No damage;UNITED AIRLINES;Illinois;Approach;;Small;0;
+917;;2000-04-11;No damage;UNKNOWN;Colorado;;;Small;0;
+918;Airplane;2000-04-11;Caused damage;UNITED AIRLINES;California;Descent;;Medium;0;
+919;;2000-04-11;No damage;UNKNOWN;Arizona;;2000-04-11;Small;0;
+920;Airplane;2000-04-11;No damage;AMERICAN AIRLINES;Texas;Landing Roll;2000-04-12;Small;0;0
+921;Airplane;2000-04-11;No damage;ALASKA AIRLINES;Washington;Approach;2000-04-12;Medium;0;2600
+922;;2000-04-11;No damage;UNKNOWN;Kentucky;;2000-04-12;Small;0;
+923;Airplane;2000-04-12;No damage;BUSINESS;California;Approach;;Small;0;5
+924;Airplane;2000-04-12;No damage;AMERICAN AIRLINES;Texas;Take-off run;;Small;0;0
+925;Airplane;2000-04-12;No damage;UNKNOWN;Virginia;Take-off run;;Medium;0;0
+926;Airplane;2000-04-12;No damage;AMERICAN AIRLINES;Texas;Approach;;Medium;0;400
+927;Airplane;2000-04-12;No damage;UNITED AIRLINES;California;Take-off run;;;0;0
+928;Airplane;2000-04-12;No damage;UNITED AIRLINES;California;Approach;;Small;1336;50
+929;Airplane;2000-04-12;No damage;UNITED AIRLINES;;;;Medium;0;
+930;Airplane;2000-04-12;Caused damage;BUSINESS;Texas;Climb;;Small;330083;10
+931;Airplane;2000-04-12;Caused damage;BUSINESS;California;Approach;;Medium;0;
+932;;2000-04-12;No damage;UNKNOWN;Ohio;;2000-04-12;Small;0;
+933;;2000-04-12;No damage;UNKNOWN;DC;;2000-04-13;Medium;0;
+934;Airplane;2000-04-12;No damage;MILITARY;Texas;Approach;2000-04-24;Small;21;1000
+935;Airplane;2000-04-13;No damage;SKYWEST AIRLINES;California;Approach;;;0;200
+936;Airplane;2000-04-13;No damage;PIEDMONT AIRLINES;North Carolina;Landing Roll;;;0;0
+937;Helicopter;2000-04-13;No damage;PRIVATELY OWNED;California;Climb;;;0;9
+938;Airplane;2000-04-13;No damage;NORTHWEST AIRLINES;Maryland;Climb;;Medium;0;2500
+939;Airplane;2000-04-13;No damage;UNITED AIRLINES;;;;Medium;0;
+940;Airplane;2000-04-13;No damage;UNITED AIRLINES;;;;Medium;0;
+941;Airplane;2000-04-13;Caused damage;AMERICAN EAGLE AIRLINES;;En Route;;Medium;0;17000
+942;Airplane;2000-04-13;No damage;BUSINESS;California;Approach;2000-04-13;Small;0;85
+943;Airplane;2000-04-13;No damage;CONTINENTAL AIRLINES;Minnesota;Approach;2000-04-13;Large;0;1200
+944;;2000-04-13;No damage;UNKNOWN;Louisiana;;2000-04-13;Small;0;
+945;Airplane;2000-04-13;No damage;US AIRWAYS*;;;2000-04-13;Medium;0;
+946;;2000-04-13;No damage;UNKNOWN;New Jersey;;2000-04-13;;0;
+947;Airplane;2000-04-13;Caused damage;COMAIR AIRLINES;Ohio;Landing Roll;2000-04-13;Large;10691;0
+948;Airplane;2000-04-13;Caused damage;PRIVATELY OWNED;Nebraska;Climb;2000-04-13;;0;1300
+949;Airplane;2000-04-13;No damage;MILITARY;Texas;Approach;2000-04-24;Small;21;50
+950;Airplane;2000-04-14;No damage;CONTINENTAL AIRLINES;Florida;Landing Roll;;Medium;0;0
+951;Airplane;2000-04-14;No damage;ABX AIR;Ohio;Approach;;Small;0;
+952;Airplane;2000-04-14;No damage;NORTHWEST AIRLINES;Texas;Approach;;Medium;0;2000
+953;Airplane;2000-04-14;No damage;UNITED AIRLINES;;;;Medium;0;
+954;Airplane;2000-04-14;No damage;UNITED AIRLINES;;;;Medium;0;
+955;Airplane;2000-04-14;No damage;UNITED AIRLINES;;;;Medium;0;
+956;Airplane;2000-04-14;No damage;UNITED AIRLINES;Kentucky;Approach;2000-04-14;Small;0;3500
+957;Airplane;2000-04-14;No damage;AMERICAN EAGLE AIRLINES;Texas;Descent;2000-04-17;Medium;0;5000
+958;Airplane;2000-04-14;No damage;AMERICAN AIRLINES;Texas;Approach;2000-04-18;Medium;0;400
+959;Airplane;2000-04-15;No damage;NORTHWEST AIRLINES;Virginia;Landing Roll;;;0;0
+960;Airplane;2000-04-15;No damage;UPS AIRLINES;Kentucky;Approach;;Medium;0;2000
+961;Airplane;2000-04-15;Caused damage;EXPRESSJET (CONTINENTAL EXPRS);New York;Approach;;Medium;0;300
+962;Airplane;2000-04-15;Caused damage;EXPRESSJET (CONTINENTAL EXPRS);New York;Approach;;Medium;0;300
+963;Airplane;2000-04-15;Caused damage;BUSINESS;Washington;En Route;;Medium;0;10
+964;Airplane;2000-04-15;No damage;SOUTHWEST AIRLINES;Ohio;Approach;2000-04-15;;0;1000
+965;Airplane;2000-04-15;No damage;SOUTHWEST AIRLINES;Missouri;Approach;2000-04-21;Medium;0;12500
+966;Airplane;2000-04-16;No damage;BUSINESS;Connecticut;Landing Roll;;;0;0
+967;Airplane;2000-04-16;No damage;US AIRWAYS*;North Carolina;Take-off run;;Small;0;0
+968;Airplane;2000-04-16;No damage;MESABA AIRLINES;Michigan;Approach;;Medium;0;500
+969;Airplane;2000-04-16;No damage;US AIRWAYS*;North Carolina;Approach;;Medium;0;
+970;Airplane;2000-04-16;No damage;UNITED AIRLINES;;;;Medium;0;
+971;Airplane;2000-04-16;No damage;UNITED AIRLINES;;;;Medium;0;
+972;Airplane;2000-04-16;No damage;UNITED AIRLINES;California;Approach;;Medium;0;
+973;Airplane;2000-04-16;Caused damage;BUSINESS;West Virginia;Descent;;Large;171186;5000
+974;Airplane;2000-04-16;No damage;AMERICAN AIRLINES;California;Take-off run;2000-04-16;;0;0
+975;;2000-04-16;No damage;UNKNOWN;Arizona;;2000-04-18;Small;0;
+976;Airplane;2000-04-16;No damage;ALOHA AIRLINES;California;Landing Roll;2000-04-19;Small;1069;0
+977;Airplane;2000-04-16;Caused damage;PRIVATELY OWNED;Maryland;En Route;2000-04-19;Large;5345;1500
+978;Airplane;2000-04-16;No damage;AMERICAN AIRLINES;Florida;Climb;2000-04-21;Small;0;100
+979;Airplane;2000-04-16;Caused damage;HORIZON AIR;Oregon;Take-off run;2000-05-11;Medium;68823;0
+980;Airplane;2000-04-17;No damage;BUSINESS;Wisconsin;Climb;;;0;90
+981;;2000-04-17;No damage;UNKNOWN;New Jersey;;;Medium;0;
+982;Airplane;2000-04-17;No damage;PRIVATELY OWNED;Colorado;Take-off run;;;0;0
+983;Airplane;2000-04-17;No damage;UNITED AIRLINES;;;;Medium;0;200
+984;Airplane;2000-04-17;No damage;US AIRWAYS*;Florida;Descent;;Medium;0;12000
+985;Airplane;2000-04-17;No damage;UNITED AIRLINES;;;;Medium;0;
+986;Airplane;2000-04-17;No damage;UNITED AIRLINES;;;;Medium;0;
+987;Airplane;2000-04-17;No damage;UNITED AIRLINES;;;;Medium;0;
+988;Airplane;2000-04-17;Caused damage;AIR AFRIQUE;New York;Climb;;Medium;0;10
+989;Airplane;2000-04-17;Caused damage;UNITED AIRLINES;Arizona;Approach;;Large;66818;700
+990;Airplane;2000-04-17;Caused damage;CHAUTAUQUA AIRLINES;Maryland;Climb;;;24055;500
+991;Airplane;2000-04-17;No damage;BUSINESS;North Carolina;Approach;2000-04-17;Medium;0;1000
+992;Airplane;2000-04-17;No damage;AMERICAN AIRLINES;Illinois;Approach;2000-04-17;Medium;0;
+993;;2000-04-17;No damage;UNKNOWN;Pennsylvania;;2000-04-17;Small;0;
+994;Airplane;2000-04-17;No damage;MILITARY;Arizona;Approach;2000-08-28;Medium;0;5000
+995;Airplane;2000-04-17;No damage;MILITARY;New Hampshire;Take-off run;2000-12-15;Medium;0;0
+996;;2000-04-17;No damage;MILITARY;New Hampshire;Climb;2001-07-16;Small;0;30
+997;Airplane;2000-04-17;No damage;MILITARY;New Hampshire;Take-off run;2001-07-16;Medium;0;
+998;Airplane;2000-04-18;No damage;FEDEX EXPRESS;Oklahoma;Approach;;Small;0;3000
+999;Airplane;2000-04-18;No damage;US AIRWAYS*;;;;Medium;0;
+1000;Airplane;2000-04-18;No damage;UNITED AIRLINES;Colorado;Take-off run;;Small;0;0
