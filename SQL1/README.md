@@ -90,3 +90,5 @@ Select certain field
 
 `SELECT cost FROM birdstrikes`
 
+`SELECT airline,cost FROM birdstrikes`
+
