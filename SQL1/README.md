@@ -120,12 +120,33 @@ Select certain field(s)
 [AWS CLoud help](https://github.com/salacika/DE1SQL/tree/master/SQL1/AWS)
 
 <a name="dump"/>
+
 # Dumping a database with MySQL Workbench
 
 ![alt text](https://github.com/salacika/DE1SQL/blob/master/SQL1/dump.png?raw=true)
 
 <a name="replicate"/>
+
 # Replicating a database from local to AWS with MySQL Workbench
 
 ![alt text](https://github.com/salacika/DE1SQL/blob/master/SQL1/replicate.png?raw=true)
+
+<a name="homework"/>
+
+# Homework
+
+1. Delete your AWS instance without backup
+
+Using mysql console:
+2. Purge birdstrikes table (hint: TRUNCATE)
+3. Delete birdstrikes table (hint: DROP)
+4. Delete schema 
+
+Using MySQL workbench:
+5. Import a datafile of your choosing into your local instance
+
+
+
+
+
 
