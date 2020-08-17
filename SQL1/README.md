@@ -1,3 +1,24 @@
+Table of content:
+
+[SQL in 5 Minutes](#5mins)
+
+[Our first database](#firstdb)
+
+[Our first SQL statements](#firstsql)
+
+[Creating a free instance of MySQL in AWS Cloud](#aws)
+
+[Dumping a database with MySQL Workbench](#dump)
+
+[Replicating a database from local to AWS with MySQL Workbench](#replicate)
+
+[HOMEWORK](#homework)  
+
+
+
+<a name="5mins"/>
+
+
 # SQL in 5 minutes
 
 Browse to https://www.w3schools.com/sql/trysql.asp?filename=trysql_op_in
@@ -30,7 +51,7 @@ HAVING AVG(ISNULL(DATEDIFF(SECOND, call.start_time, call.end_time),0)) > (SELECT
 ORDER BY calls DESC, country.id ASC;
 ```
 
-
+<a name="firstdb"/>
 # Our first Database with Tables
 
 Execute:
@@ -67,7 +88,8 @@ reported_date = nullif(@v_reported_date, ''),
 speed = nullif(@v_speed, '');
 ```
 
-# Basic SQL statements
+<a name="firstsql"/>
+# Our first SQL statements
 
 
 List the table(s) of your database
@@ -92,17 +114,18 @@ Select certain field(s)
 
 `SELECT airline,cost FROM birdstrikes`
 
+<a name="aws"/>
 # Creating a free instance of MySQL in AWS Cloud
 
 [AWS CLoud help](https://github.com/salacika/DE1SQL/tree/master/SQL1/AWS)
 
-
+<a name="dump"/>
 # Dumping a database with MySQL Workbench
 
 ![alt text](https://github.com/salacika/DE1SQL/blob/master/SQL1/dump.png?raw=true)
 
-
-# Replicating a database from local to AWS
+<a name="replicate"/>
+# Replicating a database from local to AWS with MySQL Workbench
 
 ![alt text](https://github.com/salacika/DE1SQL/blob/master/SQL1/replicate.png?raw=true)
 
