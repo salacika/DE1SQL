@@ -2,9 +2,10 @@
 
 Browse to https://www.w3schools.com/sql/trysql.asp?filename=trysql_op_in
 
+## Query 1
 `SELECT * FROM customers;`
 
-
+## Query 2
 ```
 SELECT supplierName, COUNT(*) AS 'number of products' FROM suppliers
 INNER JOIN products
