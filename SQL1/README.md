@@ -86,7 +86,7 @@ Select all data
 
 `select * from birdstrikes`
 
-Select certain field
+Select certain field(s)
 
 `SELECT cost FROM birdstrikes`
 
