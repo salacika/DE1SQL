@@ -1,4 +1,4 @@
-# 10 steps to the holy grail of creating free instance of MySQL in AWS Cloud
+# 10 steps of the holy grail. Creating free instance of MySQL in AWS Cloud
 
 ## 1. Login to AWS
 
