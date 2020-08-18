@@ -52,6 +52,7 @@ ORDER BY calls DESC, country.id ASC;
 ```
 
 <a name="firstdb"/>
+
 # Your first Database with Tables
 
 Execute:
