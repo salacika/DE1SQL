@@ -120,7 +120,7 @@ Select certain field(s)
 
 # Creating a free instance of MySQL in AWS Cloud
 
-[AWS CLoud help](https://github.com/salacika/DE1SQL/tree/master/SQL1/AWS)
+[AWS Cloud help](https://github.com/salacika/DE1SQL/tree/master/SQL1/AWS)
 
 <a name="dump"/>
 
