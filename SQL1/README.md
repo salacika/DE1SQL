@@ -148,6 +148,9 @@ Using MySQL workbench:
 - Import a datafile of your choosing into your local instance
 
 
+SUBMIT SOLUTION FOR THE LAST 2 SECTIONS IN MODDLE.
+
+
 
 
 
