@@ -1,4 +1,4 @@
-# Session content:
+# Session 1 Content:
 
 [SQL in 5 Minutes](#5mins)
 
