@@ -117,6 +117,7 @@ Select certain field(s)
 `SELECT airline,cost FROM birdstrikes`
 
 <a name="aws"/>
+
 # Creating a free instance of MySQL in AWS Cloud
 
 [AWS CLoud help](https://github.com/salacika/DE1SQL/tree/master/SQL1/AWS)
