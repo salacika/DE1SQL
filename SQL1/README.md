@@ -2,9 +2,9 @@
 
 [SQL in 5 Minutes](#5mins)
 
-[Our first database](#firstdb)
+[Your first database](#firstdb)
 
-[Our first SQL statements](#firstsql)
+[Your first SQL statements](#firstsql)
 
 [Creating a free instance of MySQL in AWS Cloud](#aws)
 
@@ -52,7 +52,7 @@ ORDER BY calls DESC, country.id ASC;
 ```
 
 <a name="firstdb"/>
-# Our first Database with Tables
+# Your first Database with Tables
 
 Execute:
 ```
@@ -89,7 +89,7 @@ speed = nullif(@v_speed, '');
 ```
 
 <a name="firstsql"/>
-# Our first SQL statements
+# Your first SQL statements
 
 
 List the table(s) of your database
