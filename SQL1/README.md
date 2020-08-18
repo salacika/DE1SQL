@@ -136,7 +136,7 @@ Select certain field(s)
 # Homework
 
 Using AWS Console
-- Delete your AWS instance without backup
+- Delete your AWS instance (without creating a backup)
 - Check your AWS billing information and create a Budget alert for Actual and Forecasted Costs, with a budaget cap of 1$.
 
 Using mysql console:
