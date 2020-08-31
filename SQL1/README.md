@@ -4,11 +4,15 @@
 
 **Questions**
 * What is SQL?
+* What is a Relational Model?
+* What is a Relational Database?
 * What is RDBMS?
 * What is MySQL?
+* Difference between MySQL and other RDBMS?
 
 **Objectives**
 * Setting the context: evolution of digital persistency 1950-2010
+* Introdcuing the basic terms in context of SQL 
 * Writing the first SQL 
 * Setting up a MYSQL in AWS
 * Creating the the first MySQL database
