@@ -79,7 +79,7 @@ ORDER BY calls DESC, country.id ASC;
 <br/><br/><br/>
 <a name="firstdb"/>
 ## First look on MySQL and MySQL Workbench
-
+[Screenshot help](https://github.com/salacika/DE1SQL/blob/master/SQL1/connect.png?raw=true)
 
 <br/><br/><br/>
 <a name="firslook"/>
