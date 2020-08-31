@@ -1,4 +1,8 @@
-# Session 1 Content:
+# Overview
+
+** Teaching **: 60 min
+
+# Table Content:
 
 [SQL in 5 Minutes](#5mins)
 
