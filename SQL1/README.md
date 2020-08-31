@@ -36,7 +36,7 @@
 
 [Homework](#homework)  
 
-</p></p></p><br/><br/><br/>
+</p></p></p>
 
 <a name="5mins"/>
 
@@ -45,10 +45,10 @@
 
 Browse to https://www.w3schools.com/sql/trysql.asp?filename=trysql_op_in
 
-### Query 1
+#### Query 1
 `SELECT * FROM customers;`
 
-### Query 2
+#### Query 2
 ```
 SELECT supplierName, COUNT(*) AS 'number of products' FROM suppliers
 INNER JOIN products
@@ -56,7 +56,7 @@ INNER JOIN products
 GROUP BY suppliers.SupplierID;
 ```
 
-### Query 3
+#### Query 3
 ```
 SELECT 
 	country.country_name,
@@ -124,7 +124,7 @@ List the structure of a table
 
 `DESCRIBE birdstrikes`
 
-## Selecting data
+## Retriving data
 
 Select all data
 
