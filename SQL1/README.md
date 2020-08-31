@@ -12,13 +12,14 @@
 
 **Objectives**
 * Setting the context: evolution of digital persistency 1950-2010
-* Introdcuing the basic terms in context of SQL 
-* Writing the first SQL 
-* Setting local MYSQL 
+* Introducing the basic terms in context of SQL
+* Writing the first SQL
+* Setting local MYSQL
 * Setting up a MYSQL in AWS
-* Creating the the first MySQL database
-* Understanting how to backup and restore a database
+* Creating the first MySQL database
+* Understanding how to backup and restore a database
 * Understanding how to migrate a database
+
 
 <br/><br/><br/>
 
@@ -159,7 +160,7 @@ Select certain field(s)
 
 Using AWS Console
 - Delete your AWS instance (without creating a backup)
-- Check your AWS billing information and create a Budget alert for Actual and Forecasted Costs, with a budaget cap of 1$.
+- Check your AWS billing information and create a Budget alert for Actual and Forecasted Costs, with a budget cap of 1$.
 
 Using mysql console:
 - Purge birdstrikes table (hint: TRUNCATE)
