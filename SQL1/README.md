@@ -41,7 +41,7 @@
 <a name="5mins"/>
 
 
-# SQL in 5 minutes
+## SQL in 5 minutes
 
 Browse to https://www.w3schools.com/sql/trysql.asp?filename=trysql_op_in
 
@@ -75,7 +75,7 @@ ORDER BY calls DESC, country.id ASC;
 
 <a name="firstdb"/>
 
-# Your first Database with Tables
+## Your first Database with Tables
 
 Execute:
 ```
@@ -113,7 +113,7 @@ speed = nullif(@v_speed, '');
 
 <a name="firstsql"/>
 
-# Your first SQL statements
+## Your first SQL statements
 
 
 List the table(s) of your database
@@ -140,19 +140,19 @@ Select certain field(s)
 
 <a name="aws"/>
 
-# Creating a free instance of MySQL in AWS Cloud
+## Creating a free instance of MySQL in AWS Cloud
 
 [AWS Cloud help](https://github.com/salacika/DE1SQL/tree/master/SQL1/AWS)
 
 <a name="dump"/>
 
-# Dumping a database with MySQL Workbench
+## Dumping a database with MySQL Workbench
 
 ![alt text](https://github.com/salacika/DE1SQL/blob/master/SQL1/dump.png?raw=true)
 
 <a name="replicate"/>
 
-# Replicating a database from local to AWS with MySQL Workbench
+## Replicating a database from local to AWS with MySQL Workbench
 
 ![alt text](https://github.com/salacika/DE1SQL/blob/master/SQL1/replicate.png?raw=true)
 
