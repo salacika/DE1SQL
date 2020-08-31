@@ -20,6 +20,7 @@
 * Understanting how to backup and restore a database
 * Understanding how to migrate a database
 
+<br/><br/><br/>
 
 # Table Content:
 
@@ -38,10 +39,7 @@
 [Homework](#homework)  
 
 <br/><br/><br/>
-
 <a name="5mins"/>
-
-
 ## SQL in 5 minutes
 
 Browse to https://www.w3schools.com/sql/trysql.asp?filename=trysql_op_in
