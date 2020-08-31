@@ -1,6 +1,20 @@
 # Overview
 
-** Teaching **: 60 min
+**Teaching**: 90 min
+
+**Questions**
+* What is SQL?
+* What is RDBMS?
+* What is MySQL?
+
+**Objectives**
+* Setting the context: evolution of digital persistency 1950-2010
+* Writing the first SQL 
+* Setting up a MYSQL in AWS
+* Creating the the first MySQL database
+* Understanting how to backup and restore a database
+* Understanding how to migrate a database
+
 
 # Table Content:
 
