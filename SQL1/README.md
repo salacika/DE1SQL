@@ -36,7 +36,7 @@
 
 [Homework](#homework)  
 
-</p></p></p>
+<br/><br/><br/>
 
 <a name="5mins"/>
 
@@ -72,9 +72,8 @@ GROUP BY
 HAVING AVG(ISNULL(DATEDIFF(SECOND, call.start_time, call.end_time),0)) > (SELECT AVG(DATEDIFF(SECOND, call.start_time, call.end_time)) FROM call)
 ORDER BY calls DESC, country.id ASC;
 ```
-
+<br/><br/><br/>
 <a name="firstdb"/>
-
 ## Your first Database with Tables
 
 Execute:
@@ -110,9 +109,8 @@ SET
 reported_date = nullif(@v_reported_date, ''),
 speed = nullif(@v_speed, '');
 ```
-
+<br/><br/><br/>
 <a name="firstsql"/>
-
 ## Your first SQL statements
 
 
@@ -138,26 +136,26 @@ Select certain field(s)
 
 `SELECT airline,cost FROM birdstrikes`
 
+<br/><br/><br/>
 <a name="aws"/>
-
 ## Creating a free instance of MySQL in AWS Cloud
 
 [AWS Cloud help](https://github.com/salacika/DE1SQL/tree/master/SQL1/AWS)
 
+<br/><br/><br/>
 <a name="dump"/>
-
 ## Dumping a database with MySQL Workbench
 
 ![alt text](https://github.com/salacika/DE1SQL/blob/master/SQL1/dump.png?raw=true)
 
+<br/><br/><br/>
 <a name="replicate"/>
-
 ## Replicating a database from local to AWS with MySQL Workbench
 
 ![alt text](https://github.com/salacika/DE1SQL/blob/master/SQL1/replicate.png?raw=true)
 
+<br/><br/><br/>
 <a name="homework"/>
-
 # Homework
 
 Using AWS Console
