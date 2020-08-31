@@ -27,6 +27,8 @@
 
 [SQL in 5 Minutes](#5mins)
 
+[First look on MySQL and MySQL Workbench](#firslook)
+
 [Your first local MySQL Database](#firstdb)
 
 [Your first SQL statements](#firstsql)
@@ -72,8 +74,15 @@ GROUP BY
 HAVING AVG(ISNULL(DATEDIFF(SECOND, call.start_time, call.end_time),0)) > (SELECT AVG(DATEDIFF(SECOND, call.start_time, call.end_time)) FROM call)
 ORDER BY calls DESC, country.id ASC;
 ```
+
+
 <br/><br/><br/>
 <a name="firstdb"/>
+## First look on MySQL and MySQL Workbench
+
+
+<br/><br/><br/>
+<a name="firslook"/>
 ## Your first local MySQL Database 
 
 Execute:
