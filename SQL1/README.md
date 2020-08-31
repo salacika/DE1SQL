@@ -147,7 +147,7 @@ Select certain field(s)
 <a name="dump"/>
 ## Dumping a database with MySQL Workbench
 
-![alt text](https://github.com/salacika/DE1SQL/blob/master/SQL1/dump.png?raw=true)
+[Help](https://github.com/salacika/DE1SQL/blob/master/SQL1/dump.png?raw=true)
 
 <br/><br/><br/>
 <a name="replicate"/>
