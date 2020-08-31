@@ -14,6 +14,7 @@
 * Setting the context: evolution of digital persistency 1950-2010
 * Introdcuing the basic terms in context of SQL 
 * Writing the first SQL 
+* Setting local MYSQL 
 * Setting up a MYSQL in AWS
 * Creating the the first MySQL database
 * Understanting how to backup and restore a database
@@ -24,7 +25,7 @@
 
 [SQL in 5 Minutes](#5mins)
 
-[Your first database](#firstdb)
+[Your first local MySQL Database](#firstdb)
 
 [Your first SQL statements](#firstsql)
 
@@ -74,7 +75,7 @@ ORDER BY calls DESC, country.id ASC;
 ```
 <br/><br/><br/>
 <a name="firstdb"/>
-## Your first Database with Tables
+## Your first local MySQL Database 
 
 Execute:
 ```
