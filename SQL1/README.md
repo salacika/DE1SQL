@@ -141,19 +141,19 @@ Select certain field(s)
 <a name="aws"/>
 ## Creating a free instance of MySQL in AWS Cloud
 
-[AWS Cloud help](https://github.com/salacika/DE1SQL/tree/master/SQL1/AWS)
+[Screenshot help](https://github.com/salacika/DE1SQL/tree/master/SQL1/AWS)
 
 <br/><br/><br/>
 <a name="dump"/>
 ## Dumping a database with MySQL Workbench
 
-[Help](https://github.com/salacika/DE1SQL/blob/master/SQL1/dump.png?raw=true)
+[Screenshot help](https://github.com/salacika/DE1SQL/blob/master/SQL1/dump.png?raw=true)
 
 <br/><br/><br/>
 <a name="replicate"/>
 ## Replicating a database from local to AWS with MySQL Workbench
 
-![alt text](https://github.com/salacika/DE1SQL/blob/master/SQL1/replicate.png?raw=true)
+[Screenshot help](https://github.com/salacika/DE1SQL/blob/master/SQL1/replicate.png?raw=true)
 
 <br/><br/><br/>
 <a name="homework"/>
