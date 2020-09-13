@@ -42,8 +42,10 @@ How do you propose to solve these problems?
 <a name="setup"/>
 ## Session setup
 
-Install [sample database](/SQL5/mysqlsampledatabase.sql?raw=true) script.
+Install [sample database](/SQL5/sampledatabase_create.sql?raw=true) script.
 
+#### Database diagram
+![Database diagram](/SQL5/sampledatabase_diagram.png)
 
 <br/><br/><br/>
 <a name="basic"/>
