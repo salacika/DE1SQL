@@ -342,7 +342,7 @@ Check the resulted new table:
 #### Disadvantages
 * Impact over server resources (CPU, memory)
 * Debugging / Trouble shooting  is not the most advanced
-* Overall the business logic written in stored procedures can be written easier in other languages 
+* Overall the business logic written in stored procedures can be written easier/nicer in other languages 
 
 
 
