@@ -75,10 +75,9 @@ CREATE PROCEDURE GetOfficeByCountry(
 )
 BEGIN
 	SELECT * 
- 	FROM offices
-	WHERE country = countryName;
+ 		FROM offices
+			WHERE country = countryName;
 END //
-
 DELIMITER ;
 ```
 
@@ -106,7 +105,6 @@ BEGIN
 	FROM orders
 	WHERE status = orderStatus;
 END$$
-
 DELIMITER ;
 ```
 
@@ -131,7 +129,6 @@ CREATE PROCEDURE SetCounter(
 BEGIN
 	SET counter = counter + inc;
 END$$
-
 DELIMITER ;
 ```
 
@@ -172,22 +169,22 @@ DELIMITER $$
 
 CREATE PROCEDURE GetCustomerLevel(
     	IN  pCustomerNumber INT, 
-    	OUT pCustomerLevel  VARCHAR(20))
-	BEGIN
-		DECLARE credit DECIMAL DEFAULT 0;
+    	OUT pCustomerLevel  VARCHAR(20)
+)
+BEGIN
+	DECLARE credit DECIMAL DEFAULT 0;
 
-		SELECT creditLimit 
-			INTO credit
-				FROM customers
-					WHERE customerNumber = pCustomerNumber;
+	SELECT creditLimit 
+		INTO credit
+			FROM customers
+				WHERE customerNumber = pCustomerNumber;
 
-		IF credit > 50000 THEN
-			SET pCustomerLevel = 'PLATINUM';
-		ELSE
-			SET pCustomerLevel = 'NOT PLATINUM';
-		END IF;
-	END$$
-
+	IF credit > 50000 THEN
+		SET pCustomerLevel = 'PLATINUM';
+	ELSE
+		SET pCustomerLevel = 'NOT PLATINUM';
+	END IF;
+END$$
 DELIMITER ;
 
 ```
@@ -230,7 +227,6 @@ BEGIN
          
 	END LOOP myloop;
 END$$
-
 DELIMITER ;
 ```
 
@@ -300,10 +296,12 @@ BEGIN
 			IF phone NOT LIKE '+%' THEN
 				IF LENGTH(phone) = 10 THEN 
 					SET  phone = CONCAT('+1',phone);
-					UPDATE classicmodels.fixed_customers SET fixed_customers.phone=phone WHERE fixed_customers.customerNumber = customerNumber;
-                END IF;    
+					UPDATE classicmodels.fixed_customers 
+						SET fixed_customers.phone=phone 
+							WHERE fixed_customers.customerNumber = customerNumber;
+                		END IF;    
 			END IF;
-        END IF;
+       		 END IF;
 
 	END LOOP fixPhone;
 	CLOSE curPhone;
