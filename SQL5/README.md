@@ -65,7 +65,7 @@ END //
 
 DELIMITER ;
 ```
-`NOTE1:` Mind the delimiter: the default delimiter in SQL is ";". In a stored procedure you'll have potentially multiple statements ending with ";" so you need the define a second delimiter to end the whole stored procedure. On the end of the routine, will set the default delimiter back to ";"
+`NOTE1:` Mind the delimiter: the default delimiter in SQL is ";". In a stored procedure, you'll have potentially multiple statements ending with ";" - so you need the define a second delimiter to end the whole stored procedure. On the end of the routine, we will set the default delimiter back to ";"
 
 `NOTE2:` You cannot edit a stored procedure, once created, you need to drop and recreate: `DROP PROCEDURE IF EXISTS ...` 
 
