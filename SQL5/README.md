@@ -21,6 +21,7 @@ How do you propose to solve these problems?
 <br/><br/><br/>
 
 # Table Content:
+[Session setup](#setup)
 
 [A basic stored procedure](#basic)
 
@@ -35,6 +36,13 @@ How do you propose to solve these problems?
 [Iterating trough a table with CURSOR](#cursor)
 
 [Homework](#homework)  
+
+
+<br/><br/><br/>
+<a name="setup"/>
+## Session setup
+
+
 
 <br/><br/><br/>
 <a name="basic"/>
