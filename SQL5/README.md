@@ -6,7 +6,7 @@
 
 **Problem statement**
 1. As analyst, you are working on DB with corrupted data. Cleaning/fixing it requires extensive business logic. 
-2. As analyst, you are running several very similar and heavy(long) quires, which differs from each other only by a few parameters. Maintaining these queries is a nightmare.
+2. As analyst, you are running several very similar and heavy(long) queries, which differs from each other only by a few parameters. Maintaining these queries is a nightmare.
 
 How do you propose to solve these problems?
 
