@@ -42,7 +42,7 @@ How do you propose to solve these problems?
 <a name="setup"/>
 ## Session setup
 
-Install [sample database](/blob/master/SQL5/mysqlsampledatabase.sql?raw=true) script.
+Install [sample database](/SQL5/mysqlsampledatabase.sql?raw=true) script.
 
 
 <br/><br/><br/>
