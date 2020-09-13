@@ -258,6 +258,8 @@ and add the next line instead of `SELECT x;`:
 
 also add `TRUNCATE messages;` before the loop.
 
+After re-execution check messages: `SELECT * FROM messages;`
+
 Note: You can you other interating commands instead of LOOP, such as WHILE, REPEAT, but similarly to IF/CASE, with the LOOP you can cover every case. 
 
 
