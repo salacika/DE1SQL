@@ -192,7 +192,7 @@ DELIMITER ;
 
 ```
 
-### Execution for a specific customer
+#### Execution for a specific customer
 
 Calling the stored procedure for customer number 447  and show the value of the OUT parameter pCustomerLevel:
 ```
@@ -251,7 +251,7 @@ Note: You can you other interating commands instead of LOOP, such as WHILE, REPE
 <a name="cursor"/>
 ## Iterating trough a table with CURSOR
 
-### Fixing US phones in customer table 
+#### Fixing US phones in customer table 
 The aim of the next snipet is to add the international prefix to US domestic format.
 
 These are the possible formats in US:
