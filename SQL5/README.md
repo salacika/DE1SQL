@@ -3,17 +3,17 @@
 **Teaching**: 90 min
 
 **Problem statement**
-1. As analyst, you are working on DB with corrupted data. Cleaninf/fixing it requires extensive bussines logic. 
+1. As analyst, you are working on DB with corrupted data. Cleaning/fixing it requires extensive business logic. 
 2. As analyst, you are running several very similar and heavy(long) quires, which differs from each other only by a few parameters. Maintaining these queries is a nightmare.
 
 How do you propose to solve these problems?
 
 **Objectives**
-* Introducing procedular elements of SQL databases
-* Introducing Stored Procedures with paramteres
+* Introducing procedural elements of SQL databases
+* Introducing Stored Procedures with parameters
 * Introducing IF/LOOP/CURSOR
-* Understaning the difference of processing data in the database vs outside of of database engine
-* Understaning the avantages and dissvantanges of stored procedures
+* Understanding the difference of processing data in the database vs outside of of database engine
+* Understanding the advantages and disadvantages of stored procedures
 * Example with fixing data
 
 
@@ -24,7 +24,7 @@ How do you propose to solve these problems?
 
 [A basic stored procedure](#basic)
 
-[A stored procedures with paramters](#parameter)
+[A stored procedures with parameters](#parameter)
 
 [Altering stored procedure](#altering)
 
@@ -61,7 +61,7 @@ Mind the delimiter: the default delimiter in SQL is ";". In a stored procedure y
 
 <br/><br/><br/>
 <a name="paramter"/>
-## A stored procedures with paramters
+## A stored procedures with parameters
 
 
 #### Input parameter with IN
@@ -81,7 +81,7 @@ END //
 DELIMITER ;
 ```
 
-#### Executing with multiple paramters
+#### Executing with multiple parameters
 
 `CALL GetOfficeByCountry('USA');`
 `CALL GetOfficeByCountry('France');`
@@ -115,7 +115,7 @@ SELECT @total;
 ```
 
 
-#### Using the INOUT paramter
+#### Using the INOUT parameter
 
 In this example, the stored procedure SetCounter()  accepts one INOUT  parameter ( counter ) and one IN parameter ( inc ). It increases the counter ( counter ) by the value of specified by the inc parameter.
 
@@ -162,7 +162,7 @@ The IF syntax can have different forms:
 * IF-THEN-ELSE
 * IF-THEN-ELSEIF-ELSE 
 
-Assigning Customer Level based on credit. Note the ussage of credit variable used the procedure. 
+Assigning Customer Level based on credit. Mind the usage of credit variable used the procedure. 
 
 ```
 DELIMITER $$
@@ -248,7 +248,7 @@ Note: You can you other interating commands instead of LOOP, such as WHILE, REPE
 ## Iterating trough a table with CURSOR
 
 #### Fixing US phones in customer table 
-The aim of the next snipet is to add the international prefix to US domestic format.
+The aim of the next snippet is to add the international prefix to US domestic format.
 
 These are the possible formats in US:
 * 754-3010 Local
