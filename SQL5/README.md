@@ -44,9 +44,8 @@ How do you propose to solve these problems?
 
 Install [sample database](/SQL5/sampledatabase_create.sql?raw=true) script.
 
-
 #### Database diagram
-[Database diagram](/SQL5/sampledatabase_diagram.png?raw=true)
+![Database diagram](/SQL5/sampledatabase_diagram.png)
 
 <br/><br/><br/>
 <a name="basic"/>
