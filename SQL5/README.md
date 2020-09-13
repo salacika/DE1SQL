@@ -56,6 +56,8 @@ Install [sample database](/SQL5/sampledatabase_create.sql?raw=true) script. Cred
 #### Creating the stored procedure
 
 ```
+DROP PROCEDURE IF EXISTS GetAllProducts;
+
 DELIMITER //
 
 CREATE PROCEDURE GetAllProducts()
@@ -65,7 +67,10 @@ END //
 
 DELIMITER ;
 ```
-Mind the delimiter: the default delimiter in SQL is ";". In a stored procedure you'll have potentially multiple statements ending with ";" so you need the define a second delimiter to end the whole stored procedure. On the end of the routine, will set the default delimiter back to ";"
+`NOTE1:` Mind the delimiter: the default delimiter in SQL is ";". In a stored procedure you'll have potentially multiple statements ending with ";" so you need the define a second delimiter to end the whole stored procedure. On the end of the routine, will set the default delimiter back to ";"
+
+`NOTE2:` You cannot edit a stored procedure, you need to drop and recreate: `DROP PROCEDURE IF EXISTS ...` 
+
 
 #### Executing the stored procedure
 
@@ -81,6 +86,8 @@ Mind the delimiter: the default delimiter in SQL is ";". In a stored procedure y
 
 The following example creates a stored procedure that finds all offices that locate in a country specified by the input parameter countryName
 ```
+DROP PROCEDURE IF EXISTS GetOfficeByCountry;
+
 DELIMITER //
 
 CREATE PROCEDURE GetOfficeByCountry(
@@ -106,6 +113,8 @@ DELIMITER ;
 
 The following stored procedure returns the number of orders by order status.
 ```
+DROP PROCEDURE IF EXISTS GetOrderCountByStatus;
+
 DELIMITER $$
 
 CREATE PROCEDURE GetOrderCountByStatus (
@@ -133,6 +142,8 @@ SELECT @total;
 In this example, the stored procedure SetCounter()  accepts one INOUT  parameter ( counter ) and one IN parameter ( inc ). It increases the counter ( counter ) by the value of specified by the inc parameter.
 
 ```
+DROP PROCEDURE IF EXISTS SetCounter;
+
 DELIMITER $$
 
 CREATE PROCEDURE SetCounter(
@@ -178,6 +189,8 @@ The IF syntax can have different forms:
 Assigning Customer Level based on credit. Mind the usage of credit variable used the procedure. 
 
 ```
+DROP PROCEDURE IF EXISTS GetCustomerLevel;
+
 DELIMITER $$
 
 CREATE PROCEDURE GetCustomerLevel(
