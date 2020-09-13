@@ -192,7 +192,7 @@ DELIMITER ;
 
 ```
 
-## Execution for a specific customer
+### Execution for a specific customer
 
 Calling the stored procedure for customer number 447  and show the value of the OUT parameter pCustomerLevel:
 ```
@@ -205,7 +205,7 @@ Note: CASE instruction is also available. We will skip CASE because you can do t
 
 <br/><br/><br/>
 <a name="loops"/>
-### Iterating with LOOP
+# Iterating with LOOP
 
 Basic loop counting to 5 and display it:
 
