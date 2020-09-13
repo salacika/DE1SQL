@@ -42,7 +42,7 @@ How do you propose to solve these problems?
 <a name="setup"/>
 ## Session setup
 
-Install [sample database](/SQL5/sampledatabase_create.sql?raw=true) script.
+Install [sample database](/SQL5/sampledatabase_create.sql?raw=true) script. Credit: https://www.mysqltutorial.org/mysql-sample-database.aspx
 
 #### Database diagram
 ![Database diagram](/SQL5/sampledatabase_diagram.png)
