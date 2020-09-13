@@ -27,13 +27,13 @@ How do you propose to solve these problems?
 
 [A stored procedures with parameters](#parameter)
 
-[Altering stored procedure](#altering)
-
 [Example with IF and declaring variables](#if)
 
 [Iterating with LOOP](#loops)
 
 [Iterating trough a table with CURSOR](#cursor)
+
+[Advantages/disadvantages of stored procedures](#advantages)
 
 [Homework](#homework)  
 
@@ -42,7 +42,7 @@ How do you propose to solve these problems?
 <a name="setup"/>
 ## Session setup
 
-Install [sample database](/SQL5/sampledatabase_create.sql?raw=true) script.
+Install [sample database](/SQL5/sampledatabase_create.sql?raw=true) script. Credit: https://www.mysqltutorial.org/mysql-sample-database.aspx
 
 #### Database diagram
 ![Database diagram](/SQL5/sampledatabase_diagram.png)
@@ -54,6 +54,8 @@ Install [sample database](/SQL5/sampledatabase_create.sql?raw=true) script.
 #### Creating the stored procedure
 
 ```
+DROP PROCEDURE IF EXISTS GetAllProducts;
+
 DELIMITER //
 
 CREATE PROCEDURE GetAllProducts()
@@ -63,7 +65,10 @@ END //
 
 DELIMITER ;
 ```
-Mind the delimiter: the default delimiter in SQL is ";". In a stored procedure you'll have potentially multiple statements ending with ";" so you need the define a second delimiter to end the whole stored procedure. On the end of the routine, will set the default delimiter back to ";"
+`NOTE1:` Mind the delimiter: the default delimiter in SQL is ";". In a stored procedure, you'll have potentially multiple statements ending with ";" - so you need the define a second delimiter to end the whole stored procedure. On the end of the routine, we will set the default delimiter back to ";"
+
+`NOTE2:` You cannot edit a stored procedure, once created, you need to drop and recreate: `DROP PROCEDURE IF EXISTS ...` 
+
 
 #### Executing the stored procedure
 
@@ -79,6 +84,8 @@ Mind the delimiter: the default delimiter in SQL is ";". In a stored procedure y
 
 The following example creates a stored procedure that finds all offices that locate in a country specified by the input parameter countryName
 ```
+DROP PROCEDURE IF EXISTS GetOfficeByCountry;
+
 DELIMITER //
 
 CREATE PROCEDURE GetOfficeByCountry(
@@ -95,8 +102,10 @@ DELIMITER ;
 #### Executing with multiple parameters
 
 `CALL GetOfficeByCountry('USA');`
+
 `CALL GetOfficeByCountry('France');`
-`CALL GetOfficeByCountry()` - you will get error, because the paramter is mandatory
+
+`CALL GetOfficeByCountry();` - you will get error, because the paramter is mandatory
 
 
 
@@ -104,6 +113,8 @@ DELIMITER ;
 
 The following stored procedure returns the number of orders by order status.
 ```
+DROP PROCEDURE IF EXISTS GetOrderCountByStatus;
+
 DELIMITER $$
 
 CREATE PROCEDURE GetOrderCountByStatus (
@@ -131,6 +142,8 @@ SELECT @total;
 In this example, the stored procedure SetCounter()  accepts one INOUT  parameter ( counter ) and one IN parameter ( inc ). It increases the counter ( counter ) by the value of specified by the inc parameter.
 
 ```
+DROP PROCEDURE IF EXISTS SetCounter;
+
 DELIMITER $$
 
 CREATE PROCEDURE SetCounter(
@@ -154,16 +167,6 @@ CALL SetCounter(counter,1);
 SELECT @counter;
 ```
 
-
-<br/><br/><br/>
-<a name="altering"/>
-## Altering stored procedure
-
-You cannot edit a stored procedure, you need to drop and recreate.
-```
-DROP PROCEDURE IF EXISTS SetCounter; 
-```
-
 <br/><br/><br/>
 <a name="if"/>
 ## Example with IF and declaring variables
@@ -176,6 +179,8 @@ The IF syntax can have different forms:
 Assigning Customer Level based on credit. Mind the usage of credit variable used the procedure. 
 
 ```
+DROP PROCEDURE IF EXISTS GetCustomerLevel;
+
 DELIMITER $$
 
 CREATE PROCEDURE GetCustomerLevel(
@@ -240,6 +245,8 @@ BEGIN
 END$$
 DELIMITER ;
 ```
+#### Execution and tweaks:
+`CALL LoopDemo();`
 
 Displaying with SELECT is not ideal if you have a long loop. You better create a simple log table named "messages" and write your logs into it:
 
@@ -250,6 +257,8 @@ and add the next line instead of `SELECT x;`:
 `INSERT INTO messages SELECT CONCAT('x:',x);`
 
 also add `TRUNCATE messages;` before the loop.
+
+After re-execution check messages: `SELECT * FROM messages;`
 
 Note: You can you other interating commands instead of LOOP, such as WHILE, REPEAT, but similarly to IF/CASE, with the LOOP you can cover every case. 
 
@@ -277,7 +286,7 @@ BEGIN
 	DECLARE finished INTEGER DEFAULT 0;
 	DECLARE phone varchar(50) DEFAULT "x";
 	DECLARE customerNumber INT DEFAULT 0;
-    DECLARE country varchar(50) DEFAULT "";
+    	DECLARE country varchar(50) DEFAULT "";
 
 	-- declare cursor for customer
 	DECLARE curPhone
@@ -290,7 +299,7 @@ BEGIN
 
 	OPEN curPhone;
     
-    -- create a copy of the customer table 
+    	-- create a copy of the customer table 
 	DROP TABLE IF EXISTS classicmodels.fixed_customers;
 	CREATE TABLE classicmodels.fixed_customers LIKE classicmodels.customers;
 	INSERT fixed_customers SELECT * FROM classicmodels.customers;
@@ -326,6 +335,23 @@ Execute the procedure:
 
 Check the resulted new table:
 `SELECT * FROM fixed_customers where country = 'USA';`
+
+
+<br/><br/><br/>
+<a name="advantages"/>
+# Advantages/disadvantages of stored procedures
+
+#### Advantages
+* Embedded processing, no need to extract data to process it with an external procedural language or tool - this is potentially faster and reduces network traffic
+* Maintainable code, avoiding duplicates
+* Better security, better control over data access
+
+#### Disadvantages
+* Impact over server resources (CPU, memory)
+* Debugging / Trouble shooting  is not the most advanced
+* Overall the business logic written in stored procedures can be written easier/nicer in other languages 
+
+
 
 <br/><br/><br/>
 <a name="homework"/>
