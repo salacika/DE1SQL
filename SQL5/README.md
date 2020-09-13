@@ -35,6 +35,8 @@ How do you propose to solve these problems?
 
 [Iterating trough a table with CURSOR](#cursor)
 
+[Advantages/disadvantages of stored procedures](#advantages)
+
 [Homework](#homework)  
 
 
@@ -326,6 +328,23 @@ Execute the procedure:
 
 Check the resulted new table:
 `SELECT * FROM fixed_customers where country = 'USA';`
+
+
+<br/><br/><br/>
+<a name="advantages"/>
+# Advantages/disadvantages of stored procedures
+
+#### Advantages
+* Embedded processing, no need to extract data to process it with an external procedural language or tool - this is potentially faster and reduces network traffic
+* Maintainable code, avoiding duplicates
+* Better security, better control over data access
+
+#### Disadvantages
+* Impact over server resources (CPU, memory)
+* Debugging / Trouble shooting  is not the most advanced
+* Overall the business logic written in stored procedures can be written easier in other languages 
+
+
 
 <br/><br/><br/>
 <a name="homework"/>
