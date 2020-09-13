@@ -245,6 +245,8 @@ BEGIN
 END$$
 DELIMITER ;
 ```
+#### Execution and tweaks:
+`CALL LoopDemo();`
 
 Displaying with SELECT is not ideal if you have a long loop. You better create a simple log table named "messages" and write your logs into it:
 
