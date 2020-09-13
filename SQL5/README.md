@@ -27,8 +27,6 @@ How do you propose to solve these problems?
 
 [A stored procedures with parameters](#parameter)
 
-[Altering stored procedure](#altering)
-
 [Example with IF and declaring variables](#if)
 
 [Iterating with LOOP](#loops)
@@ -69,7 +67,7 @@ DELIMITER ;
 ```
 `NOTE1:` Mind the delimiter: the default delimiter in SQL is ";". In a stored procedure you'll have potentially multiple statements ending with ";" so you need the define a second delimiter to end the whole stored procedure. On the end of the routine, will set the default delimiter back to ";"
 
-`NOTE2:` You cannot edit a stored procedure, you need to drop and recreate: `DROP PROCEDURE IF EXISTS ...` 
+`NOTE2:` You cannot edit a stored procedure, once created, you need to drop and recreate: `DROP PROCEDURE IF EXISTS ...` 
 
 
 #### Executing the stored procedure
@@ -165,16 +163,6 @@ CALL SetCounter(@counter,1);
 SELECT @counter;
 CALL SetCounter(counter,1); 
 SELECT @counter;
-```
-
-
-<br/><br/><br/>
-<a name="altering"/>
-## Altering stored procedure
-
-You cannot edit a stored procedure, you need to drop and recreate.
-```
-DROP PROCEDURE IF EXISTS SetCounter; 
 ```
 
 <br/><br/><br/>
