@@ -102,8 +102,10 @@ DELIMITER ;
 #### Executing with multiple parameters
 
 `CALL GetOfficeByCountry('USA');`
+
 `CALL GetOfficeByCountry('France');`
-`CALL GetOfficeByCountry()` - you will get error, because the paramter is mandatory
+
+`CALL GetOfficeByCountry();` - you will get error, because the paramter is mandatory
 
 
 
