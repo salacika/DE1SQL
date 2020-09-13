@@ -126,7 +126,7 @@ DELIMITER $$
 
 CREATE PROCEDURE SetCounter(
 	INOUT counter INT,
-    IN inc INT
+    	IN inc INT
 )
 BEGIN
 	SET counter = counter + inc;
@@ -171,22 +171,22 @@ Assigning Customer Level based on credit. Note the ussage of credit variable use
 DELIMITER $$
 
 CREATE PROCEDURE GetCustomerLevel(
-    IN  pCustomerNumber INT, 
-    OUT pCustomerLevel  VARCHAR(20))
-BEGIN
-    DECLARE credit DECIMAL DEFAULT 0;
+    	IN  pCustomerNumber INT, 
+    	OUT pCustomerLevel  VARCHAR(20))
+	BEGIN
+		DECLARE credit DECIMAL DEFAULT 0;
 
-    SELECT creditLimit 
-    INTO credit
-    FROM customers
-    WHERE customerNumber = pCustomerNumber;
+		SELECT creditLimit 
+			INTO credit
+				FROM customers
+					WHERE customerNumber = pCustomerNumber;
 
-    IF credit > 50000 THEN
-        SET pCustomerLevel = 'PLATINUM';
-    ELSE
-        SET pCustomerLevel = 'NOT PLATINUM';
-    END IF;
-END$$
+		IF credit > 50000 THEN
+			SET pCustomerLevel = 'PLATINUM';
+		ELSE
+			SET pCustomerLevel = 'NOT PLATINUM';
+		END IF;
+	END$$
 
 DELIMITER ;
 
@@ -222,11 +222,11 @@ BEGIN
 	myloop: LOOP 
 	           
 		SET  x = x + 1;
-    SELECT x;
+    		SELECT x;
            
 		IF  (x = 5) THEN
 			LEAVE myloop;
-         END  IF;
+         	END  IF;
          
 	END LOOP myloop;
 END$$
@@ -309,7 +309,7 @@ BEGIN
 	CLOSE curPhone;
 
 END$$
-DELIMITER 
+DELIMITER ;
 ```
 
 Execute the procedure:
