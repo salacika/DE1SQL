@@ -277,7 +277,7 @@ BEGIN
 	DECLARE finished INTEGER DEFAULT 0;
 	DECLARE phone varchar(50) DEFAULT "x";
 	DECLARE customerNumber INT DEFAULT 0;
-    DECLARE country varchar(50) DEFAULT "";
+    	DECLARE country varchar(50) DEFAULT "";
 
 	-- declare cursor for customer
 	DECLARE curPhone
@@ -290,7 +290,7 @@ BEGIN
 
 	OPEN curPhone;
     
-    -- create a copy of the customer table 
+    	-- create a copy of the customer table 
 	DROP TABLE IF EXISTS classicmodels.fixed_customers;
 	CREATE TABLE classicmodels.fixed_customers LIKE classicmodels.customers;
 	INSERT fixed_customers SELECT * FROM classicmodels.customers;
