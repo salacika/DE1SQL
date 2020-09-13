@@ -320,7 +320,7 @@ Check the resulted new table:
 <a name="homework"/>
 # Homework
 
-Complete the US local phones to international using the city code. Hint: for this you need to find a data source with domestic prefixes maped to cities, import as a table to the database and add new bussines logic to the procedure. 
+Contuniue the last script: complete the US local phones to international using the city code. Hint: for this you need to find a data source with domestic prefixes maped to cities, import as a table to the database and add new bussines logic to the procedure. 
 
 
 
