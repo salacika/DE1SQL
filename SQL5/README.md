@@ -307,7 +307,8 @@ BEGIN
 	-- declare cursor for customer
 	DECLARE curPhone
 		CURSOR FOR 
-            SELECT customers.customerNumber, customers.phone, customers.country FROM classicmodels.customers;
+            		SELECT customers.customerNumber, customers.phone, customers.country 
+				FROM classicmodels.customers;
 
 	-- declare NOT FOUND handler
 	DECLARE CONTINUE HANDLER 
