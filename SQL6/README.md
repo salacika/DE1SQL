@@ -3,18 +3,16 @@
 **Teaching**: 90 min
 
 **Problem statement**
-1. As analyst, you are working on DB with corrupted data. Cleaning/fixing it requires extensive business logic. 
-2. As analyst, you are running several very similar and heavy(long) queries, which differs from each other only by a few parameters. Maintaining these queries is a nightmare.
+1. As analyst, you need to separate your analytical data store from the operational one. How would you do that?
 
 How do you propose to solve these problems?
 
 **Objectives**
-* Introducing procedural elements of SQL databases
-* Introducing Stored Procedures with parameters
-* Introducing IF/LOOP/CURSOR
-* Understanding the difference of processing data in the database vs outside of of database engine
-* Understanding the advantages and disadvantages of stored procedures
-* Example with fixing data
+* Understanding the difference between Operational and Analytical data layer
+* Introducing Data Warehouse architectures
+* Building an minimilastic analytical data store 
+* Building an ETL pipeline using MySQL Triggers 
+* Building data marts with MySQL View
 
 
 
