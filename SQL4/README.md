@@ -155,6 +155,8 @@ LEFT JOIN orders o
 #### Difference between LEFT and INNER join
 The previous example returns all customers including the customers who have no order. If a customer has no order, the values in the column orderNumber and status are NULL. Try the same query with INNER join.
 
+#### Difference between LEFT and RIGHT join
+Right join is the mirror of the left join, you can achive the same results with both. Rarely used.
 
 #### WHERE with joins
 ```
@@ -185,7 +187,7 @@ LEFT JOIN orderDetails d
        o.orderNumber = 10123;
 ```
 
-`Note` Right join is the mirror of the left join, you can achive the same results with both. Rarely used.
+
 
 
 
