@@ -1,9 +1,17 @@
 
-DROP TABLE IF EXISTS order_store;
+DROP TABLE IF EXISTS product_sales;
 
-CREATE TABLE order_store AS
+CREATE TABLE product_sales AS
 SELECT 
-   *
+   orders.orderNumber AS SalesId, 
+   orderdetails.priceEach AS Price, 
+   orderdetails.quantityOrdered AS Unit,
+   products.productName AS Product,
+   products.productLine As Brand,   
+   customers.city As City,
+   customers.country As Country,   
+   orders.orderDate AS Date,
+   WEEK(orders.orderDate) as WeekOfYear
 FROM
     orders
 INNER JOIN
@@ -17,25 +25,37 @@ ORDER BY
     orderLineNumber;
     
 
+
+
+-- empty log table
+TRUNCATE messages;
+    
+    
 DROP TRIGGER IF EXISTS after_order_insert; 
 
 DELIMITER $$
 
-CREATE TRIGGER after_orderdetails_insert
+CREATE TRIGGER after_order_insert
 AFTER INSERT
 ON orderdetails FOR EACH ROW
 BEGIN
-  
-	-- empty log table
-	TRUNCATE messages;
-
+   
 	-- log the order number of the newley inserted order
     INSERT INTO messages SELECT CONCAT('new orderNumber: ', NEW.orderNumber);
 
+   
 	-- archive the order and assosiated table entries to order_store
-  	INSERT INTO order_store
+  	INSERT INTO product_sales
 	SELECT 
-	   *
+	   orders.orderNumber AS SalesId, 
+	   orderdetails.priceEach AS Price, 
+	   orderdetails.quantityOrdered AS Unit,
+	   products.productName AS Product,
+	   products.productLine As Brand,
+	   customers.city As City,
+	   customers.country As Country,   
+	   orders.orderDate AS Date,
+	   WEEK(orders.orderDate) as WeekOfYear
 	FROM
 		orders
 	INNER JOIN
@@ -48,35 +68,43 @@ BEGIN
 	ORDER BY 
 		orderNumber, 
 		orderLineNumber;
-
+        
 END $$
 
 DELIMITER ;
 
 
 
-SELECT * FROM classicmodels.order_store;
+SELECT * FROM product_sales ORDER BY SalesId;
 
-SELECT COUNT(*) FROM classicmodels.order_store;
+SELECT COUNT(*) FROM product_sales;
 
-INSERT INTO orders  VALUES(16,'2020-10-01','2020-10-01','2020-10-01','Shipped','CEU',131);
+INSERT INTO orders  VALUES(16,'2020-10-01','2020-10-01','2020-10-01','Done','',131);
 INSERT INTO orderdetails  VALUES(16,'S18_1749','1','10',1);
 
-SELECT * FROM classicmodels.order_store WHERE comments = 'CEU';
+SELECT * FROM messages;
 
-SELECT * FROM classicmodels.messages;
+SELECT * FROM product_sales WHERE product_sales.SalesId = 16;
 
-truncate classicmodels.messages;
+
+
 
 
 DROP VIEW IF EXISTS USA;
 
 CREATE VIEW `USA` AS
-SELECT * FROM classicmodels.order_store WHERE country = 'USA';
+SELECT * FROM product_sales WHERE country = 'USA';
 
 
 DROP VIEW IF EXISTS Year_2004;
 
 CREATE VIEW `Year_2004` AS
-SELECT * FROM classicmodels.order_store WHERE orderDate LIKE '2004%';
+SELECT * FROM product_sales WHERE product_sales.Date LIKE '2004%';
+
+DROP VIEW IF EXISTS Vintage_Cars;
+
+CREATE VIEW `Vintage_Cars` AS
+SELECT * FROM product_sales WHERE product_sales.Brand = 'Vintage Cars';
+
+
 
