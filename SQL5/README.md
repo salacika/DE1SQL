@@ -4,7 +4,7 @@
 
 **Problem statement**
 1. As analyst, you are working on DB with corrupted data. Cleaning/fixing it requires extensive business logic. 
-2. As analyst, you are running several very similar and heavy(long) quires, which differs from each other only by a few parameters. Maintaining these queries is a nightmare.
+2. As analyst, you are running several very similar and heavy(long) queries, which differs from each other only by a few parameters. Maintaining these queries is a nightmare.
 
 How do you propose to solve these problems?
 
@@ -107,7 +107,10 @@ DELIMITER ;
 
 `CALL GetOfficeByCountry();` - you will get error, because the paramter is mandatory
 
-
+<br/><br/>
+### `Exercise1` 
+### Create a stored procedure which displays the first X entries of payment table. X is IN parameter for the procedure. 
+<br/><br/>
 
 #### Output parameter with OUT
 
@@ -135,6 +138,11 @@ DELIMITER ;
 CALL GetOrderCountByStatus('Shipped',@total);
 SELECT @total;
 ```
+
+<br/><br/>
+### `Exercise2` 
+### Create a stored procedure which returns the amount for Xth entry of payment table. X is IN parameter for the procedure. Display the returned amount.
+<br/><br/>
 
 
 #### Using the INOUT parameter
@@ -216,6 +224,14 @@ SELECT @level;
 Note: CASE instruction is also available. We will skip CASE because you can do the same with IF. Sometimes CASE looks nicer or might be even faster for the interpreter. 
 
 
+<br/><br/>
+### `Exercise3` 
+### Create a stored procedure which returns category of a given row. Row number is IN parameter, while category is OUT parameter. Display the returned category. 
+### CAT1 - amount > 100.000, CAT2 - amount > 10.000, CAT3 - amount <= 10.000
+
+
+
+
 <br/><br/><br/>
 <a name="loops"/>
 # Iterating with LOOP
@@ -291,7 +307,8 @@ BEGIN
 	-- declare cursor for customer
 	DECLARE curPhone
 		CURSOR FOR 
-            SELECT customers.customerNumber, customers.phone, customers.country FROM classicmodels.customers;
+            		SELECT customers.customerNumber, customers.phone, customers.country 
+				FROM classicmodels.customers;
 
 	-- declare NOT FOUND handler
 	DECLARE CONTINUE HANDLER 
