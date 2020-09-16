@@ -127,7 +127,9 @@ DELIMITER ;
 
 <br>
 `E` - Extract: Joining the tables for the operational layer is an extract operation
+
 `T` - Transform: We don't have glamorous transformations here, only a WeekOfYear covering this part. Nevertheless, please note that you call a store procedure form trigger or even use procedural language to do transformation in the trigger itself. 
+
 `L` - Load: Inserting into product_sales represents the load part of the ETL
 
 #### Activating the trigger
@@ -177,7 +179,7 @@ CREATE VIEW `Vintage_Cars` AS
 SELECT * FROM product_sales WHERE product_sales.Brand = 'Vintage Cars';
 ```
 
-`Note` the content of Views are generated on-the-fly. For performance reasons, in analytics so called materialized views are prefered on large data set. This is not supported by MySQL but there are several ways to implemented. Here is an example: https://fromdual.com/mysql-materialized-views
+`Note` the content of Views are generated on-the-fly. For performance reasons, in analytics, so called materialized views are prefered on large data set. This is not supported by MySQL, but there are several ways to implemented. Here is an example: https://fromdual.com/mysql-materialized-views
 
 
 
