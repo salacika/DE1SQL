@@ -1,94 +1,45 @@
-# New data from World Bank
+# Overview
 
-We will add a new set of tables from a World Bank database (http://databank.worldbank.org/data/databases)
+**Teaching**: 90 min
 
-Normally this should be batch run of an .sql file. In our case this is the worldbank.sql added in this folder. This time we will run the content of the .sql file command by command. 
-
-For each table we will do the following steps:
-
-1. Run `CREATE TABLE table_name` command
-2. `DESCRIBE table_name` (to check the table was indeed created)
-3. `LOAD DATA INFILE ...` (to load the preloaded csv data into the table)
-4. `SELECT * FROM table_name`
-
-We will do these steps for 6 tables: cities, countries,languages,economies,currencies,populations
-
-Before we start, lets make sure the loading won't fail, if in the csv we have empty values
-
-`SET sql_mode = '';`
-
-Now lets do the first table called `cities`
-
-```
-CREATE TABLE cities (
-  city_name               VARCHAR(255),
-  country_code            VARCHAR(255),
-  city_proper_pop         REAL,
-  metroarea_pop           REAL NULL,
-  urbanarea_pop           REAL,
-  PRIMARY KEY(city_name)
-);
-```
-Check if the table was created
-
-`DESCRIBE cities`
-
-Load cities.csv preloaded on the HDD into cities table. The csv fields are delimited with ',' the entries with '\n' and the first line is header
-
-`LOAD DATA INFILE '/var/lib/mysql-files/cities.csv' INTO TABLE cities FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES`
-
-Check if the data was loaded
-
-`SELECT * FROM cities`
-
-Repeat this for the remaining 5 tables. 
+**Problem statement**
+1. In normalized database, the data is structured in a way to avoid data redundancy and support consistency. This strucure is not allways the best fit to analytics, most of the time you need to merge one or more tables to get the required data set. Joins is offering a solution for this problem.  
 
 
-# Conditional logic
+**Objectives**
+* Understanding the basics of table relationships 
+* Understanding relationship marking on database diagrams
+* Understanding the difference between different joins
+* Exercising joins
 
-## CASE
 
-Syntax form
 
-```
-CASE expression
-    WHEN test THEN result
-    …
-    ELSE otherResult
-END
-```
+<br/><br/><br/>
 
-Lets create a new field base on surface and name it geosize_group
+# Table Content:
+[Session setup](#setup)
 
-```
-SELECT country_name, continent, country_code, surface_area,
-    CASE 
-        WHEN surface_area  > 2000000
-            THEN 'large'
-        WHEN  surface_area > 350000 AND surface_area <2000000
-            THEN 'medium'
-        ELSE 
-            'small'
-    END
-    AS geosize_group   
-FROM  countries
-```
+[INNER joins](#inner)
 
-## Exercise 1
+[SELF joins](#self)
 
-Select the populations records where year is 2015, create a new field AS popsize_group to organize population size into
+[LEFT joins](#left)
 
-* 'large' (> 50 million),
+[Homework](#homework)  
 
-* 'medium' (> 1 million), and
 
-* 'small' groups.
+<br/><br/><br/>
+<a name="setup"/>
+## Session setup
 
-Select only the country code, population size, and this new popsize_group as fields.
+Install [sample database](/SQL5/sampledatabase_create.sql?raw=true) script. Credit: https://www.mysqltutorial.org/mysql-sample-database.aspx
 
-# Joins
+#### Database diagram
+![Database diagram](/SQL5/sampledatabase_diagram.png)
 
-## INNER JOIN
+<br/><br/><br/>
+<a name="inner"/>
+## INNER joins
 
 Syntax form
 ```
@@ -99,22 +50,26 @@ ON left_table.id = right_table.id;
 ```
 
 
-Join all fields
+Join all fields of order and order details
 
 ```
-SELECT *
-FROM cities 
-INNER JOIN countries 
-ON cities.country_code = countries.country_code
+SELECT * 
+FROM orders 
+INNER JOIN orderdetails 
+ON orders.orderNumber = orderdetails.orderNumber;
 ```
 
-Join selected fields. List all country codes from country tables which has related cities in city table. Show country code and city name. Order by country code. 
+Same think, but now join selected fields and create and synthetic column:
 ```
-SELECT countries.country_code, cities.city_name
-FROM cities 
-INNER JOIN countries 
-ON cities.country_code = countries.country_code
-ORDER BY cities.country_code
+SELECT 
+    t1.orderNumber,
+    t1.status,
+    SUM(quantityOrdered * priceEach) total
+FROM
+    orders t1
+INNER JOIN orderdetails t2 
+    ON t1.orderNumber = t2.orderNumber
+GROUP BY orderNumber;
 ```
 
 ## Exercise 2
