@@ -90,6 +90,7 @@ ON t1.productline = t2.productline;
 
 <br/>
 ### `Exercise2` 
+
 ### Join all fields of order and orderdetails. Display only orderNumber, status and sum of totalsales (quantityOrdered * priceEach) for each orderNumber. 
 
 <br/>
@@ -108,10 +109,10 @@ INNER JOIN another_table
 ON left_table.id = another_table.id;
 ```
 
-<br/><br/>
+<br/>
 ### `Exercise3` 
 ### We want to how the emplyoees are performing. Join orders, customers and employees and return orderDate,lastName, firstName
-
+<br/>
 
 ## SELF JOIN
 
