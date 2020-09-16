@@ -110,6 +110,7 @@ DELIMITER ;
 `CALL GetOfficeByCountry();` - you will get error, because the paramter is mandatory
 
 
+### @Exercise1: Create a stored procedure which displays the first X entries of payment table. X is IN parameter for the procedure. 
 
 #### Output parameter with OUT
 
