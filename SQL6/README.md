@@ -77,6 +77,7 @@ ORDER BY
 ## Trigger as ETL
 
 Empty log table:
+
 `TRUNCATE messages;`
 
 #### The trigger
@@ -136,6 +137,7 @@ DELIMITER ;
 #### Activating the trigger
 
 Listing the current state of the product_sales. Please note that, there is no orderNumber 16.
+
 `SELECT * FROM product_sales ORDER BY SalesId;`
 
 Now will activate the trigger by inserting into orderdetails:
@@ -187,7 +189,7 @@ SELECT * FROM product_sales WHERE product_sales.Brand = 'Vintage Cars';
 
 <br/><br/><br/>
 <a name="homework"/>
-# Term project]
+# Term project
 
 
 
