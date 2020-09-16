@@ -108,7 +108,8 @@ DELIMITER ;
 `CALL GetOfficeByCountry();` - you will get error, because the paramter is mandatory
 
 <br/><br/>
-### `Exercise1` Create a stored procedure which displays the first X entries of payment table. X is IN parameter for the procedure. 
+### `Exercise1` 
+### Create a stored procedure which displays the first X entries of payment table. X is IN parameter for the procedure. 
 <br/><br/>
 
 #### Output parameter with OUT
@@ -139,7 +140,8 @@ SELECT @total;
 ```
 
 <br/><br/>
-### `Exercise2` Create a stored procedure which returns the amount for Xth entry of payment table. X is IN parameter for the procedure. Display the returned amount.
+### `Exercise2` 
+### Create a stored procedure which returns the amount for Xth entry of payment table. X is IN parameter for the procedure. Display the returned amount.
 <br/><br/>
 
 
@@ -223,7 +225,8 @@ Note: CASE instruction is also available. We will skip CASE because you can do t
 
 
 <br/><br/>
-### `Exercise3` Create a stored procedure which returns category of a given row. Row number is IN parameter, while category is OUT parameter. Display the returned category. 
+### `Exercise3` 
+### Create a stored procedure which returns category of a given row. Row number is IN parameter, while category is OUT parameter. Display the returned category. 
 ### CAT1 - amount > 100.000, CAT2 - amount > 10.000, CAT3 - amount <= 10.000
 
 
