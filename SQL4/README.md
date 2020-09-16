@@ -138,54 +138,55 @@ ORDER BY
 
 ## LEFT JOIN
 
-Inner join countries and currencies from North America
+The next example returns customer info and related orders:
 
 ```
-SELECT country_name, region, basic_unit
-FROM countries
-INNER JOIN currencies
-USING (country_code)
-WHERE region = 'North America' 
-ORDER BY region;
+SELECT
+    c.customerNumber,
+    customerName,
+    orderNumber,
+    status
+FROM
+    customers c
+LEFT JOIN orders o 
+    ON c.customerNumber = o.customerNumber;
 ```
 
-Same with left join
+#### Difference between LEFT and INNER join
+The previous example returns all customers including the customers who have no order. If a customer has no order, the values in the column orderNumber and status are NULL. Try the same query with INNER join.
 
-```
-SELECT country_name,region, basic_unit
-FROM countries
-LEFT JOIN currencies
-USING (country_code)
-WHERE region = 'North America' 
-ORDER BY region;
-```
 
-Same with left join and null check 
-
+#### WHERE with joins
 ```
-SELECT country_name, region, basic_unit
-FROM countries
-LEFT JOIN currencies
-USING (country_code)
-WHERE region = 'North America' AND currencies.country_code IS NULL
-ORDER BY region;
+SELECT 
+    o.orderNumber, 
+    customerNumber, 
+    productCode
+FROM
+    orders o
+LEFT JOIN orderDetails 
+    USING (orderNumber)
+WHERE
+    orderNumber = 10123;
 ```
 
-## Exercise 4
-Left join countries with economies. List country_name, region, gdp_percapita for the first 5 records of year 2010. 
+#### ON 
 
-
-## RIGHT JOIN
-
-Rarely used. It is a mirror of left join. Previous exercise with right join: 
-
+In the next query, the WHERE clause is added to ON, yet, it will have a different meaning. In this case, the query returns all orders but only the order 10123 will have line items associated with it as in the following picture:
 ```
-SELECT country_name, region, gdp_percapita
-FROM economies 
-RIGHT JOIN countries 
-USING(country_code)
-where year = 2010 LIMIT 5;
+SELECT 
+    o.orderNumber, 
+    customerNumber, 
+    productCode
+FROM
+    orders o
+LEFT JOIN orderDetails d 
+    ON o.orderNumber = d.orderNumber AND 
+       o.orderNumber = 10123;
 ```
+
+`Note` Right join is the mirror of the left join, you can achive the same results with both. Rarely used.
+
 
 
 
