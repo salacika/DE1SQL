@@ -3,9 +3,7 @@
 **Teaching**: 90 min
 
 **Problem statement**
-1. As analyst, you need to separate your analytical data store from the operational one. How would you do that?
-
-How do you propose to solve these problems?
+1. As analyst, you would like to create a separate analytical data layer for your analytics. How would you do that?
 
 **Objectives**
 * Understanding the difference between Operational and Analytical data layer
