@@ -222,6 +222,13 @@ SELECT @level;
 Note: CASE instruction is also available. We will skip CASE because you can do the same with IF. Sometimes CASE looks nicer or might be even faster for the interpreter. 
 
 
+<br/><br/>
+### `Exercise3` Create a stored procedure which returns category of a given row. Row number is IN parameter, while category is OUT parameter. Display the returned category. 
+### CAT1 - amount > 100.000, CAT2 - amount > 10.000, CAT3 - amount <= 10.000
+
+
+
+
 <br/><br/><br/>
 <a name="loops"/>
 # Iterating with LOOP
