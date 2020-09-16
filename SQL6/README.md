@@ -3,7 +3,7 @@
 **Teaching**: 90 min
 
 **Problem statement**
-1. As analyst, you would like to create a separate analytical data layer for your analytics. How would you do that?
+1. As analyst, you would like to create a dedicated analytical data layer for your analytics. How would you do that?
 
 **Objectives**
 * Understanding the difference between Operational and Analytical data layer
