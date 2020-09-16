@@ -8,7 +8,7 @@
 **Objectives**
 * Understanding the difference between Operational and Analytical data layer
 * Introducing Data Warehouse architectures
-* Building an minimilastic analytical data store 
+* Building a denormalized analytical data store 
 * Building an ETL pipeline using MySQL Triggers 
 * Building data marts with MySQL View
 
