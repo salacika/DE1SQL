@@ -60,14 +60,6 @@ INNER JOIN productlines
 ON products.productline = productlines.productline;
 ```
 
-Same thing, but now join only selected fields and use aliasing:
-```
-SELECT t1.productLine, t2.textDescription
-FROM products t1
-INNER JOIN productlines t2 
-ON t1.productline = t2.productline;
-```
-
 Same thing, but now with USING:
 ```
 SELECT t1.productLine, t2.textDescription
@@ -76,21 +68,37 @@ INNER JOIN productlines t2
 USING(productline);
 ```
 
+Same thing with aliasing:
+```
+SELECT *
+FROM products t1
+INNER JOIN productlines t2 
+USING(productline);
+```
+
+#### Select specific columns
+```
+SELECT t1.productLine, t2.textDescription
+FROM products t1
+INNER JOIN productlines t2 
+ON t1.productline = t2.productline;
+```
+
 <br/><br/>
 ### `Exercise1` 
 ### Join all fields of order and orderdetails
 
-<br/><br/>
+<br/>
 ### `Exercise2` 
 ### Join all fields of order and orderdetails. Display only orderNumber, status and sum of totalsales (quantityOrdered * priceEach) for each orderNumber. 
 
+<br/>
 
 
 
+### Multiple INNER joins
 
-## MULTIPLE INNER JOINS
-
-Syntax form
+#### Syntax 
 ```
 SELECT *
 FROM left_table
@@ -100,36 +108,10 @@ INNER JOIN another_table
 ON left_table.id = another_table.id;
 ```
 
-## Exercise 3
-Using multiple inner joins list city names, belonging country, capital of the country and inflation rate for the given country. In which city we had the lowest inflation? Send me the SQL query and the city name.
+<br/><br/>
+### `Exercise3` 
+### We want to how the emplyoees are performing. Join orders, customers and employees and return orderDate,lastName, firstName
 
-
-## USING
-
-This how we can inner join countries with languages
-```
-SELECT *
-FROM countries 
-INNER JOIN languages 
-ON countries.country_code = languages.country_code
-```
-
-The is how we count the number of result records for the previous query
-```
-SELECT COUNT(*)
-FROM countries 
-INNER JOIN languages 
-ON countries.country_code = languages.country_code
-```
-
-Now, there is a shorcut if the key of the left table and the key of the right table has the same name:
-
-```
-SELECT COUNT(*)
-FROM countries 
-INNER JOIN languages 
-USING (country_code)
-```
 
 ## SELF JOIN
 
