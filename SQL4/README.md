@@ -41,7 +41,7 @@ Install [sample database](/SQL5/sampledatabase_create.sql?raw=true) script. Cred
 <a name="inner"/>
 ## INNER joins
 
-Syntax form
+#### Syntax 
 ```
 SELECT *
 FROM left_table
@@ -50,35 +50,43 @@ ON left_table.id = right_table.id;
 ```
 
 
-Join all fields of order and order details
+#### Basic forms
+Join all fields of products and productlines details
 
 ```
 SELECT * 
-FROM orders 
-INNER JOIN orderdetails 
-ON orders.orderNumber = orderdetails.orderNumber;
+FROM products 
+INNER JOIN productlines  
+ON products.productline = productlines.productline;
 ```
 
-Same think, but now join selected fields and create and synthetic column:
+Same thing, but now join only selected fields and use aliasing:
 ```
-SELECT 
-    t1.orderNumber,
-    t1.status,
-    SUM(quantityOrdered * priceEach) total
-FROM
-    orders t1
-INNER JOIN orderdetails t2 
-    ON t1.orderNumber = t2.orderNumber
-GROUP BY orderNumber;
+SELECT t1.productLine, t2.textDescription
+FROM products t1
+INNER JOIN productlines t2 
+ON t1.productline = t2.productline;
 ```
 
-## Exercise 2
+Same thing, but now with USING:
+```
+SELECT t1.productLine, t2.textDescription
+FROM products t1
+INNER JOIN productlines t2 
+USING(productline);
+```
 
-List GDP per capita by spoken language. 
+<br/><br/>
+### `Exercise1` 
+### Join all fields of order and orderdetails
 
-Hints: 
-* you have to use economies and language table
-* you have to aggregate by spoken language
+<br/><br/>
+### `Exercise2` 
+### Join all fields of order and orderdetails. Display only orderNumber, status and sum of totalsales (quantityOrdered * priceEach) for each orderNumber. 
+
+
+
+
 
 ## MULTIPLE INNER JOINS
 
