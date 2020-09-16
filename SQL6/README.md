@@ -3,18 +3,14 @@
 **Teaching**: 90 min
 
 **Problem statement**
-1. As analyst, you are working on DB with corrupted data. Cleaning/fixing it requires extensive business logic. 
-2. As analyst, you are running several very similar and heavy(long) queries, which differs from each other only by a few parameters. Maintaining these queries is a nightmare.
-
-How do you propose to solve these problems?
+1. As analyst, you would like to create a dedicated analytical data layer for your analytics. How would you do that?
 
 **Objectives**
-* Introducing procedural elements of SQL databases
-* Introducing Stored Procedures with parameters
-* Introducing IF/LOOP/CURSOR
-* Understanding the difference of processing data in the database vs outside of of database engine
-* Understanding the advantages and disadvantages of stored procedures
-* Example with fixing data
+* Understanding the difference between Operational and Analytical data layer
+* Introducing Data Warehouse architectures
+* Building a denormalized analytical data store 
+* Building an ETL pipeline using MySQL Triggers 
+* Building data marts with MySQL View
 
 
 
@@ -23,19 +19,15 @@ How do you propose to solve these problems?
 # Table Content:
 [Session setup](#setup)
 
-[A basic stored procedure](#basic)
+[Creating the analytical data store](#dw)
 
-[A stored procedures with parameters](#parameter)
+[Trigger as ETL](#etl)
 
-[Example with IF and declaring variables](#if)
+[Data marts with Views](#datamart)
 
-[Iterating with LOOP](#loops)
+[Security with Views](#security)
 
-[Iterating trough a table with CURSOR](#cursor)
-
-[Advantages/disadvantages of stored procedures](#advantages)
-
-[Homework](#homework)  
+[Term project](#homework)  
 
 
 <br/><br/><br/>
@@ -48,333 +40,158 @@ Install [sample database](/SQL5/sampledatabase_create.sql?raw=true) script. Cred
 ![Database diagram](/SQL5/sampledatabase_diagram.png)
 
 <br/><br/><br/>
-<a name="basic"/>
-## A basic stored procedure
+<a name="dw"/>
+## Creating the analytical data store
 
-#### Creating the stored procedure
-
-```
-DROP PROCEDURE IF EXISTS GetAllProducts;
-
-DELIMITER //
-
-CREATE PROCEDURE GetAllProducts()
-BEGIN
-	SELECT *  FROM products;
-END //
-
-DELIMITER ;
-```
-`NOTE1:` Mind the delimiter: the default delimiter in SQL is ";". In a stored procedure, you'll have potentially multiple statements ending with ";" - so you need the define a second delimiter to end the whole stored procedure. On the end of the routine, we will set the default delimiter back to ";"
-
-`NOTE2:` You cannot edit a stored procedure, once created, you need to drop and recreate: `DROP PROCEDURE IF EXISTS ...` 
-
-
-#### Executing the stored procedure
-
-`CALL GetAllProducts();`
-
-
-<br/><br/><br/>
-<a name="paramter"/>
-## A stored procedures with parameters
-
-
-#### Input parameter with IN
-
-The following example creates a stored procedure that finds all offices that locate in a country specified by the input parameter countryName
-```
-DROP PROCEDURE IF EXISTS GetOfficeByCountry;
-
-DELIMITER //
-
-CREATE PROCEDURE GetOfficeByCountry(
-	IN countryName VARCHAR(255)
-)
-BEGIN
-	SELECT * 
- 		FROM offices
-			WHERE country = countryName;
-END //
-DELIMITER ;
-```
-
-#### Executing with multiple parameters
-
-`CALL GetOfficeByCountry('USA');`
-
-`CALL GetOfficeByCountry('France');`
-
-`CALL GetOfficeByCountry();` - you will get error, because the paramter is mandatory
-
-<br/><br/>
-### `Exercise1` 
-### Create a stored procedure which displays the first X entries of payment table. X is IN parameter for the procedure. 
-<br/><br/>
-
-#### Output parameter with OUT
-
-The following stored procedure returns the number of orders by order status.
-```
-DROP PROCEDURE IF EXISTS GetOrderCountByStatus;
-
-DELIMITER $$
-
-CREATE PROCEDURE GetOrderCountByStatus (
-	IN  orderStatus VARCHAR(25),
-	OUT total INT
-)
-BEGIN
-	SELECT COUNT(orderNumber)
-	INTO total
-	FROM orders
-	WHERE status = orderStatus;
-END$$
-DELIMITER ;
-```
-
-#### Executing the procedure and displaying the result
-```
-CALL GetOrderCountByStatus('Shipped',@total);
-SELECT @total;
-```
-
-<br/><br/>
-### `Exercise2` 
-### Create a stored procedure which returns the amount for Xth entry of payment table. X is IN parameter for the procedure. Display the returned amount.
-<br/><br/>
-
-
-#### Using the INOUT parameter
-
-In this example, the stored procedure SetCounter()  accepts one INOUT  parameter ( counter ) and one IN parameter ( inc ). It increases the counter ( counter ) by the value of specified by the inc parameter.
+We will use a query created in Homework 3. This creates a denormalized snapshot of the operational tables for product_sales subject. 
 
 ```
-DROP PROCEDURE IF EXISTS SetCounter;
+DROP TABLE IF EXISTS product_sales;
 
-DELIMITER $$
-
-CREATE PROCEDURE SetCounter(
-	INOUT counter INT,
-    	IN inc INT
-)
-BEGIN
-	SET counter = counter + inc;
-END$$
-DELIMITER ;
-```
-
-#### Initializing the input parameter and repeating the execution and displaying result several times
-```
-SET @counter = 1;
-CALL SetCounter(@counter,1); 
-SELECT @counter;
-CALL SetCounter(@counter,1); 
-SELECT @counter;
-CALL SetCounter(counter,1); 
-SELECT @counter;
+CREATE TABLE product_sales AS
+SELECT 
+   orders.orderNumber AS SalesId, 
+   orderdetails.priceEach AS Price, 
+   orderdetails.quantityOrdered AS Unit,
+   products.productName AS Product,
+   products.productLine As Brand,   
+   customers.city As City,
+   customers.country As Country,   
+   orders.orderDate AS Date,
+   WEEK(orders.orderDate) as WeekOfYear
+FROM
+    orders
+INNER JOIN
+    orderdetails USING (orderNumber)
+INNER JOIN
+    products USING (productCode)
+INNER JOIN
+    customers USING (customerNumber)
+ORDER BY 
+    orderNumber, 
+    orderLineNumber;
 ```
 
 <br/><br/><br/>
-<a name="if"/>
-## Example with IF and declaring variables
+<a name="etl"/>
+## Trigger as ETL
 
-The IF syntax can have different forms:
-* IF-THEN
-* IF-THEN-ELSE
-* IF-THEN-ELSEIF-ELSE 
+Empty log table:
 
-Assigning Customer Level based on credit. Mind the usage of credit variable used the procedure. 
+`TRUNCATE messages;`
+
+#### The trigger
+Creating a trigger which is activated if an insert is executed into orderdetails table. Once triggered will insert a new line in our previously created data store.
 
 ```
-DROP PROCEDURE IF EXISTS GetCustomerLevel;
+DROP TRIGGER IF EXISTS after_order_insert; 
 
 DELIMITER $$
 
-CREATE PROCEDURE GetCustomerLevel(
-    	IN  pCustomerNumber INT, 
-    	OUT pCustomerLevel  VARCHAR(20)
-)
+CREATE TRIGGER after_order_insert
+AFTER INSERT
+ON orderdetails FOR EACH ROW
 BEGIN
-	DECLARE credit DECIMAL DEFAULT 0;
+	
+	-- log the order number of the newley inserted order
+    	INSERT INTO messages SELECT CONCAT('new orderNumber: ', NEW.orderNumber);
 
-	SELECT creditLimit 
-		INTO credit
-			FROM customers
-				WHERE customerNumber = pCustomerNumber;
-
-	IF credit > 50000 THEN
-		SET pCustomerLevel = 'PLATINUM';
-	ELSE
-		SET pCustomerLevel = 'NOT PLATINUM';
-	END IF;
-END$$
-DELIMITER ;
-
-```
-
-#### Execution for a specific customer
-
-Calling the stored procedure for customer number 447  and show the value of the OUT parameter pCustomerLevel:
-```
-CALL GetCustomerLevel(447, @level);
-SELECT @level;
-```
-
-Note: CASE instruction is also available. We will skip CASE because you can do the same with IF. Sometimes CASE looks nicer or might be even faster for the interpreter. 
-
-
-<br/><br/>
-### `Exercise3` 
-### Create a stored procedure which returns category of a given row. Row number is IN parameter, while category is OUT parameter. Display the returned category. 
-### CAT1 - amount > 100.000, CAT2 - amount > 10.000, CAT3 - amount <= 10.000
-
-
-
-
-<br/><br/><br/>
-<a name="loops"/>
-# Iterating with LOOP
-
-Basic loop counting to 5 and display it:
-
-```
-DROP PROCEDURE IF EXISTS LoopDemo;
-
-DELIMITER $$
-CREATE PROCEDURE LoopDemo()
-BEGIN
-	DECLARE x  INT;
-    
-	SET x = 0;
+	-- archive the order and assosiated table entries to product_sales
+  	INSERT INTO product_sales
+	SELECT 
+	   orders.orderNumber AS SalesId, 
+	   orderdetails.priceEach AS Price, 
+	   orderdetails.quantityOrdered AS Unit,
+	   products.productName AS Product,
+	   products.productLine As Brand,
+	   customers.city As City,
+	   customers.country As Country,   
+	   orders.orderDate AS Date,
+	   WEEK(orders.orderDate) as WeekOfYear
+	FROM
+		orders
+	INNER JOIN
+		orderdetails USING (orderNumber)
+	INNER JOIN
+		products USING (productCode)
+	INNER JOIN
+		customers USING (customerNumber)
+	WHERE orderNumber = NEW.orderNumber
+	ORDER BY 
+		orderNumber, 
+		orderLineNumber;
         
-	myloop: LOOP 
-	           
-		SET  x = x + 1;
-    		SELECT x;
-           
-		IF  (x = 5) THEN
-			LEAVE myloop;
-         	END  IF;
-         
-	END LOOP myloop;
-END$$
-DELIMITER ;
-```
-#### Execution and tweaks:
-`CALL LoopDemo();`
+END $$
 
-Displaying with SELECT is not ideal if you have a long loop. You better create a simple log table named "messages" and write your logs into it:
-
-`CREATE TABLE messages (message varchar(100) NOT NULL);`
-
-and add the next line instead of `SELECT x;`:
-
-`INSERT INTO messages SELECT CONCAT('x:',x);`
-
-also add `TRUNCATE messages;` before the loop.
-
-After re-execution check messages: `SELECT * FROM messages;`
-
-Note: You can you other interating commands instead of LOOP, such as WHILE, REPEAT, but similarly to IF/CASE, with the LOOP you can cover every case. 
-
-
-<br/><br/><br/>
-<a name="cursor"/>
-## Iterating trough a table with CURSOR
-
-#### Fixing US phones in customer table 
-The aim of the next snippet is to add the international prefix to US domestic format.
-
-These are the possible formats in US:
-* 754-3010 Local
-* (541) 754-3010 Domestic
-* +1-541-754-3010 International
-* 1-541-754-3010 Dialed in the US
-
-```
-DROP PROCEDURE IF EXISTS FixUSPhones; 
-
-DELIMITER $$
-
-CREATE PROCEDURE FixUSPhones ()
-BEGIN
-	DECLARE finished INTEGER DEFAULT 0;
-	DECLARE phone varchar(50) DEFAULT "x";
-	DECLARE customerNumber INT DEFAULT 0;
-    	DECLARE country varchar(50) DEFAULT "";
-
-	-- declare cursor for customer
-	DECLARE curPhone
-		CURSOR FOR 
-            		SELECT customers.customerNumber, customers.phone, customers.country 
-				FROM classicmodels.customers;
-
-	-- declare NOT FOUND handler
-	DECLARE CONTINUE HANDLER 
-        FOR NOT FOUND SET finished = 1;
-
-	OPEN curPhone;
-    
-    	-- create a copy of the customer table 
-	DROP TABLE IF EXISTS classicmodels.fixed_customers;
-	CREATE TABLE classicmodels.fixed_customers LIKE classicmodels.customers;
-	INSERT fixed_customers SELECT * FROM classicmodels.customers;
-
-	fixPhone: LOOP
-		FETCH curPhone INTO customerNumber,phone, country;
-		IF finished = 1 THEN 
-			LEAVE fixPhone;
-		END IF;
-		 
-		-- insert into messages select concat('country is: ', country, ' and phone is: ', phone);
-         
-		IF country = 'USA'  THEN
-			IF phone NOT LIKE '+%' THEN
-				IF LENGTH(phone) = 10 THEN 
-					SET  phone = CONCAT('+1',phone);
-					UPDATE classicmodels.fixed_customers 
-						SET fixed_customers.phone=phone 
-							WHERE fixed_customers.customerNumber = customerNumber;
-                		END IF;    
-			END IF;
-       		 END IF;
-
-	END LOOP fixPhone;
-	CLOSE curPhone;
-
-END$$
 DELIMITER ;
 ```
 
-Execute the procedure:
-`CALL FixUSPhones();`
+<br>
 
-Check the resulted new table:
-`SELECT * FROM fixed_customers where country = 'USA';`
+`E` - Extract: Joining the tables for the operational layer is an extract operation
+
+`T` - Transform: We don't have glamorous transformations here, only a WeekOfYear covering this part. Nevertheless, please note that you call a store procedure form trigger or even use procedural language to do transformation in the trigger itself. 
+
+`L` - Load: Inserting into product_sales represents the load part of the ETL
+
+#### Activating the trigger
+
+Listing the current state of the product_sales. Please note that, there is no orderNumber 16.
+
+`SELECT * FROM product_sales ORDER BY SalesId;`
+
+Now will activate the trigger by inserting into orderdetails:
+```
+INSERT INTO orders  VALUES(16,'2020-10-01','2020-10-01','2020-10-01','Done','',131);
+INSERT INTO orderdetails  VALUES(16,'S18_1749','1','10',1);
+```
+
+Check product_sales again, you should have orderNumber 16:
+`SELECT * FROM product_sales ORDER BY SalesId;`
+
+`Note` Triggers are not the only way to initiate an ETL process. In fact for performance reasons, it is advised to use the Event engine on large data sets. For more information check: https://www.mysqltutorial.org/mysql-triggers/working-mysql-scheduled-event/
 
 
 <br/><br/><br/>
-<a name="advantages"/>
-# Advantages/disadvantages of stored procedures
+<a name="datamart"/>
+# Data marts with Views
 
-#### Advantages
-* Embedded processing, no need to extract data to process it with an external procedural language or tool - this is potentially faster and reduces network traffic
-* Maintainable code, avoiding duplicates
-* Better security, better control over data access
+With views we can define sections of the datastore and prepare them for a BI operation such as reporting.
 
-#### Disadvantages
-* Impact over server resources (CPU, memory)
-* Debugging / Trouble shooting  is not the most advanced
-* Overall the business logic written in stored procedures can be written easier/nicer in other languages 
+View of sales in USA:
+```
+DROP VIEW IF EXISTS USA;
+
+CREATE VIEW `USA` AS
+SELECT * FROM product_sales WHERE country = 'USA';
+```
+
+View of sales in 2004:
+```
+DROP VIEW IF EXISTS Year_2004;
+
+CREATE VIEW `Year_2004` AS
+SELECT * FROM product_sales WHERE product_sales.Date LIKE '2004%';
+```
+
+View of sales for a specific brand (Vintage_Cars)
+```
+DROP VIEW IF EXISTS Vintage_Cars;
+
+CREATE VIEW `Vintage_Cars` AS
+SELECT * FROM product_sales WHERE product_sales.Brand = 'Vintage Cars';
+```
+
+`Note` the content of Views are generated on-the-fly. For performance reasons, in analytics, so called materialized views are prefered on large data set. This is not supported by MySQL, but there are several ways to implemented. Here is an example: https://fromdual.com/mysql-materialized-views
+
 
 
 
 <br/><br/><br/>
 <a name="homework"/>
-# Homework
+# Term project
 
-Continue the last script: complete the US local phones to international using the city code. Hint: for this you need to find a data source with domestic prefixes mapped to cities, import as a table to the database and add new business logic to the procedure.
+
 
 
 
