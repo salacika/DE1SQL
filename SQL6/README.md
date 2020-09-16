@@ -126,6 +126,7 @@ DELIMITER ;
 ```
 
 <br>
+
 `E` - Extract: Joining the tables for the operational layer is an extract operation
 
 `T` - Transform: We don't have glamorous transformations here, only a WeekOfYear covering this part. Nevertheless, please note that you call a store procedure form trigger or even use procedural language to do transformation in the trigger itself. 
