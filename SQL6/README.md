@@ -43,7 +43,7 @@ Install [sample database](/SQL5/sampledatabase_create.sql?raw=true) script. Cred
 <a name="dw"/>
 ## Creating the analytical data store
 
-We will use a query created in Homework 3.
+We will use a query created in Homework 3. This creates a denormalized snapshot of the operational tables for product_sales subject. 
 
 ```
 DROP TABLE IF EXISTS product_sales;
@@ -126,9 +126,9 @@ DELIMITER ;
 ```
 
 <br>
-E - Extract: Joining the tables for the operational layer is an extract operation
-T - Transform: We don't have glamorous transformations here, only a WeekOfYear covering this part. Nevertheless, please note that you call a store procedure form trigger or even use procedural language to do transformation in the trigger itself. 
-L - Load: Inserting into product_sales represents the load part of the ETL
+`E` - Extract: Joining the tables for the operational layer is an extract operation
+`T` - Transform: We don't have glamorous transformations here, only a WeekOfYear covering this part. Nevertheless, please note that you call a store procedure form trigger or even use procedural language to do transformation in the trigger itself. 
+`L` - Load: Inserting into product_sales represents the load part of the ETL
 
 #### Activating the trigger
 
