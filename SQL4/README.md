@@ -86,12 +86,11 @@ ON t1.productline = t2.productline;
 
 <br/><br/>
 ### `Exercise1` 
-### Join all fields of order and orderdetails
+#### Join all fields of order and orderdetails
 
 <br/>
 ### `Exercise2` 
-
-### Join all fields of order and orderdetails. Display only orderNumber, status and sum of totalsales (quantityOrdered * priceEach) for each orderNumber. 
+#### Join all fields of order and orderdetails. Display only orderNumber, status and sum of totalsales (quantityOrdered * priceEach) for each orderNumber. 
 
 <br/>
 
