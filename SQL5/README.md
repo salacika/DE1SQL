@@ -108,7 +108,7 @@ DELIMITER ;
 `CALL GetOfficeByCountry();` - you will get error, because the paramter is mandatory
 
 
-### `@Exercise1` Create a stored procedure which displays the first X entries of payment table. X is IN parameter for the procedure. 
+## `Exercise1` Create a stored procedure which displays the first X entries of payment table. X is IN parameter for the procedure. 
 
 #### Output parameter with OUT
 
@@ -137,7 +137,7 @@ CALL GetOrderCountByStatus('Shipped',@total);
 SELECT @total;
 ```
 
-### `@Exercise2` Create a stored procedure which returns the amount for Xth entry of payment table. X is IN parameter for the procedure. Display the returned amount.
+## `Exercise2` Create a stored procedure which returns the amount for Xth entry of payment table. X is IN parameter for the procedure. Display the returned amount.
 
 
 
