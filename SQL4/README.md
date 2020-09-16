@@ -117,22 +117,24 @@ ON left_table.id = another_table.id;
 
 ## SELF JOIN
 
-In cities table we have 2 cities for United Arab Emirates (ARE):
-
-`SELECT country_code,city_name FROM cities WHERE country_code = 'ARE'`  
-
-Let's create a list with all combination these 2 cities
+Employee table represents a hierarhy, which can be flantend with a self join. The next query displays the Manager, Direct report pairs:
 
 ```
-SELECT p1.country_code, 
-       p1.city_name as city1,
-       p2.city_name as city2
-FROM cities AS p1
-INNER JOIN cities AS p2
-USING(country_code)
-WHERE country_code = 'ARE' 
-ORDER BY country_code
+SELECT 
+    CONCAT(m.lastName, ', ', m.firstName) AS Manager,
+    CONCAT(e.lastName, ', ', e.firstName) AS 'Direct report'
+FROM
+    employees e
+INNER JOIN employees m ON 
+    m.employeeNumber = e.reportsTo
+ORDER BY 
+    Manager;
 ```
+
+### `Exercise4` 
+#### Why President is not in the list?
+
+
 
 ## LEFT JOIN
 
