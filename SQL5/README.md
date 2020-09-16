@@ -139,6 +139,9 @@ CALL GetOrderCountByStatus('Shipped',@total);
 SELECT @total;
 ```
 
+### @Exercise2: Create a stored procedure which returns the amount for Xth entry of payment table. X is IN parameter for the procedure. Display the returned amount.
+
+
 
 #### Using the INOUT parameter
 
