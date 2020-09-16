@@ -134,7 +134,7 @@ ORDER BY
 ### `Exercise4` 
 #### Why President is not in the list?
 
-
+<br>
 
 ## LEFT JOIN
 
@@ -188,7 +188,11 @@ LEFT JOIN orderDetails d
 ```
 
 
+<br/><br/><br/>
+<a name="homework"/>
+# Homework
 
+Continue the last script: complete the US local phones to international using the city code. Hint: for this you need to find a data source with domestic prefixes mapped to cities, import as a table to the database and add new business logic to the procedure.
 
 
 
