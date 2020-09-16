@@ -109,9 +109,11 @@ ON left_table.id = another_table.id;
 ```
 
 <br/>
+
 ### `Exercise3` 
-### We want to how the emplyoees are performing. Join orders, customers and employees and return orderDate,lastName, firstName
-<br/>
+#### We want to how the emplyoees are performing. Join orders, customers and employees and return orderDate,lastName, firstName
+
+<br/><br/>
 
 ## SELF JOIN
 
