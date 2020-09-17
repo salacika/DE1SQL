@@ -1,3 +1,5 @@
+@TODO: add case
+
 ## Groupping and aggregation
 
 ## COUNT

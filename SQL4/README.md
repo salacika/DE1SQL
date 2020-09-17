@@ -1,96 +1,47 @@
-# New data from World Bank
+# Overview
 
-We will add a new set of tables from a World Bank database (http://databank.worldbank.org/data/databases)
+**Teaching**: 90 min
 
-Normally this should be batch run of an .sql file. In our case this is the worldbank.sql added in this folder. This time we will run the content of the .sql file command by command. 
-
-For each table we will do the following steps:
-
-1. Run `CREATE TABLE table_name` command
-2. `DESCRIBE table_name` (to check the table was indeed created)
-3. `LOAD DATA INFILE ...` (to load the preloaded csv data into the table)
-4. `SELECT * FROM table_name`
-
-We will do these steps for 6 tables: cities, countries,languages,economies,currencies,populations
-
-Before we start, lets make sure the loading won't fail, if in the csv we have empty values
-
-`SET sql_mode = '';`
-
-Now lets do the first table called `cities`
-
-```
-CREATE TABLE cities (
-  city_name               VARCHAR(255),
-  country_code            VARCHAR(255),
-  city_proper_pop         REAL,
-  metroarea_pop           REAL NULL,
-  urbanarea_pop           REAL,
-  PRIMARY KEY(city_name)
-);
-```
-Check if the table was created
-
-`DESCRIBE cities`
-
-Load cities.csv preloaded on the HDD into cities table. The csv fields are delimited with ',' the entries with '\n' and the first line is header
-
-`LOAD DATA INFILE '/var/lib/mysql-files/cities.csv' INTO TABLE cities FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES`
-
-Check if the data was loaded
-
-`SELECT * FROM cities`
-
-Repeat this for the remaining 5 tables. 
+**Problem statement**
+1. In normalized database, the data is structured in a way to avoid data redundancy and support consistency. This strucure is not allways the best fit to analytics, most of the time you need to merge one or more tables to get the required data set. Joins is offering a solution for this problem.  
 
 
-# Conditional logic
+**Objectives**
+* Understanding the basics of table relationships 
+* Understanding relationship marking on database diagrams
+* Understanding the difference between different joins
+* Exercising joins
 
-## CASE
 
-Syntax form
 
-```
-CASE expression
-    WHEN test THEN result
-    …
-    ELSE otherResult
-END
-```
+<br/><br/><br/>
 
-Lets create a new field base on surface and name it geosize_group
+# Table Content:
+[Session setup](#setup)
 
-```
-SELECT country_name, continent, country_code, surface_area,
-    CASE 
-        WHEN surface_area  > 2000000
-            THEN 'large'
-        WHEN  surface_area > 350000 AND surface_area <2000000
-            THEN 'medium'
-        ELSE 
-            'small'
-    END
-    AS geosize_group   
-FROM  countries
-```
+[INNER joins](#inner)
 
-## Exercise 1
+[SELF joins](#self)
 
-Select the populations records where year is 2015, create a new field AS popsize_group to organize population size into
+[LEFT joins](#left)
 
-* 'large' (> 50 million),
+[Homework](#homework)  
 
-* 'medium' (> 1 million), and
 
-* 'small' groups.
+<br/><br/><br/>
+<a name="setup"/>
+## Session setup
 
-Select only the country code, population size, and this new popsize_group as fields.
+Install [sample database](/SQL5/sampledatabase_create.sql?raw=true) script. Credit: https://www.mysqltutorial.org/mysql-sample-database.aspx
 
-# Joins
+#### Database diagram
+![Database diagram](/SQL5/sampledatabase_diagram.png)
 
-## INNER JOIN
+<br/><br/><br/>
+<a name="inner"/>
+## INNER joins
 
-Syntax form
+#### Syntax 
 ```
 SELECT *
 FROM left_table
@@ -99,35 +50,55 @@ ON left_table.id = right_table.id;
 ```
 
 
-Join all fields
+#### Basic forms
+Join all fields of products and productlines details
 
+```
+SELECT * 
+FROM products 
+INNER JOIN productlines  
+ON products.productline = productlines.productline;
+```
+
+Same thing, but now with USING:
+```
+SELECT t1.productLine, t2.textDescription
+FROM products t1
+INNER JOIN productlines t2 
+USING(productline);
+```
+
+Same thing with aliasing:
 ```
 SELECT *
-FROM cities 
-INNER JOIN countries 
-ON cities.country_code = countries.country_code
+FROM products t1
+INNER JOIN productlines t2 
+USING(productline);
 ```
 
-Join selected fields. List all country codes from country tables which has related cities in city table. Show country code and city name. Order by country code. 
+#### Select specific columns
 ```
-SELECT countries.country_code, cities.city_name
-FROM cities 
-INNER JOIN countries 
-ON cities.country_code = countries.country_code
-ORDER BY cities.country_code
+SELECT t1.productLine, t2.textDescription
+FROM products t1
+INNER JOIN productlines t2 
+ON t1.productline = t2.productline;
 ```
 
-## Exercise 2
+<br/><br/>
+### `Exercise1` 
+#### Join all fields of order and orderdetails
 
-List GDP per capita by spoken language. 
 
-Hints: 
-* you have to use economies and language table
-* you have to aggregate by spoken language
+### `Exercise2` 
+#### Join all fields of order and orderdetails. Display only orderNumber, status and sum of totalsales (quantityOrdered * priceEach) for each orderNumber. 
 
-## MULTIPLE INNER JOINS
+<br/>
 
-Syntax form
+
+
+### Multiple INNER joins
+
+#### Syntax 
 ```
 SELECT *
 FROM left_table
@@ -137,108 +108,96 @@ INNER JOIN another_table
 ON left_table.id = another_table.id;
 ```
 
-## Exercise 3
-Using multiple inner joins list city names, belonging country, capital of the country and inflation rate for the given country. In which city we had the lowest inflation? Send me the SQL query and the city name.
+<br/>
 
+### `Exercise3` 
+#### We want to how the emplyoees are performing. Join orders, customers and employees and return orderDate,lastName, firstName
 
-## USING
-
-This how we can inner join countries with languages
-```
-SELECT *
-FROM countries 
-INNER JOIN languages 
-ON countries.country_code = languages.country_code
-```
-
-The is how we count the number of result records for the previous query
-```
-SELECT COUNT(*)
-FROM countries 
-INNER JOIN languages 
-ON countries.country_code = languages.country_code
-```
-
-Now, there is a shorcut if the key of the left table and the key of the right table has the same name:
-
-```
-SELECT COUNT(*)
-FROM countries 
-INNER JOIN languages 
-USING (country_code)
-```
+<br/><br/>
 
 ## SELF JOIN
 
-In cities table we have 2 cities for United Arab Emirates (ARE):
-
-`SELECT country_code,city_name FROM cities WHERE country_code = 'ARE'`  
-
-Let's create a list with all combination these 2 cities
+Employee table represents a hierarhy, which can be flantend with a self join. The next query displays the Manager, Direct report pairs:
 
 ```
-SELECT p1.country_code, 
-       p1.city_name as city1,
-       p2.city_name as city2
-FROM cities AS p1
-INNER JOIN cities AS p2
-USING(country_code)
-WHERE country_code = 'ARE' 
-ORDER BY country_code
+SELECT 
+    CONCAT(m.lastName, ', ', m.firstName) AS Manager,
+    CONCAT(e.lastName, ', ', e.firstName) AS 'Direct report'
+FROM
+    employees e
+INNER JOIN employees m ON 
+    m.employeeNumber = e.reportsTo
+ORDER BY 
+    Manager;
 ```
+
+### `Exercise4` 
+#### Why President is not in the list?
+
+<br>
 
 ## LEFT JOIN
 
-Inner join countries and currencies from North America
+The next example returns customer info and related orders:
 
 ```
-SELECT country_name, region, basic_unit
-FROM countries
-INNER JOIN currencies
-USING (country_code)
-WHERE region = 'North America' 
-ORDER BY region;
+SELECT
+    c.customerNumber,
+    customerName,
+    orderNumber,
+    status
+FROM
+    customers c
+LEFT JOIN orders o 
+    ON c.customerNumber = o.customerNumber;
 ```
 
-Same with left join
+#### Difference between LEFT and INNER join
+The previous example returns all customers including the customers who have no order. If a customer has no order, the values in the column orderNumber and status are NULL. Try the same query with INNER join.
 
-```
-SELECT country_name,region, basic_unit
-FROM countries
-LEFT JOIN currencies
-USING (country_code)
-WHERE region = 'North America' 
-ORDER BY region;
-```
+#### Difference between LEFT and RIGHT join
+Right join is the mirror of the left join, you can achive the same results with both. Rarely used.
 
-Same with left join and null check 
-
+#### WHERE with joins
 ```
-SELECT country_name, region, basic_unit
-FROM countries
-LEFT JOIN currencies
-USING (country_code)
-WHERE region = 'North America' AND currencies.country_code IS NULL
-ORDER BY region;
+SELECT 
+    o.orderNumber, 
+    customerNumber, 
+    productCode
+FROM
+    orders o
+LEFT JOIN orderDetails 
+    USING (orderNumber)
+WHERE
+    orderNumber = 10123;
 ```
 
-## Exercise 4
-Left join countries with economies. List country_name, region, gdp_percapita for the first 5 records of year 2010. 
+#### ON 
 
-
-## RIGHT JOIN
-
-Rarely used. It is a mirror of left join. Previous exercise with right join: 
-
+In the next query, the WHERE clause is added to ON, yet, it will have a different meaning. In this case, the query returns all orders but only the order 10123 will have line items associated with it as in the following picture:
 ```
-SELECT country_name, region, gdp_percapita
-FROM economies 
-RIGHT JOIN countries 
-USING(country_code)
-where year = 2010 LIMIT 5;
+SELECT 
+    o.orderNumber, 
+    customerNumber, 
+    productCode
+FROM
+    orders o
+LEFT JOIN orderDetails d 
+    ON o.orderNumber = d.orderNumber AND 
+       o.orderNumber = 10123;
 ```
 
 
-
-
+<br/><br/><br/>
+<a name="homework"/>
+# Homework
+INNER join orders,orderdetails,products and customers. Return back: 
+* orderNumber
+* priceEach
+* quantityOrdered
+* productName
+* productLine
+* city
+* country
+* orderDate
 
