@@ -191,5 +191,13 @@ LEFT JOIN orderDetails d
 <br/><br/><br/>
 <a name="homework"/>
 # Homework
-INNER join orders,orderdetails,products and customers. Return back: orderNumber,priceEach,quantityOrdered,productName,productLine,city,country,orderDate
+INNER join orders,orderdetails,products and customers. Return back: 
+* orderNumber
+* priceEach
+* quantityOrdered
+* productName
+* productLine
+* city
+* country
+* orderDate
 
