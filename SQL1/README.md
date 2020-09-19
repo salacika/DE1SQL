@@ -181,6 +181,26 @@ Select certain field(s):
 
 <br/><br/><br/>
 <a name="aws"/>
+## Users and privileges
+
+#### Creating new user
+`CREATE USER 'laszlosallo'@'%' IDENTIFIED BY 'laszlosallo1';`
+
+#### Giving full rights for table employee
+`GRANT ALL ON birdstrikes.employee TO 'laszlosallo'@'%';`
+
+#### Giving rights to see one column of birdstrikes
+`GRANT SELECT (state) ON birdstrikes.birdstrikes TO 'laszlosallo'@'%';`
+
+#### Deleting user
+`DROP USER 'laszlosallo'@'%';`
+
+
+
+
+
+<br/><br/><br/>
+<a name="aws"/>
 ## Altering your first database
 
 #### Copy table
