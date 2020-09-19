@@ -29,6 +29,9 @@ As analyst, ...
 <br/><br/><br/>
 <a name="db"/>
 ## Today's database
+
+No need to load data, today we will use only the birdstrikes table loaded last time:
+
 ![Database diagram](/SQL1/db_model.png)
 
 
