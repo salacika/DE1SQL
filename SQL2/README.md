@@ -17,13 +17,21 @@ As analyst, ...
 # Table Content:
 [Chapter's database](#db)
 
-[INNER joins](#inner)
+[Altering your first database](#altering)
 
-[SELF joins](#self)
+[Users and privileges](#users)
 
-[LEFT joins](#left)
+[More advanced selects](#selects)
 
-[Homework](#homework)  
+[Data types](#datatypes)  
+
+[Comparison Operators](#operators)  
+
+[Filtering with VARCHAR](#VARCHAR)  
+
+[Filtering with INT](#INT)  
+
+[Filtering with DATE](#DATE)  
 
 
 <br/><br/><br/>
@@ -36,7 +44,7 @@ No need to load new data, in this chapter we will use only the birdstrikes table
 ![Database diagram](/SQL1/db_model.png)
 
 <br/><br/><br/>
-<a name="aws"/>
+<a name="altering"/>
 ## Altering your first database
 
 #### Copy table
@@ -108,7 +116,7 @@ Let's check the results
 
 
 <br/><br/><br/>
-<a name="aws"/>
+<a name="users"/>
 ## Users and privileges
 
 #### Creating new user
@@ -125,7 +133,7 @@ Let's check the results
 
 
 <br/><br/><br/>
-<a name="db"/>
+<a name="selects"/>
 ## More advanced selects
 
 #### New column
@@ -201,14 +209,14 @@ Select the lines where states is Alabama
 
 
 <br/><br/><br/>
-<a name="db"/>
+<a name="datatypes"/>
 ## Data types
 
 ![Data types](/SQL2/data_types.png)
 
 
 <br/><br/><br/>
-<a name="db"/>
+<a name="operators"/>
 ## Comparison Operators
 
 
@@ -228,7 +236,7 @@ Select the lines where states is Alabama
 
 
 <br/><br/><br/>
-<a name="db"/>
+<a name="VARCHAR"/>
 ## Filtering with VARCHAR
 
 Select the lines where states is not Alabama
@@ -285,7 +293,7 @@ Listing states with 5 characters
 
 
 <br/><br/><br/>
-<a name="db"/>
+<a name="INT"/>
 ## Filtering with INT
 
 Speed equals 350
@@ -315,7 +323,7 @@ Speed equal or more than 25000
 
 
 <br/><br/><br/>
-<a name="db"/>
+<a name="DATE"/>
 ## Filtering with DATE
 
 Date is "2000-01-02"
