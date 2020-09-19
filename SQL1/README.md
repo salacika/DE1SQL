@@ -14,11 +14,12 @@
 * Setting the context: evolution of digital persistency 1950-2010
 * Introducing the basic terms in context of SQL
 * Writing the first SQL
-* Setting local MYSQL
-* Setting up a MYSQL in AWS
+* Setting local MYSQL / Workbench
+* Understanding how to work in Workbench
 * Creating the first MySQL database
 * Understanding how to backup and restore a database
 * Understanding how to migrate a database
+* Learning about database security
 
 
 <br/><br/><br/>
