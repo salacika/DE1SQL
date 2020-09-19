@@ -1,6 +1,4 @@
-# Overview
-
-# Overview
+# Chapter 1 - Overview
 
 **Teaching**: 90 min
 
