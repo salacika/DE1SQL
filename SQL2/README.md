@@ -337,7 +337,9 @@ Or using BETWEEN for range operations
 `SELECT * FROM birdstrikes where flight_date BETWEEN "2000-01-01" AND "2000-01-03"`
 
 
-
+<br/><br/>
+### `Exercise5` 
+### How many days ellapsed between now and flight dates happening in week 52? (Hint: used DATEDIFF, WEEKOFYEAR)
 
 
 
