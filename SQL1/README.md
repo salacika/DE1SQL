@@ -185,24 +185,21 @@ Select certain field(s):
 [Screenshot help](https://github.com/salacika/DE1SQL/blob/master/SQL1/dump.png?raw=true)
 
 
-br/><br/><br/>
+<br/><br/><br/>
 <a name="homework"/>
 # Homework
 
-Using AWS Console
-- Delete your AWS instance (without creating a backup)
-- Check your AWS billing information and create a Budget alert for Actual and Forecasted Costs, with a budget cap of 1$.
+Import a relational data set of your choosing into your local instance. 
 
-Using mysql console:
-- Purge birdstrikes table (hint: TRUNCATE)
-- Delete birdstrikes table (hint: DROP)
-- Delete schema 
+Requirements:
+* find a data set worth to analyze later (prepares you for the term project)
+* no restriction on the type of data source, can be excel, csv, another db, sql file etc
+* pay attention on the relational nature of the set, advised to find a strucure of 3+ interlinked table 
+* do not use this: https://www.mysqltutorial.org/mysql-sample-database.aspx (because we will use it later in the course)
 
-Using MySQL workbench:
-- Import a datafile of your choosing into your local instance
+Hints: you can find various open datasets on the internet, like here: https://data.worldbank.org/
 
-
-SUBMIT SOLUTION FOR THE LAST 2 SECTIONS IN MODDLE.
+SUBMIT SOLUTION INTO MODDLE. 
 
 
 
