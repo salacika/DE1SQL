@@ -178,27 +178,6 @@ Select certain field(s):
 
 `SELECT airline,cost FROM birdstrikes`
 
-
-<br/><br/><br/>
-<a name="aws"/>
-## Users and privileges
-
-#### Creating new user
-`CREATE USER 'laszlosallo'@'%' IDENTIFIED BY 'laszlosallo1';`
-
-#### Giving full rights for table employee
-`GRANT ALL ON birdstrikes.employee TO 'laszlosallo'@'%';`
-
-#### Giving rights to see one column of birdstrikes
-`GRANT SELECT (state) ON birdstrikes.birdstrikes TO 'laszlosallo'@'%';`
-
-#### Deleting user
-`DROP USER 'laszlosallo'@'%';`
-
-
-
-
-
 <br/><br/><br/>
 <a name="aws"/>
 ## Altering your first database
@@ -267,6 +246,28 @@ Let's check the results
 Let's check the results
 
 `SELECT * FROM employee;`
+
+
+
+
+<br/><br/><br/>
+<a name="aws"/>
+## Users and privileges
+
+#### Creating new user
+`CREATE USER 'laszlosallo'@'%' IDENTIFIED BY 'laszlosallo1';`
+
+#### Giving full rights for table employee
+`GRANT ALL ON birdstrikes.employee TO 'laszlosallo'@'%';`
+
+#### Giving rights to see one column of birdstrikes
+`GRANT SELECT (state) ON birdstrikes.birdstrikes TO 'laszlosallo'@'%';`
+
+#### Deleting user
+`DROP USER 'laszlosallo'@'%';`
+
+
+
 
 <br/><br/><br/>
 <a name="aws"/>
