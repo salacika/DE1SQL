@@ -40,7 +40,7 @@ No need to load new data, in this chapter we will use only the birdstrikes table
 <a name="db"/>
 ## Data types
 
-![Data types](/SQL2/data_types.png)
+![Data types](/SQL2/data_typesx.png)
 
 
 
