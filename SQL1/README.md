@@ -184,6 +184,18 @@ SUBMIT SOLUTION FOR THE LAST 2 SECTIONS IN MODDLE.
 
 
 
+# Basic SQL statements
 
+Select a Database
+
+`USE --DBNAME`
+
+List the table(s) of your database
+
+`SHOW TABLES`
+
+List the structure of a table
+
+`DESCRIBE birdstrikes`
 
 
