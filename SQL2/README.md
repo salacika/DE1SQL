@@ -32,7 +32,17 @@ As analyst, ...
 
 No need to load new data, in this chapter we will use only the birdstrikes table loaded in the last chapter:
 
+
 ![Database diagram](/SQL1/db_model.png)
+
+
+<br/><br/><br/>
+<a name="db"/>
+## Data types
+
+![Database diagram](/SQL1/data_types1.png)
+![Database diagram](/SQL1/data_types2.png)
+
 
 
 
@@ -125,21 +135,10 @@ Let's check the results
 `DROP USER 'laszlosallo'@'%';`
 
 
+
+
 ## Selecting data
 
-Select all data
-
-`SELECT * FROM birdstrikes`
-
-`select * from birdstrikes`
-
-Select certain field
-
-`SELECT cost FROM birdstrikes`
-
-Select certain fields
-
-`SELECT bird_size, cost FROM birdstrikes`
 
 Create a new column
 
