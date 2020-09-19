@@ -1,4 +1,4 @@
-# Overview
+# Chapter 2 - Overview
 
 **Teaching**: 90 min
 
@@ -146,8 +146,11 @@ List the first 10 records:
 List the first 1 record, after the the first 10:
 `SELECT * FROM birdstrikes LIMIT 10,1;`
 
-### Exercise 1: What state figures in the 145th line of our database?
 
+<br/><br/>
+### `Exercise1` 
+### What state figures in the 145th line of our database?
+<br/><br/>
 
 
 #### Ordering data
@@ -164,7 +167,12 @@ Reverse ordering
 
 `SELECT state, cost FROM birdstrikes ORDER BY cost DESC`
 
-### Exercise 2: What is the date of the newest birstrike in this database?
+
+<br/><br/>
+### `Exercise2` 
+### What is the date of the newest birstrike in this database?
+<br/><br/>
+
 
 
 
@@ -178,7 +186,11 @@ Unique pairs
 
 `SELECT DISTINCT airline, damage FROM birdstrikes`
 
-### Exercise3: What was the cost of the 100th most expensive damage?
+
+<br/><br/>
+### `Exercise3` 
+### What was the cost of the 100th most expensive damage?
+<br/><br/>
 
 
 #### Filtering
@@ -254,9 +266,6 @@ Filter by multiple conditions
 
 `SELECT * FROM birdstrikes WHERE state = 'Alabama' OR state = 'Missouri'`
 
-### Exercise 4: What state figures in the 2nd record, if you filter out all records which have no state and no bird_size specified?
-
-
 #### IS NOT NULL
 
 Filtering out empty strings as well
@@ -295,6 +304,10 @@ Cost is equal with half of the speed
 `SELECT * FROM birdstrikes WHERE speed IS NULL`
 
 
+<br/><br/>
+### `Exercise4` 
+### What state figures in the 2nd record, if you filter out all records which have no state and no bird_size specified?
+<br/><br/>
 
 
 <br/><br/><br/>
