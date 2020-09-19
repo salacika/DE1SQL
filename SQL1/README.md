@@ -159,9 +159,8 @@ List the structure of a table
 
 `DESCRIBE birdstrikes`
 
-
-
-
+#### Database diagram
+![Database diagram](/SQL1/db_model.png)
 
 
 ## Retriving data
