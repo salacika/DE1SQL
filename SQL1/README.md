@@ -87,6 +87,32 @@ ORDER BY calls DESC, country.id ASC;
 <a name="firslook"/>
 ## Your first local MySQL Database 
 
+
+#### Create your first database / schema
+`CREATE SCHEMA firstdb;`
+
+For the next commands make sure the created db is selected.
+
+`USE firstdb ;`
+
+#### Deleting a database
+
+Execute twice:
+`DROP SCHEMA firstdb;`
+
+`Note` second time you will get and error because the db is already deleted with the first one. 
+
+Try this instead:
+`DROP SCHEMA IF EXISTS firstdb`
+
+Lets recreate the db again:
+
+```
+CREATE SCHEMA firstdb;
+USE firstdb ;
+```
+
+
 Execute:
 ```
 SHOW VARIABLES LIKE "secure_file_priv";
@@ -132,6 +158,11 @@ List the table(s) of your database
 List the structure of a table
 
 `DESCRIBE birdstrikes`
+
+
+
+
+
 
 ## Retriving data
 
