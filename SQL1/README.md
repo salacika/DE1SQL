@@ -146,10 +146,8 @@ SET
 reported_date = nullif(@v_reported_date, ''),
 speed = nullif(@v_speed, '');
 ```
-<br/><br/><br/>
-<a name="firstsql"/>
-## Your first SQL statements
 
+#### Exploring database
 
 List the table(s) of your database
 
