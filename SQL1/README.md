@@ -94,17 +94,17 @@ For the next commands make sure the created db is selected.
 
 #### Deleting a database
 
-Execute twice:
+Execute twice
 
 `DROP SCHEMA firstdb;`
 
 `Note` second time you will get and error because the db is already deleted with the first one. 
 
-Try this instead:
+Try this instead
 
 `DROP SCHEMA IF EXISTS firstdb`
 
-Lets recreate the db again:
+Lets recreate the db again
 
 ```
 CREATE SCHEMA firstdb;
@@ -113,14 +113,14 @@ USE firstdb ;
 
 #### Loading CSV into a table
 
-Execute:
+Execute
 ```
 SHOW VARIABLES LIKE "secure_file_priv";
 ```
 
 Copy https://github.com/salacika/DE1SQL/blob/master/SQL1/birdstrikes_small.csv in the folder resulted in the previous command. 
 
-Then execute:
+Then execute
 
 ```
 CREATE TABLE birdstrikes 
@@ -164,11 +164,11 @@ List the structure of a table
 ![Database diagram](/SQL1/db_model.png)
 
 
-Retriving data stored in birdstrikes:
+Retriving data stored in birdstrikes
 
 `SELECT * FROM birdstrikes`
 
-Select certain field(s):
+Select certain field(s)
 
 `SELECT cost FROM birdstrikes`
 
