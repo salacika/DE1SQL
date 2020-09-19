@@ -102,13 +102,13 @@ Execute twice
 
 Try this instead
 
-`DROP SCHEMA IF EXISTS firstdb`
+`DROP SCHEMA IF EXISTS firstdb;`
 
 Lets recreate the db again
 
 ```
 CREATE SCHEMA firstdb;
-USE firstdb ;
+USE firstdb;
 ```
 
 #### Loading CSV into a table
@@ -155,24 +155,24 @@ speed = nullif(@v_speed, '');
 
 List the table(s) of your database
 
-`SHOW TABLES`
+`SHOW TABLES;`
 
 List the structure of a table
 
-`DESCRIBE birdstrikes`
+`DESCRIBE birdstrikes;`
 
 ![Database diagram](/SQL1/db_model.png)
 
 
 Retriving data stored in birdstrikes
 
-`SELECT * FROM birdstrikes`
+`SELECT * FROM birdstrikes;`
 
 Select certain field(s)
 
-`SELECT cost FROM birdstrikes`
+`SELECT cost FROM birdstrikes;`
 
-`SELECT airline,cost FROM birdstrikes`
+`SELECT airline,cost FROM birdstrikes;`
 
 
 <br/><br/><br/>
