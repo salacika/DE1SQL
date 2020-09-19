@@ -1,3 +1,128 @@
+# Overview
+
+**Teaching**: 90 min
+
+**Problem statement**
+As analyst, ... 
+
+
+**Objectives**
+* ..
+* ..
+
+
+
+<br/><br/><br/>
+
+# Table Content:
+[Chapter's database](#db)
+
+[INNER joins](#inner)
+
+[SELF joins](#self)
+
+[LEFT joins](#left)
+
+[Homework](#homework)  
+
+
+<br/><br/><br/>
+<a name="db"/>
+## Chapter's database
+
+No need to load new data, in this chapter we will use only the birdstrikes table loaded in the last chapter:
+
+![Database diagram](/SQL1/db_model.png)
+
+
+
+<br/><br/><br/>
+<a name="aws"/>
+## Altering your first database
+
+#### Copy table
+
+```
+CREATE TABLE new_birdstrikes LIKE birdstrikes;
+SHOW TABLES;
+DESCRIBE new_birdstrikes;
+SELECT * FROM new_birdstrikes;
+```
+
+#### Delete table
+
+`DROP TABLE IF EXISTS new_birdstrikes;`
+
+
+#### Create table
+
+`CREATE TABLE employee (id INTEGER NOT NULL, employee_name VARCHAR(255) NOT NULL, PRIMARY KEY(id));`
+
+`DESCRIBE employee;`
+
+#### Insert new rows (records)
+
+Insert lines in employee table one by one
+
+```
+INSERT INTO employee (id,employee_name) VALUES(1,'Student1');
+INSERT INTO employee (id,employee_name) VALUES(2,'Student2');
+INSERT INTO employee (id,employee_name) VALUES(3,'Student3');
+```
+
+Let's check the results
+
+`SELECT * FROM employee;`
+
+What happens if you try this (and why)?
+
+`INSERT INTO employee (id,employee_name) VALUES(3,'Student4');`
+
+#### Updating rows
+
+`UPDATE employee SET employee_name='Arnold Schwarzenegger' WHERE id = '1';`
+
+`UPDATE employee SET employee_name='The Other Arnold' WHERE id = '2';`
+
+Let's check the results
+
+`SELECT * FROM employee;`
+
+#### Deleting rows
+
+Deleting some records
+
+`DELETE FROM employee WHERE id = 3;`
+
+Let's check the results
+
+`SELECT * FROM employee`
+
+#### Deleting rows
+`TRUNCATE employee;`
+
+Let's check the results
+
+`SELECT * FROM employee;`
+
+
+
+
+<br/><br/><br/>
+<a name="aws"/>
+## Users and privileges
+
+#### Creating new user
+`CREATE USER 'laszlosallo'@'%' IDENTIFIED BY 'laszlosallo1';`
+
+#### Giving full rights for table employee
+`GRANT ALL ON birdstrikes.employee TO 'laszlosallo'@'%';`
+
+#### Giving rights to see one column of birdstrikes
+`GRANT SELECT (state) ON birdstrikes.birdstrikes TO 'laszlosallo'@'%';`
+
+#### Deleting user
+`DROP USER 'laszlosallo'@'%';`
 
 
 ## Selecting data

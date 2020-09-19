@@ -17,10 +17,9 @@ What do you need to know to perform these tasks?
 * Writing the first SQL
 * Setting local MYSQL / Workbench (Expected to be done prior the course)
 * Understanding how to work in Workbench
-* Creating the first MySQL database
+* Creating and exploring the first MySQL database
 * Understanding how to backup and restore a database
-* Understanding how to migrate a database
-* Learning about database security
+
 
 
 <br/><br/><br/>
@@ -33,13 +32,9 @@ What do you need to know to perform these tasks?
 
 [Your first local MySQL Database](#firstdb)
 
-[Your first SQL statements](#firstsql)
+[Exploring your first database](#explore)
 
-[Creating a free instance of MySQL in AWS Cloud](#aws)
-
-[Dumping a database with MySQL Workbench](#dump)
-
-[Replicating a database from local to AWS with MySQL Workbench](#replicate)
+[Dumping and restoring a database with MySQL Workbench](#dump)
 
 [Homework](#homework)  
 
@@ -87,6 +82,36 @@ ORDER BY calls DESC, country.id ASC;
 <a name="firslook"/>
 ## Your first local MySQL Database 
 
+
+#### Create your first database / schema
+`CREATE SCHEMA firstdb;`
+
+SQL is not case sensitive:
+`create schema firstdb;`
+
+For the next commands make sure the created db is selected.
+
+`USE firstdb ;`
+
+#### Deleting a database
+
+Execute twice:
+`DROP SCHEMA firstdb;`
+
+`Note` second time you will get and error because the db is already deleted with the first one. 
+
+Try this instead:
+`DROP SCHEMA IF EXISTS firstdb`
+
+Lets recreate the db again:
+
+```
+CREATE SCHEMA firstdb;
+USE firstdb ;
+```
+
+#### Loading CSV into a table
+
 Execute:
 ```
 SHOW VARIABLES LIKE "secure_file_priv";
@@ -120,9 +145,11 @@ SET
 reported_date = nullif(@v_reported_date, ''),
 speed = nullif(@v_speed, '');
 ```
+
+
 <br/><br/><br/>
-<a name="firstsql"/>
-## Your first SQL statements
+<a name="explore"/>
+## Exploring your first database
 
 
 List the table(s) of your database
@@ -133,134 +160,42 @@ List the structure of a table
 
 `DESCRIBE birdstrikes`
 
-## Retriving data
+![Database diagram](/SQL1/db_model.png)
 
-Select all data
+
+Retriving data stored in birdstrikes:
 
 `SELECT * FROM birdstrikes`
 
-`select * from birdstrikes`
-
-Select certain field(s)
+Select certain field(s):
 
 `SELECT cost FROM birdstrikes`
 
 `SELECT airline,cost FROM birdstrikes`
 
-<br/><br/><br/>
-<a name="aws"/>
-## Creating a free instance of MySQL in AWS Cloud
-
-[Screenshot help](https://github.com/salacika/DE1SQL/tree/master/SQL1/AWS)
 
 <br/><br/><br/>
 <a name="dump"/>
 ## Dumping a database with MySQL Workbench
-
 [Screenshot help](https://github.com/salacika/DE1SQL/blob/master/SQL1/dump.png?raw=true)
 
-<br/><br/><br/>
-<a name="replicate"/>
-## Replicating a database from local to AWS with MySQL Workbench
-
-[Screenshot help](https://github.com/salacika/DE1SQL/blob/master/SQL1/replicate.png?raw=true)
 
 <br/><br/><br/>
 <a name="homework"/>
 # Homework
 
-Using AWS Console
-- Delete your AWS instance (without creating a backup)
-- Check your AWS billing information and create a Budget alert for Actual and Forecasted Costs, with a budget cap of 1$.
+Import a relational data set of your choosing into your local instance. 
 
-Using mysql console:
-- Purge birdstrikes table (hint: TRUNCATE)
-- Delete birdstrikes table (hint: DROP)
-- Delete schema 
+Requirements:
+* find a data set worth to analyze later (prepares you for the term project)
+* no restriction on the type of data source, can be excel, csv, another db, sql file etc
+* pay attention on the relational nature of the set, advised to find a strucure of 3+ interlinked table 
+* do not use this: https://www.mysqltutorial.org/mysql-sample-database.aspx (because we will use it later in the course)
 
-Using MySQL workbench:
-- Import a datafile of your choosing into your local instance
+Hints: you can find various open datasets on the internet, like here: https://data.worldbank.org/
 
-
-SUBMIT SOLUTION FOR THE LAST 2 SECTIONS IN MODDLE.
+SUBMIT SOLUTION INTO MODDLE. 
 
 
 
-# Basic SQL statements
-
-Select a Database
-
-`USE --DBNAME`
-
-List the table(s) of your database
-
-`SHOW TABLES`
-
-List the structure of a table
-
-`DESCRIBE birdstrikes`
-
-
-
-# Writing data into the Database
-
-## COPY TABLE
-`CREATE TABLE new_birdstrikes LIKE birdstrikes`
-
-`SHOW TABLES`
-
-`DESCRIBE new_birdstrikes`
-
-## DELETE TABLE 
-
-`DROP TABLE new_birdstrikes`
-
-
-## CREATE TABLE
-
-`CREATE TABLE employee (id INTEGER NOT NULL, employee_name VARCHAR(255) NOT NULL, PRIMARY KEY(id))`
-
-`DESCRIBE employee`
-
-## INSERT LINE
-
-Insert lines in employee table one by one
-
-`INSERT INTO employee (id,employee_name) VALUES(1,'Student1')`
-
-`INSERT INTO employee (id,employee_name) VALUES(2,'Student2')`
-
-`INSERT INTO employee (id,employee_name) VALUES(3,'Student3')`
-
-Let's check the results
-
-`SELECT * FROM employee`
-
-What happens if you try this (and why)?
-
-`INSERT INTO employee (id,employee_name) VALUES(3,'Student4')`
-
-## UPDATE LINE
-
-Updating some records
-
-`UPDATE employee SET employee_name='Arnold Schwarzenegger' WHERE id = '1'`
-
-`UPDATE employee SET employee_name='The Other Arnold' WHERE id = '2'`
-
-Let's check the results
-
-`SELECT * FROM employee`
-
-## DELETE LINE
-
-Deleting some records
-
-`DELETE FROM employee WHERE id = 3`
-
-`DELETE FROM employee WHERE employee_name LIKE '%Arnold%'`
-
-`DROP TABLE employee`
-
-@todo security rights
 
