@@ -307,7 +307,6 @@ Cost is equal with half of the speed
 <br/><br/>
 ### `Exercise4` 
 ### What state figures in the 2nd record, if you filter out all records which have no state and no bird_size specified?
-<br/><br/>
 
 
 <br/><br/><br/>
