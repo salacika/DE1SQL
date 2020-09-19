@@ -296,9 +296,9 @@ Speed equal or more than 25000
 
 `SELECT * FROM birdstrikes WHERE speed >= 25000;`
 
-Cost is equal with half of the speed
+#### ROUND, SQRT
 
-`SELECT * FROM birdstrikes WHERE cost = speed/2 * 10 ORDER BY cost DESC;`
+`SELECT ROUND(SQRT(speed/2) * 10) AS synthetic_speed FROM birdstrikes`
 
 #### BETWEEN
 
