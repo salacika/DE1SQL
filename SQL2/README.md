@@ -124,28 +124,33 @@ Let's check the results
 `DROP USER 'laszlosallo'@'%';`
 
 
-
 <br/><br/><br/>
 <a name="db"/>
-## Data types
+## More advanced selects
 
-![Data types](/SQL2/data_types.png)
-
-
-## Selecting data
-
-
+#### New column
 Create a new column
 
-`SELECT *, speed/2 FROM birdstrikes`
+`SELECT *, speed/2 FROM birdstrikes;`
 
-Select all & limit
+#### Aliasing
 
-`SELECT * FROM birdstrikes LIMIT 10`
+`SELECT *, speed/2 AS halfspeed FROM birdstrikes;`
+
+
+#### Using Limit
+
+List the first 10 records:
+`SELECT * FROM birdstrikes LIMIT 10;`
+
+List the first 1 record, after the the first 10:
+`SELECT * FROM birdstrikes LIMIT 10,1;`
 
 ### Exercise 1: What state figures in the 145th line of our database?
 
-## Ordering data
+
+
+#### Ordering data
 
 Order by a field
 
@@ -159,13 +164,11 @@ Reverse ordering
 
 `SELECT state, cost FROM birdstrikes ORDER BY cost DESC`
 
-Reverse ordering by multiple fields
-
-`SELECT state, cost FROM birdstrikes ORDER BY state DESC, cost`
-
 ### Exercise 2: What is the date of the newest birstrike in this database?
 
-## Select unique values 
+
+
+#### Unique values 
 
 Of a column
 
@@ -176,6 +179,17 @@ Unique pairs
 `SELECT DISTINCT airline, damage FROM birdstrikes`
 
 ### Exercise3: What was the cost of the 100th most expensive damage?
+
+
+
+
+
+
+<br/><br/><br/>
+<a name="db"/>
+## Data types
+
+![Data types](/SQL2/data_types.png)
 
 
 ## Filtering data
