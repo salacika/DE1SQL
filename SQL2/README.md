@@ -192,9 +192,10 @@ Unique pairs
 ![Data types](/SQL2/data_types.png)
 
 
-## Filtering data
+<br/><br/><br/>
+<a name="db"/>
+## Comparison Operators
 
-Filter by field value
 
 `=` equal
 
@@ -210,7 +211,11 @@ Filter by field value
 
 `>=` greater than or equal to
 
-#### VARCHAR
+
+<br/><br/><br/>
+<a name="db"/>
+## Filtering VARCHAR
+
 
 Select the lines where states is Alabama
 
@@ -241,7 +246,9 @@ States not starting with 'A'
 `SELECT DISTINCT state FROM birdstrikes WHERE state NOT LIKE 'a%' ORDER BY state`
 
 
-#### INT
+<br/><br/><br/>
+<a name="db"/>
+## Filtering INT
 
 Speed equals 350
 
