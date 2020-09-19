@@ -147,7 +147,11 @@ reported_date = nullif(@v_reported_date, ''),
 speed = nullif(@v_speed, '');
 ```
 
-#### Exploring database
+
+<br/><br/><br/>
+<a name="aws"/>
+## Exploring your first database
+
 
 List the table(s) of your database
 
@@ -157,13 +161,10 @@ List the structure of a table
 
 `DESCRIBE birdstrikes`
 
-#### Database diagram
 ![Database diagram](/SQL1/db_model.png)
 
 
-## Retriving data
-
-Select all data
+Retriving data stored in birdstrikes:
 
 `SELECT * FROM birdstrikes`
 
