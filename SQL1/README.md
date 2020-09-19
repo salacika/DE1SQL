@@ -1,6 +1,4 @@
-# Overview
-
-# Overview
+# Chapter 1 - Overview
 
 **Teaching**: 90 min
 
@@ -87,39 +85,42 @@ ORDER BY calls DESC, country.id ASC;
 `CREATE SCHEMA firstdb;`
 
 SQL is not case sensitive:
-`create schema firstdb;`
 
-For the next commands make sure the created db is selected.
+`create schema FIRSTDB;`
 
-`USE firstdb ;`
+For the next commands, make sure the created db is selected
+
+`USE firstdb;`
 
 #### Deleting a database
 
-Execute twice:
+Execute twice
+
 `DROP SCHEMA firstdb;`
 
 `Note` second time you will get and error because the db is already deleted with the first one. 
 
-Try this instead:
-`DROP SCHEMA IF EXISTS firstdb`
+Try this instead
 
-Lets recreate the db again:
+`DROP SCHEMA IF EXISTS firstdb;`
+
+Lets recreate the db again
 
 ```
 CREATE SCHEMA firstdb;
-USE firstdb ;
+USE firstdb;
 ```
 
 #### Loading CSV into a table
 
-Execute:
+Execute
 ```
 SHOW VARIABLES LIKE "secure_file_priv";
 ```
 
 Copy https://github.com/salacika/DE1SQL/blob/master/SQL1/birdstrikes_small.csv in the folder resulted in the previous command. 
 
-Then execute:
+Then execute
 
 ```
 CREATE TABLE birdstrikes 
@@ -154,24 +155,24 @@ speed = nullif(@v_speed, '');
 
 List the table(s) of your database
 
-`SHOW TABLES`
+`SHOW TABLES;`
 
 List the structure of a table
 
-`DESCRIBE birdstrikes`
+`DESCRIBE birdstrikes;`
 
 ![Database diagram](/SQL1/db_model.png)
 
 
-Retriving data stored in birdstrikes:
+Retriving data stored in birdstrikes
 
-`SELECT * FROM birdstrikes`
+`SELECT * FROM birdstrikes;`
 
-Select certain field(s):
+Select certain field(s)
 
-`SELECT cost FROM birdstrikes`
+`SELECT cost FROM birdstrikes;`
 
-`SELECT airline,cost FROM birdstrikes`
+`SELECT airline,cost FROM birdstrikes;`
 
 
 <br/><br/><br/>

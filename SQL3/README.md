@@ -1,3 +1,49 @@
+
+<br/><br/><br/>
+<a name="db"/>
+## CONDITONAL LOGIC
+
+#### CASE
+
+Syntax form
+
+```
+CASE expression
+    WHEN test THEN result
+    …
+    ELSE otherResult
+END
+```
+
+Lets create a new field base on surface and name it geosize_group
+
+```
+SELECT country_name, continent, country_code, surface_area,
+    CASE 
+        WHEN surface_area  > 2000000
+            THEN 'large'
+        WHEN  surface_area > 350000 AND surface_area <2000000
+            THEN 'medium'
+        ELSE 
+            'small'
+    END
+    AS geosize_group   
+FROM  countries
+```
+
+## Exercise 1
+
+Select the populations records where year is 2015, create a new field AS popsize_group to organize population size into
+
+* 'large' (> 50 million),
+
+* 'medium' (> 1 million), and
+
+* 'small' groups.
+
+Select only the country code, population size, and this new popsize_group as fields.
+
+
 ## Groupping and aggregation
 
 ## COUNT

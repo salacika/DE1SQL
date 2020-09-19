@@ -1,4 +1,4 @@
-# Overview
+# Chapter 2 - Overview
 
 **Teaching**: 90 min
 
@@ -17,13 +17,21 @@ As analyst, ...
 # Table Content:
 [Chapter's database](#db)
 
-[INNER joins](#inner)
+[Altering your first database](#altering)
 
-[SELF joins](#self)
+[Users and privileges](#users)
 
-[LEFT joins](#left)
+[More advanced selects](#selects)
 
-[Homework](#homework)  
+[Data types](#datatypes)  
+
+[Comparison Operators](#operators)  
+
+[Filtering with VARCHAR](#VARCHAR)  
+
+[Filtering with INT](#INT)  
+
+[Filtering with DATE](#DATE)  
 
 
 <br/><br/><br/>
@@ -35,20 +43,8 @@ No need to load new data, in this chapter we will use only the birdstrikes table
 
 ![Database diagram](/SQL1/db_model.png)
 
-
 <br/><br/><br/>
-<a name="db"/>
-## Data types
-
-![Data types](/SQL2/data_typesx.png)
-
-
-
-
-
-
-<br/><br/><br/>
-<a name="aws"/>
+<a name="altering"/>
 ## Altering your first database
 
 #### Copy table
@@ -120,7 +116,7 @@ Let's check the results
 
 
 <br/><br/><br/>
-<a name="aws"/>
+<a name="users"/>
 ## Users and privileges
 
 #### Creating new user
@@ -136,57 +132,93 @@ Let's check the results
 `DROP USER 'laszlosallo'@'%';`
 
 
+<br/><br/><br/>
+<a name="selects"/>
+## More advanced selects
 
-
-## Selecting data
-
-
+#### New column
 Create a new column
 
-`SELECT *, speed/2 FROM birdstrikes`
+`SELECT *, speed/2 FROM birdstrikes;`
 
-Select all & limit
+#### Aliasing
 
-`SELECT * FROM birdstrikes LIMIT 10`
+`SELECT *, speed/2 AS halfspeed FROM birdstrikes;`
 
-### Exercise 1: What state figures in the 145th line of our database?
 
-## Ordering data
+#### Using Limit
+
+List the first 10 records:
+`SELECT * FROM birdstrikes LIMIT 10;`
+
+List the first 1 record, after the the first 10:
+`SELECT * FROM birdstrikes LIMIT 10,1;`
+
+
+<br/><br/>
+### `Exercise1` 
+### What state figures in the 145th line of our database?
+<br/><br/>
+
+
+#### Ordering data
 
 Order by a field
 
-`SELECT state, cost FROM birdstrikes ORDER BY cost`
+`SELECT state, cost FROM birdstrikes ORDER BY cost;`
 
 Order by a multiple fields
 
-`SELECT state, cost FROM birdstrikes ORDER BY state, cost ASC`
+`SELECT state, cost FROM birdstrikes ORDER BY state, cost ASC;`
 
 Reverse ordering
 
-`SELECT state, cost FROM birdstrikes ORDER BY cost DESC`
+`SELECT state, cost FROM birdstrikes ORDER BY cost DESC;`
 
-Reverse ordering by multiple fields
 
-`SELECT state, cost FROM birdstrikes ORDER BY state DESC, cost`
+<br/><br/>
+### `Exercise2` 
+### What is the date of the newest birstrike in this database?
+<br/><br/>
 
-### Exercise 2: What is the date of the newest birstrike in this database?
 
-## Select unique values 
+
+
+#### Unique values 
 
 Of a column
 
-`SELECT DISTINCT damage FROM birdstrikes`
+`SELECT DISTINCT damage FROM birdstrikes;`
 
 Unique pairs
 
-`SELECT DISTINCT airline, damage FROM birdstrikes`
-
-### Exercise3: What was the cost of the 100th most expensive damage?
+`SELECT DISTINCT airline, damage FROM birdstrikes;`
 
 
-## Filtering data
+<br/><br/>
+### `Exercise3` 
+### What was the cost of the 100th most expensive damage?
+<br/><br/>
 
-Filter by field value
+
+#### Filtering
+Select the lines where states is Alabama
+
+`SELECT * FROM birdstrikes WHERE state = 'Alabama';`
+
+
+
+<br/><br/><br/>
+<a name="datatypes"/>
+## Data types
+
+![Data types](/SQL2/data_types.png)
+
+
+<br/><br/><br/>
+<a name="operators"/>
+## Comparison Operators
+
 
 `=` equal
 
@@ -202,11 +234,10 @@ Filter by field value
 
 `>=` greater than or equal to
 
-#### VARCHAR
 
-Select the lines where states is Alabama
-
-`SELECT * FROM birdstrikes WHERE state = 'Alabama'`
+<br/><br/><br/>
+<a name="VARCHAR"/>
+## Filtering with VARCHAR
 
 Select the lines where states is not Alabama
 
@@ -214,11 +245,13 @@ Select the lines where states is not Alabama
 
 States starting with 'A'
 
-`SELECT DISTINCT state FROM birdstrikes WHERE state LIKE 'A%'`
+#### LIKE
+
+`SELECT DISTINCT state FROM birdstrikes WHERE state LIKE 'A%';`
 
 Note the case (in)sensitivity
 
-`SELECT DISTINCT state FROM birdstrikes WHERE state LIKE 'a%'`
+`SELECT DISTINCT state FROM birdstrikes WHERE state LIKE 'a%';`
 
 States starting with 'ala'
 
@@ -226,29 +259,72 @@ States starting with 'ala'
 
 States starting with 'North ' followed by any character, followed by an 'a', followed by anything
 
-`SELECT DISTINCT state FROM birdstrikes WHERE state LIKE 'North _a%'`
+`SELECT DISTINCT state FROM birdstrikes WHERE state LIKE 'North _a%';`
 
 States not starting with 'A'
 
-`SELECT DISTINCT state FROM birdstrikes WHERE state NOT LIKE 'a%' ORDER BY state`
+`SELECT DISTINCT state FROM birdstrikes WHERE state NOT LIKE 'a%' ORDER BY state;`
 
 
-#### INT
+#### Logical operators
+
+Filter by multiple conditions
+
+`SELECT * FROM birdstrikes WHERE state = 'Alabama' AND bird_size = 'Small';`
+
+`SELECT * FROM birdstrikes WHERE state = 'Alabama' OR state = 'Missouri';`
+
+#### IS NOT NULL
+
+Filtering out empty strings as well
+
+`SELECT * FROM birdstrikes WHERE state IS NOT NULL AND bird_size IS NOT NULL AND state != '';`
+
+#### IN
+
+What if I need 'Alabama', 'Missouri','New York','Alaska'? Should we concatenate 4 AND filters?
+
+`SELECT * FROM birdstrikes WHERE state IN ('Alabama', 'Missouri','New York','Alaska');`
+
+#### LENGTH
+Listing states with 5 characters
+
+`SELECT DISTINCT(state) FROM birdstrikes WHERE LENGTH(state) = 5;`
+
+
+<br/><br/><br/>
+<a name="INT"/>
+## Filtering with INT
 
 Speed equals 350
 
-`SELECT * FROM birdstrikes WHERE speed = 350`
+`SELECT * FROM birdstrikes WHERE speed = 350;`
 
 Speed equal or more than 25000
 
-`SELECT * FROM birdstrikes WHERE speed >= 25000`
+`SELECT * FROM birdstrikes WHERE speed >= 25000;`
 
-Cost is equal with half of the speed
+#### ROUND, SQRT
 
-`SELECT * FROM birdstrikes WHERE cost = speed/2 * 10 ORDER BY cost DESC`
+`SELECT ROUND(SQRT(speed/2) * 10) AS synthetic_speed FROM birdstrikes`
+
+#### BETWEEN
+
+`SELECT * FROM birdstrikes where cost BETWEEN 20 AND 40`
+
+#### IS NULL
+
+`SELECT * FROM birdstrikes WHERE speed IS NULL`
 
 
-#### DATE
+<br/><br/>
+### `Exercise4` 
+### What state figures in the 2nd record, if you filter out all records which have no state and no bird_size specified?
+
+
+<br/><br/><br/>
+<a name="DATE"/>
+## Filtering with DATE
 
 Date is "2000-01-02"
 
@@ -258,35 +334,7 @@ Date is less than "2000-01-02"
 
 `SELECT * FROM birdstrikes WHERE flight_date < "2000-01-02"`
 
-
-#### NULL 
-
-`SELECT * FROM birdstrikes WHERE speed IS NULL`
-
-`SELECT * FROM birdstrikes WHERE speed IS NOT NULL`
-
-
-## LOGICAL OPERATORS 
-
-Filter by multiple conditions
-
-`SELECT * FROM birdstrikes WHERE state = 'Alabama' AND bird_size = 'Small'`
-
-`SELECT * FROM birdstrikes WHERE state = 'Alabama' OR state = 'Missouri'`
-
-### Exercise 4: What state figures in the 2nd record, if you filter out all records which have no state and no bird_size specified?
-
-Filtering out empty strings as well
-
-`SELECT * FROM birdstrikes WHERE state IS NOT NULL AND bird_size IS NOT NULL AND state != ''`
-
-## IN
-
-What if i need 'Alabama', 'Missouri','New York','Alaska'? Should we concatenate 4 AND filters?
-
-`SELECT * FROM birdstrikes WHERE state IN ('Alabama', 'Missouri','New York','Alaska')`
-
-## BETWEEN
+#### BETWEEN
 
 All entries where flight_date is between "2000-01-01" AND "2000-01-03"
 
@@ -296,50 +344,11 @@ Or using BETWEEN for range operations
 
 `SELECT * FROM birdstrikes where flight_date BETWEEN "2000-01-01" AND "2000-01-03"`
 
-Works with integers as well
 
-`SELECT * FROM birdstrikes where cost BETWEEN 20 AND 40`
+<br/><br/>
+### `Exercise5` 
+### How many days ellapsed between now and flight dates happening in week 52? (Hint: used DATEDIFF, WEEKOFYEAR)
 
 
-# Conditional logic
 
-## CASE
-
-Syntax form
-
-```
-CASE expression
-    WHEN test THEN result
-    …
-    ELSE otherResult
-END
-```
-
-Lets create a new field base on surface and name it geosize_group
-
-```
-SELECT country_name, continent, country_code, surface_area,
-    CASE 
-        WHEN surface_area  > 2000000
-            THEN 'large'
-        WHEN  surface_area > 350000 AND surface_area <2000000
-            THEN 'medium'
-        ELSE 
-            'small'
-    END
-    AS geosize_group   
-FROM  countries
-```
-
-## Exercise 1
-
-Select the populations records where year is 2015, create a new field AS popsize_group to organize population size into
-
-* 'large' (> 50 million),
-
-* 'medium' (> 1 million), and
-
-* 'small' groups.
-
-Select only the country code, population size, and this new popsize_group as fields.
 
