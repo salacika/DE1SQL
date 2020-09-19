@@ -7,8 +7,6 @@
 
 
 **Objectives**
-* Understanding the basics of table relationships 
-* Understanding relationship marking on database diagrams
 * Understanding the difference between different joins
 * Exercising joins
 
