@@ -88,9 +88,9 @@ SQL is not case sensitive:
 
 `create schema FIRSTDB;`
 
-For the next commands make sure the created db is selected.
+For the next commands, make sure the created db is selected
 
-`USE firstdb ;`
+`USE firstdb;`
 
 #### Deleting a database
 
