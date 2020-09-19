@@ -41,6 +41,7 @@ No need to load new data, in this chapter we will use only the birdstrikes table
 ## Data types
 
 ![Database diagram](/SQL2/data_types1.png)
+
 ![Database diagram](/SQL2/data_types2.png)
 
 
