@@ -181,7 +181,10 @@ Unique pairs
 ### Exercise3: What was the cost of the 100th most expensive damage?
 
 
+#### Filtering
+Select the lines where states is Alabama
 
+`SELECT * FROM birdstrikes WHERE state = 'Alabama'`
 
 
 
@@ -214,12 +217,7 @@ Unique pairs
 
 <br/><br/><br/>
 <a name="db"/>
-## Filtering VARCHAR
-
-
-Select the lines where states is Alabama
-
-`SELECT * FROM birdstrikes WHERE state = 'Alabama'`
+## Filtering with VARCHAR
 
 Select the lines where states is not Alabama
 
@@ -227,7 +225,7 @@ Select the lines where states is not Alabama
 
 States starting with 'A'
 
-#### Like
+#### LIKE
 
 `SELECT DISTINCT state FROM birdstrikes WHERE state LIKE 'A%'`
 
@@ -248,7 +246,7 @@ States not starting with 'A'
 `SELECT DISTINCT state FROM birdstrikes WHERE state NOT LIKE 'a%' ORDER BY state`
 
 
-#### LOGICAL OPERATORS 
+#### Logical operators
 
 Filter by multiple conditions
 
@@ -274,7 +272,7 @@ What if I need 'Alabama', 'Missouri','New York','Alaska'? Should we concatenate 
 
 <br/><br/><br/>
 <a name="db"/>
-## Filtering INT
+## Filtering with INT
 
 Speed equals 350
 
@@ -301,7 +299,7 @@ Cost is equal with half of the speed
 
 <br/><br/><br/>
 <a name="db"/>
-## Filtering DATE
+## Filtering with DATE
 
 Date is "2000-01-02"
 
