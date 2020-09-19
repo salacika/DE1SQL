@@ -1,24 +1,26 @@
 # Overview
 
+# Overview
+
 **Teaching**: 90 min
 
-**Questions**
-* What is SQL?
-* What is a Relational Model?
-* What is a Relational Database?
-* What is RDBMS?
-* What is MySQL?
-* Difference between MySQL and other RDBMS?
+**Problem statement**
+1. As analyst, you are asked to perform analytics on data set stored in a database. 
+
+2. As analyst, you got data from various sources (eg. csv, access to an external db or db dump). You would like to setup your own database loading the data from external sources, so that you can perfrom analytics on it. 
+
+What do you need to know to perform these tasks?
 
 **Objectives**
 * Setting the context: evolution of digital persistency 1950-2010
 * Introducing the basic terms in context of SQL
 * Writing the first SQL
-* Setting local MYSQL
-* Setting up a MYSQL in AWS
+* Setting local MYSQL / Workbench (Expected to be done prior the course)
+* Understanding how to work in Workbench
 * Creating the first MySQL database
 * Understanding how to backup and restore a database
 * Understanding how to migrate a database
+* Learning about database security
 
 
 <br/><br/><br/>
@@ -184,6 +186,81 @@ SUBMIT SOLUTION FOR THE LAST 2 SECTIONS IN MODDLE.
 
 
 
+# Basic SQL statements
+
+Select a Database
+
+`USE --DBNAME`
+
+List the table(s) of your database
+
+`SHOW TABLES`
+
+List the structure of a table
+
+`DESCRIBE birdstrikes`
 
 
+
+# Writing data into the Database
+
+## COPY TABLE
+`CREATE TABLE new_birdstrikes LIKE birdstrikes`
+
+`SHOW TABLES`
+
+`DESCRIBE new_birdstrikes`
+
+## DELETE TABLE 
+
+`DROP TABLE new_birdstrikes`
+
+
+## CREATE TABLE
+
+`CREATE TABLE employee (id INTEGER NOT NULL, employee_name VARCHAR(255) NOT NULL, PRIMARY KEY(id))`
+
+`DESCRIBE employee`
+
+## INSERT LINE
+
+Insert lines in employee table one by one
+
+`INSERT INTO employee (id,employee_name) VALUES(1,'Student1')`
+
+`INSERT INTO employee (id,employee_name) VALUES(2,'Student2')`
+
+`INSERT INTO employee (id,employee_name) VALUES(3,'Student3')`
+
+Let's check the results
+
+`SELECT * FROM employee`
+
+What happens if you try this (and why)?
+
+`INSERT INTO employee (id,employee_name) VALUES(3,'Student4')`
+
+## UPDATE LINE
+
+Updating some records
+
+`UPDATE employee SET employee_name='Arnold Schwarzenegger' WHERE id = '1'`
+
+`UPDATE employee SET employee_name='The Other Arnold' WHERE id = '2'`
+
+Let's check the results
+
+`SELECT * FROM employee`
+
+## DELETE LINE
+
+Deleting some records
+
+`DELETE FROM employee WHERE id = 3`
+
+`DELETE FROM employee WHERE employee_name LIKE '%Arnold%'`
+
+`DROP TABLE employee`
+
+@todo security rights
 
