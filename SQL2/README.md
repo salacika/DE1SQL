@@ -227,6 +227,8 @@ Select the lines where states is not Alabama
 
 States starting with 'A'
 
+#### Like
+
 `SELECT DISTINCT state FROM birdstrikes WHERE state LIKE 'A%'`
 
 Note the case (in)sensitivity
@@ -246,6 +248,30 @@ States not starting with 'A'
 `SELECT DISTINCT state FROM birdstrikes WHERE state NOT LIKE 'a%' ORDER BY state`
 
 
+#### LOGICAL OPERATORS 
+
+Filter by multiple conditions
+
+`SELECT * FROM birdstrikes WHERE state = 'Alabama' AND bird_size = 'Small'`
+
+`SELECT * FROM birdstrikes WHERE state = 'Alabama' OR state = 'Missouri'`
+
+### Exercise 4: What state figures in the 2nd record, if you filter out all records which have no state and no bird_size specified?
+
+
+#### IS NOT NULL
+
+Filtering out empty strings as well
+
+`SELECT * FROM birdstrikes WHERE state IS NOT NULL AND bird_size IS NOT NULL AND state != ''`
+
+#### IN
+
+What if I need 'Alabama', 'Missouri','New York','Alaska'? Should we concatenate 4 AND filters?
+
+`SELECT * FROM birdstrikes WHERE state IN ('Alabama', 'Missouri','New York','Alaska')`
+
+
 <br/><br/><br/>
 <a name="db"/>
 ## Filtering INT
@@ -262,8 +288,20 @@ Cost is equal with half of the speed
 
 `SELECT * FROM birdstrikes WHERE cost = speed/2 * 10 ORDER BY cost DESC`
 
+#### BETWEEN
 
-#### DATE
+`SELECT * FROM birdstrikes where cost BETWEEN 20 AND 40`
+
+#### IS NULL
+
+`SELECT * FROM birdstrikes WHERE speed IS NULL`
+
+
+
+
+<br/><br/><br/>
+<a name="db"/>
+## Filtering DATE
 
 Date is "2000-01-02"
 
@@ -273,35 +311,7 @@ Date is less than "2000-01-02"
 
 `SELECT * FROM birdstrikes WHERE flight_date < "2000-01-02"`
 
-
-#### NULL 
-
-`SELECT * FROM birdstrikes WHERE speed IS NULL`
-
-`SELECT * FROM birdstrikes WHERE speed IS NOT NULL`
-
-
-## LOGICAL OPERATORS 
-
-Filter by multiple conditions
-
-`SELECT * FROM birdstrikes WHERE state = 'Alabama' AND bird_size = 'Small'`
-
-`SELECT * FROM birdstrikes WHERE state = 'Alabama' OR state = 'Missouri'`
-
-### Exercise 4: What state figures in the 2nd record, if you filter out all records which have no state and no bird_size specified?
-
-Filtering out empty strings as well
-
-`SELECT * FROM birdstrikes WHERE state IS NOT NULL AND bird_size IS NOT NULL AND state != ''`
-
-## IN
-
-What if i need 'Alabama', 'Missouri','New York','Alaska'? Should we concatenate 4 AND filters?
-
-`SELECT * FROM birdstrikes WHERE state IN ('Alabama', 'Missouri','New York','Alaska')`
-
-## BETWEEN
+#### BETWEEN
 
 All entries where flight_date is between "2000-01-01" AND "2000-01-03"
 
@@ -311,14 +321,16 @@ Or using BETWEEN for range operations
 
 `SELECT * FROM birdstrikes where flight_date BETWEEN "2000-01-01" AND "2000-01-03"`
 
-Works with integers as well
-
-`SELECT * FROM birdstrikes where cost BETWEEN 20 AND 40`
 
 
-# Conditional logic
 
-## CASE
+
+
+<br/><br/><br/>
+<a name="db"/>
+## CONDITONAL LOGIC
+
+#### CASE
 
 Syntax form
 
