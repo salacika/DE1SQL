@@ -157,15 +157,15 @@ List the first 1 record, after the the first 10:
 
 Order by a field
 
-`SELECT state, cost FROM birdstrikes ORDER BY cost`
+`SELECT state, cost FROM birdstrikes ORDER BY cost;`
 
 Order by a multiple fields
 
-`SELECT state, cost FROM birdstrikes ORDER BY state, cost ASC`
+`SELECT state, cost FROM birdstrikes ORDER BY state, cost ASC;`
 
 Reverse ordering
 
-`SELECT state, cost FROM birdstrikes ORDER BY cost DESC`
+`SELECT state, cost FROM birdstrikes ORDER BY cost DESC;`
 
 
 <br/><br/>
@@ -180,11 +180,11 @@ Reverse ordering
 
 Of a column
 
-`SELECT DISTINCT damage FROM birdstrikes`
+`SELECT DISTINCT damage FROM birdstrikes;`
 
 Unique pairs
 
-`SELECT DISTINCT airline, damage FROM birdstrikes`
+`SELECT DISTINCT airline, damage FROM birdstrikes;`
 
 
 <br/><br/>
@@ -196,7 +196,7 @@ Unique pairs
 #### Filtering
 Select the lines where states is Alabama
 
-`SELECT * FROM birdstrikes WHERE state = 'Alabama'`
+`SELECT * FROM birdstrikes WHERE state = 'Alabama';`
 
 
 
@@ -239,11 +239,11 @@ States starting with 'A'
 
 #### LIKE
 
-`SELECT DISTINCT state FROM birdstrikes WHERE state LIKE 'A%'`
+`SELECT DISTINCT state FROM birdstrikes WHERE state LIKE 'A%';`
 
 Note the case (in)sensitivity
 
-`SELECT DISTINCT state FROM birdstrikes WHERE state LIKE 'a%'`
+`SELECT DISTINCT state FROM birdstrikes WHERE state LIKE 'a%';`
 
 States starting with 'ala'
 
@@ -251,32 +251,37 @@ States starting with 'ala'
 
 States starting with 'North ' followed by any character, followed by an 'a', followed by anything
 
-`SELECT DISTINCT state FROM birdstrikes WHERE state LIKE 'North _a%'`
+`SELECT DISTINCT state FROM birdstrikes WHERE state LIKE 'North _a%';`
 
 States not starting with 'A'
 
-`SELECT DISTINCT state FROM birdstrikes WHERE state NOT LIKE 'a%' ORDER BY state`
+`SELECT DISTINCT state FROM birdstrikes WHERE state NOT LIKE 'a%' ORDER BY state;`
 
 
 #### Logical operators
 
 Filter by multiple conditions
 
-`SELECT * FROM birdstrikes WHERE state = 'Alabama' AND bird_size = 'Small'`
+`SELECT * FROM birdstrikes WHERE state = 'Alabama' AND bird_size = 'Small';`
 
-`SELECT * FROM birdstrikes WHERE state = 'Alabama' OR state = 'Missouri'`
+`SELECT * FROM birdstrikes WHERE state = 'Alabama' OR state = 'Missouri';`
 
 #### IS NOT NULL
 
 Filtering out empty strings as well
 
-`SELECT * FROM birdstrikes WHERE state IS NOT NULL AND bird_size IS NOT NULL AND state != ''`
+`SELECT * FROM birdstrikes WHERE state IS NOT NULL AND bird_size IS NOT NULL AND state != '';`
 
 #### IN
 
 What if I need 'Alabama', 'Missouri','New York','Alaska'? Should we concatenate 4 AND filters?
 
-`SELECT * FROM birdstrikes WHERE state IN ('Alabama', 'Missouri','New York','Alaska')`
+`SELECT * FROM birdstrikes WHERE state IN ('Alabama', 'Missouri','New York','Alaska');`
+
+#### LENGTH
+Listing states with 5 characters
+
+`SELECT DISTINCT(state) FROM birdstrikes WHERE LENGTH(state) = 5;`
 
 
 <br/><br/><br/>
@@ -285,15 +290,15 @@ What if I need 'Alabama', 'Missouri','New York','Alaska'? Should we concatenate 
 
 Speed equals 350
 
-`SELECT * FROM birdstrikes WHERE speed = 350`
+`SELECT * FROM birdstrikes WHERE speed = 350;`
 
 Speed equal or more than 25000
 
-`SELECT * FROM birdstrikes WHERE speed >= 25000`
+`SELECT * FROM birdstrikes WHERE speed >= 25000;`
 
 Cost is equal with half of the speed
 
-`SELECT * FROM birdstrikes WHERE cost = speed/2 * 10 ORDER BY cost DESC`
+`SELECT * FROM birdstrikes WHERE cost = speed/2 * 10 ORDER BY cost DESC;`
 
 #### BETWEEN
 
