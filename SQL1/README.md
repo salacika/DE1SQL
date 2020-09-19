@@ -199,3 +199,66 @@ List the structure of a table
 `DESCRIBE birdstrikes`
 
 
+
+# Writing data into the Database
+
+## COPY TABLE
+`CREATE TABLE new_birdstrikes LIKE birdstrikes`
+
+`SHOW TABLES`
+
+`DESCRIBE new_birdstrikes`
+
+## DELETE TABLE 
+
+`DROP TABLE new_birdstrikes`
+
+
+## CREATE TABLE
+
+`CREATE TABLE employee (id INTEGER NOT NULL, employee_name VARCHAR(255) NOT NULL, PRIMARY KEY(id))`
+
+`DESCRIBE employee`
+
+## INSERT LINE
+
+Insert lines in employee table one by one
+
+`INSERT INTO employee (id,employee_name) VALUES(1,'Student1')`
+
+`INSERT INTO employee (id,employee_name) VALUES(2,'Student2')`
+
+`INSERT INTO employee (id,employee_name) VALUES(3,'Student3')`
+
+Let's check the results
+
+`SELECT * FROM employee`
+
+What happens if you try this (and why)?
+
+`INSERT INTO employee (id,employee_name) VALUES(3,'Student4')`
+
+## UPDATE LINE
+
+Updating some records
+
+`UPDATE employee SET employee_name='Arnold Schwarzenegger' WHERE id = '1'`
+
+`UPDATE employee SET employee_name='The Other Arnold' WHERE id = '2'`
+
+Let's check the results
+
+`SELECT * FROM employee`
+
+## DELETE LINE
+
+Deleting some records
+
+`DELETE FROM employee WHERE id = 3`
+
+`DELETE FROM employee WHERE employee_name LIKE '%Arnold%'`
+
+`DROP TABLE employee`
+
+@todo security rights
+
