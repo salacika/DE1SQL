@@ -112,6 +112,7 @@ CREATE SCHEMA firstdb;
 USE firstdb ;
 ```
 
+#### Loading CSV into a table
 
 Execute:
 ```
@@ -175,6 +176,8 @@ Select certain field(s)
 `SELECT cost FROM birdstrikes`
 
 `SELECT airline,cost FROM birdstrikes`
+
+
 
 <br/><br/><br/>
 <a name="aws"/>
