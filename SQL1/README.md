@@ -184,61 +184,69 @@ Select certain field(s):
 ## Altering your first database
 
 #### Copy table
-`CREATE TABLE new_birdstrikes LIKE birdstrikes`
 
-`SHOW TABLES`
-
-`DESCRIBE new_birdstrikes`
+```
+CREATE TABLE new_birdstrikes LIKE birdstrikes;
+SHOW TABLES;
+DESCRIBE new_birdstrikes;
+SELECT * FROM new_birdstrikes;
+```
 
 #### Delete table
 
-`DROP TABLE IF EXISTS new_birdstrikes`
+`DROP TABLE IF EXISTS new_birdstrikes;`
 
 
 #### Create table
 
-`CREATE TABLE employee (id INTEGER NOT NULL, employee_name VARCHAR(255) NOT NULL, PRIMARY KEY(id))`
+`CREATE TABLE employee (id INTEGER NOT NULL, employee_name VARCHAR(255) NOT NULL, PRIMARY KEY(id));`
 
-`DESCRIBE employee`
+`DESCRIBE employee;`
 
 #### Insert new rows (records)
 
 Insert lines in employee table one by one
 
-`INSERT INTO employee (id,employee_name) VALUES(1,'Student1')`
-
-`INSERT INTO employee (id,employee_name) VALUES(2,'Student2')`
-
-`INSERT INTO employee (id,employee_name) VALUES(3,'Student3')`
+```
+INSERT INTO employee (id,employee_name) VALUES(1,'Student1');
+INSERT INTO employee (id,employee_name) VALUES(2,'Student2');
+INSERT INTO employee (id,employee_name) VALUES(3,'Student3');
+```
 
 Let's check the results
 
-`SELECT * FROM employee`
+`SELECT * FROM employee;`
 
 What happens if you try this (and why)?
 
-`INSERT INTO employee (id,employee_name) VALUES(3,'Student4')`
+`INSERT INTO employee (id,employee_name) VALUES(3,'Student4');`
 
 #### Updating rows
 
-`UPDATE employee SET employee_name='Arnold Schwarzenegger' WHERE id = '1'`
+`UPDATE employee SET employee_name='Arnold Schwarzenegger' WHERE id = '1';`
 
-`UPDATE employee SET employee_name='The Other Arnold' WHERE id = '2'`
+`UPDATE employee SET employee_name='The Other Arnold' WHERE id = '2';`
+
+Let's check the results
+
+`SELECT * FROM employee;`
+
+#### Deleting rows
+
+Deleting some records
+
+`DELETE FROM employee WHERE id = 3;`
 
 Let's check the results
 
 `SELECT * FROM employee`
 
 #### Deleting rows
+`TRUNCATE employee;`
 
-Deleting some records
+Let's check the results
 
-`DELETE FROM employee WHERE id = 3`
-
-`DELETE FROM employee WHERE employee_name LIKE '%Arnold%'`
-
-
-
+`SELECT * FROM employee;`
 
 <br/><br/><br/>
 <a name="aws"/>
