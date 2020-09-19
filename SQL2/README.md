@@ -35,18 +35,6 @@ No need to load new data, in this chapter we will use only the birdstrikes table
 
 ![Database diagram](/SQL1/db_model.png)
 
-
-<br/><br/><br/>
-<a name="db"/>
-## Data types
-
-![Data types](/SQL2/data_typesx.png)
-
-
-
-
-
-
 <br/><br/><br/>
 <a name="aws"/>
 ## Altering your first database
@@ -136,6 +124,12 @@ Let's check the results
 `DROP USER 'laszlosallo'@'%';`
 
 
+
+<br/><br/><br/>
+<a name="db"/>
+## Data types
+
+![Data types](/SQL2/data_types.png)
 
 
 ## Selecting data
