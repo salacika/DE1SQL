@@ -1,3 +1,38 @@
+# Overview
+
+**Teaching**: 90 min
+
+**Problem statement**
+As analyst, ... 
+
+
+**Objectives**
+* ..
+* ..
+
+
+
+<br/><br/><br/>
+
+# Table Content:
+[Today's database](#db)
+
+[INNER joins](#inner)
+
+[SELF joins](#self)
+
+[LEFT joins](#left)
+
+[Homework](#homework)  
+
+
+<br/><br/><br/>
+<a name="db"/>
+## Today's database
+![Database diagram](/SQL1/db_model.png)
+
+
+
 <br/><br/><br/>
 <a name="aws"/>
 ## Altering your first database
