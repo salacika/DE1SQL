@@ -91,6 +91,9 @@ ORDER BY calls DESC, country.id ASC;
 #### Create your first database / schema
 `CREATE SCHEMA firstdb;`
 
+SQL is not case sensitive:
+`create schema firstdb;`
+
 For the next commands make sure the created db is selected.
 
 `USE firstdb ;`
@@ -169,9 +172,7 @@ Retriving data stored in birdstrikes:
 
 `SELECT * FROM birdstrikes`
 
-`select * from birdstrikes`
-
-Select certain field(s)
+Select certain field(s):
 
 `SELECT cost FROM birdstrikes`
 
