@@ -85,7 +85,8 @@ ORDER BY calls DESC, country.id ASC;
 `CREATE SCHEMA firstdb;`
 
 SQL is not case sensitive:
-`create schema firstdb;`
+
+`create schema FIRSTDB;`
 
 For the next commands make sure the created db is selected.
 
@@ -94,11 +95,13 @@ For the next commands make sure the created db is selected.
 #### Deleting a database
 
 Execute twice:
+
 `DROP SCHEMA firstdb;`
 
 `Note` second time you will get and error because the db is already deleted with the first one. 
 
 Try this instead:
+
 `DROP SCHEMA IF EXISTS firstdb`
 
 Lets recreate the db again:
