@@ -40,8 +40,8 @@ No need to load new data, in this chapter we will use only the birdstrikes table
 <a name="db"/>
 ## Data types
 
-![Database diagram](/SQL1/data_types1.png)
-![Database diagram](/SQL1/data_types2.png)
+![Database diagram](/SQL2/data_types1.png)
+![Database diagram](/SQL2/data_types2.png)
 
 
 
