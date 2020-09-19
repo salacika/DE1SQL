@@ -1,14 +1,15 @@
 # Overview
 
+# Overview
+
 **Teaching**: 90 min
 
-**Questions**
-* What is SQL?
-* What is a Relational Model?
-* What is a Relational Database?
-* What is RDBMS?
-* What is MySQL?
-* Difference between MySQL and other RDBMS?
+**Problem statement**
+1. As analyst, you are asked to perform analytics on data set stored in a database. 
+
+2. As analyst, you got data from various sources (eg. csv, access to an external db or db dump). You would like to setup your own database loading the data from external sources, so that you can perfrom analytics on it. 
+
+What do you need to know to perform these tasks?
 
 **Objectives**
 * Setting the context: evolution of digital persistency 1950-2010
