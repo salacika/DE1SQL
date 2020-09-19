@@ -17,10 +17,9 @@ What do you need to know to perform these tasks?
 * Writing the first SQL
 * Setting local MYSQL / Workbench (Expected to be done prior the course)
 * Understanding how to work in Workbench
-* Creating the first MySQL database
+* Creating and exploring the first MySQL database
 * Understanding how to backup and restore a database
-* Understanding how to migrate a database
-* Learning about database security
+
 
 
 <br/><br/><br/>
@@ -33,13 +32,9 @@ What do you need to know to perform these tasks?
 
 [Your first local MySQL Database](#firstdb)
 
-[Your first SQL statements](#firstsql)
+[Exploring your first database](#explore)
 
-[Creating a free instance of MySQL in AWS Cloud](#aws)
-
-[Dumping a database with MySQL Workbench](#dump)
-
-[Replicating a database from local to AWS with MySQL Workbench](#replicate)
+[Dumping and restoring a database with MySQL Workbench](#dump)
 
 [Homework](#homework)  
 
@@ -153,7 +148,7 @@ speed = nullif(@v_speed, '');
 
 
 <br/><br/><br/>
-<a name="aws"/>
+<a name="explore"/>
 ## Exploring your first database
 
 
