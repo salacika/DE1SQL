@@ -182,7 +182,7 @@ Select certain field(s):
 <br/><br/><br/>
 <a name="dump"/>
 ## Dumping a database with MySQL Workbench
-
+![Database diagram](/SQL1/dump.png)
 
 
 
