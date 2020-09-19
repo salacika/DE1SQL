@@ -30,7 +30,7 @@ As analyst, ...
 <a name="db"/>
 ## Chapter's database
 
-No need to load data, in this chapter we will use only the birdstrikes table loaded in the last chapter:
+No need to load new data, in this chapter we will use only the birdstrikes table loaded in the last chapter:
 
 ![Database diagram](/SQL1/db_model.png)
 
