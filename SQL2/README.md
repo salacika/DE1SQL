@@ -15,7 +15,7 @@ As analyst, ...
 <br/><br/><br/>
 
 # Table Content:
-[Today's database](#db)
+[Chapter's database](#db)
 
 [INNER joins](#inner)
 
@@ -28,9 +28,9 @@ As analyst, ...
 
 <br/><br/><br/>
 <a name="db"/>
-## Today's database
+## Chapter's database
 
-No need to load data, today we will use only the birdstrikes table loaded last time:
+No need to load data, in this chapter we will use only the birdstrikes table loaded in the last chapter:
 
 ![Database diagram](/SQL1/db_model.png)
 
