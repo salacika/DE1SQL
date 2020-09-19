@@ -219,20 +219,8 @@ Select the lines where states is Alabama
 <a name="operators"/>
 ## Comparison Operators
 
+![Data types](/SQL2/ops.png)
 
-`=` equal
-
-`<>` not equal (standard SQL)
-
-`!=` not equal
-
-`<` less than
-
-`>` greater than
-
-`<=` less than or equal to
-
-`>=` greater than or equal to
 
 
 <br/><br/><br/>
