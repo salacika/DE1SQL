@@ -182,16 +182,10 @@ Select certain field(s):
 <br/><br/><br/>
 <a name="dump"/>
 ## Dumping a database with MySQL Workbench
-![Database diagram](/SQL1/dump.png)
+[Screenshot help](https://github.com/salacika/DE1SQL/blob/master/SQL1/dump.png?raw=true)
 
 
-
-
-
-
-
-
-<br/><br/><br/>
+br/><br/><br/>
 <a name="homework"/>
 # Homework
 
