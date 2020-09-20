@@ -16,7 +16,7 @@
 # Table Content:
 [Chapter's database](#db)
 
-[Conditional logic(#logic)
+[Conditional logic](#logic)
 
 [Aggregations](#aggregations)
 
