@@ -247,7 +247,7 @@ Note the case (in)sensitivity
 
 States starting with 'ala'
 
-`SELECT DISTINCT state FROM birdstrikes WHERE state LIKE 'ala%'`
+`SELECT DISTINCT state FROM birdstrikes WHERE state LIKE 'ala%';`
 
 States starting with 'North ' followed by any character, followed by an 'a', followed by anything
 
