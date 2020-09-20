@@ -229,6 +229,8 @@ Select the lines where states is Alabama
 <a name="VARCHAR"/>
 ## Filtering with VARCHAR
 
+## NOT EQUAL
+
 Select the lines where states is not Alabama
 
 `SELECT * FROM birdstrikes WHERE state != 'Alabama'`
