@@ -16,7 +16,7 @@
 # Table Content:
 [Chapter's database](#db)
 
-[Conditional logic - CASE, IF](#logic)
+[Conditional logic(#logic)
 
 [Aggregations](#aggregations)
 
@@ -37,7 +37,7 @@ No need to load new data, in this chapter we will use only the birdstrikes table
 
 <br/><br/><br/>
 <a name="logic"/>
-## Conditional logic - CASE, IF
+## Conditional logic
 
 #### CASE
 
