@@ -146,6 +146,9 @@ What is the lowest speed by aircraft type?
 
 `SELECT MIN(speed), aircraft from birdstrikes group by aircraft;`
 
+Which state for which aircraft type paid the most repair cost?
+`SELECT state, aircraft, SUM(cost) AS sum FROM birdstrikes WHERE state !='' GROUP BY state, aircraft ORDER BY sum DESC;`
+
 
 <br/><br/>
 ### `Exercise3` 
@@ -158,26 +161,15 @@ What is the lowest speed by aircraft type?
 <br/><br/>
 
 
-
-Multiple aggregate functions
-
-`SELECT state, aircraft, COUNT(*), MAX(cost), MIN(cost), AVG(cost) FROM birdstrikes WHERE state LIKE 'A%' GROUP BY state, aircraft ORDER BY state, aircraft;`
-
-`SELECT aircraft, state, MAX(cost) AS max_cost FROM birdstrikes GROUP BY state ORDER BY state;`
-
-Let's fix it:
-
-`SELECT state, aircraft, MAX(cost) AS max_cost FROM birdstrikes GROUP BY state, aircraft ORDER BY state, aircraft;`
-
 #### HAVING
 
-What if I want AVG speed for states which has 'island' on their name:
+We would like to filter the result of the aggregation. In this case we want only the results where the avg speed is equal to 50.
 
-`SELECT AVG(speed),state FROM birdstrikes GROUP BY state WHERE state LIKE '%island%';`
+`SELECT AVG(speed) AS avg_speed,state FROM birdstrikes GROUP BY state WHERE ROUND(avg_speed) = 50;`
 
 Crashbummbang! The correct keyword after GROUP BY is HAVING
 
-`SELECT AVG(speed),state FROM birdstrikes GROUP BY state HAVING state LIKE '%island%';`
+`SELECT AVG(speed) AS avg_speed,state FROM birdstrikes GROUP BY state HAVING ROUND(avg_speed) = 50;`
 
 
 <br/><br/>
