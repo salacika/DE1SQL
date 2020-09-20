@@ -116,7 +116,7 @@ ON left_table.id = another_table.id;
 
 ## SELF JOIN
 
-Employee table represents a hierarhy, which can be flantend with a self join. The next query displays the Manager, Direct report pairs:
+Employee table represents a hierarchy, which can be flattened with a self join. The next query displays the Manager, Direct report pairs:
 
 ```
 SELECT 
@@ -155,7 +155,7 @@ LEFT JOIN orders o
 The previous example returns all customers including the customers who have no order. If a customer has no order, the values in the column orderNumber and status are NULL. Try the same query with INNER join.
 
 #### Difference between LEFT and RIGHT join
-Right join is the mirror of the left join, you can achive the same results with both. Rarely used.
+Right join is the mirror of the left join, you can achieve the same results with both. Rarely used.
 
 #### WHERE with joins
 ```
@@ -199,4 +199,6 @@ INNER join orders,orderdetails,products and customers. Return back:
 * city
 * country
 * orderDate
+
+SUBMIT SOLUTION INTO MODDLE.
 
