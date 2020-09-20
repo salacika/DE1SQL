@@ -16,21 +16,11 @@
 # Table Content:
 [Chapter's database](#db)
 
-[Altering your first database](#altering)
+[Conditional logic - CASE, IF](#logic)
 
-[Users and privileges](#users)
+[Aggregations](#aggregations)
 
-[More advanced selects](#selects)
-
-[Data types](#datatypes)  
-
-[Comparison Operators](#operators)  
-
-[Filtering with VARCHAR](#VARCHAR)  
-
-[Filtering with INT](#INT)  
-
-[Filtering with DATE](#DATE)  
+[Grouping](#grouping)
 
 [Homework](#homework)  
 
@@ -44,14 +34,10 @@ No need to load new data, in this chapter we will use only the birdstrikes table
 
 ![Database diagram](/SQL1/db_model.png)
 
-<br/><br/><br/>
-<a name="altering"/>
-## Altering your first database
-
 
 <br/><br/><br/>
-<a name="db"/>
-## CONDITONAL LOGIC
+<a name="logic"/>
+## Conditional logic - CASE, IF
 
 #### CASE
 
@@ -88,8 +74,8 @@ ORDER BY cost_category;
 
 
 <br/><br/><br/>
-<a name="altering"/>
-## Groupping and aggregation
+<a name="agregations"/>
+## Aggregations
 
 #### COUNT
 
@@ -139,6 +125,9 @@ How many observation days we have in birdstrikes
 <br/><br/>
 
 
+<br/><br/><br/>
+<a name="grouping"/>
+## Grouping
 
 #### GROUP BY
 
