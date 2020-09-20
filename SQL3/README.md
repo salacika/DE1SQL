@@ -1,3 +1,53 @@
+# Chapter 3 - Overview
+
+**Teaching**: 90 min
+
+**Problem statement**
+1. As analyst ...
+
+
+**Objectives**
+* ..
+
+
+
+<br/><br/><br/>
+
+# Table Content:
+[Chapter's database](#db)
+
+[Altering your first database](#altering)
+
+[Users and privileges](#users)
+
+[More advanced selects](#selects)
+
+[Data types](#datatypes)  
+
+[Comparison Operators](#operators)  
+
+[Filtering with VARCHAR](#VARCHAR)  
+
+[Filtering with INT](#INT)  
+
+[Filtering with DATE](#DATE)  
+
+[Homework](#homework)  
+
+
+<br/><br/><br/>
+<a name="db"/>
+## Chapter's database
+
+No need to load new data, in this chapter we will use only the birdstrikes table loaded in the last chapter:
+
+
+![Database diagram](/SQL1/db_model.png)
+
+<br/><br/><br/>
+<a name="altering"/>
+## Altering your first database
+
 
 <br/><br/><br/>
 <a name="db"/>
