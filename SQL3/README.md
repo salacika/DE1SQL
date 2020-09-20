@@ -65,20 +65,21 @@ CASE expression
 END
 ```
 
-Lets create a new field base on surface and name it geosize_group
+Lets create a new field based on cost
 
 ```
-SELECT country_name, continent, country_code, surface_area,
+SELECT aircraft, airline, cost, 
     CASE 
-        WHEN surface_area  > 2000000
-            THEN 'large'
-        WHEN  surface_area > 350000 AND surface_area <2000000
-            THEN 'medium'
+        WHEN cost  = 0
+            THEN 'NO COST'
+        WHEN  cost >0 AND cost < 100000
+            THEN 'MEDIUM COST'
         ELSE 
-            'small'
+            'HIGH COST'
     END
-    AS geosize_group   
-FROM  countries
+    AS cost_category   
+FROM  birdstrikes
+ORDER BY cost_category;
 ```
 
 ## Exercise 1
