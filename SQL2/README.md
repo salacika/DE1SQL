@@ -9,7 +9,7 @@
 
 **Objectives**
 * Understanding the options of altering a db
-* Introdcution to database security
+* Introduction to database security
 * Understanding datatypes
 * Exercising database queries
 
