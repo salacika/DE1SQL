@@ -64,60 +64,7 @@ SELECT * FROM birdstrikes;
 SELECT cost FROM birdstrikes;
 SELECT airline,cost FROM birdstrikes;
 
--- ALTERING DB
 
-
--- copy table (structure)
-CREATE TABLE new_birdstrikes LIKE birdstrikes;
-SHOW TABLES;
-DESCRIBE new_birdstrikes;
-SELECT * FROM new_birdstrikes;
-
--- delete table
-DROP TABLE IF EXISTS new_birdstrikes;
-
--- create table
-CREATE TABLE employee (id INTEGER NOT NULL, employee_name VARCHAR(255) NOT NULL, PRIMARY KEY(id));
-DESCRIBE employee;
-SELECT * FROM employee;
-
--- insert new rows (records)
-
-INSERT INTO employee (id,employee_name) VALUES(1,'Student1');
-INSERT INTO employee (id,employee_name) VALUES(2,'Student2');
-INSERT INTO employee (id,employee_name) VALUES(3,'Student3');
-SELECT * FROM employee;
-
--- What happens if you try this (and why)?
-INSERT INTO employee (id,employee_name) VALUES(3,'Student4');
-
--- updating rows
-UPDATE employee SET employee_name='Arnold Schwarzenegger' WHERE id = '1';
-UPDATE employee SET employee_name='The Other Arnold' WHERE id = '2';
-SELECT * FROM employee;
-
--- deleting rows
-DELETE FROM employee WHERE id = 3;
-SELECT * FROM employee;
-
--- empty table
-TRUNCATE employee;
-SELECT * FROM employee;
-
-
--- USERS AND PRIVILEGES
-
--- create user
-CREATE USER 'laszlosallo'@'%' IDENTIFIED BY 'laszlosallo1';
-
--- full rights on one table
-GRANT ALL ON birdstrikes.employee TO 'laszlosallo'@'%';
-
--- access only one column
-GRANT SELECT (state) ON birdstrikes.birdstrikes TO 'laszlosallo'@'%';
-
--- delete user
-DROP USER 'laszlosallo'@'%';
 
 
 
