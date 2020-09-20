@@ -2,7 +2,7 @@
 
 This repository contains the files for CEU’s Data Engineering 1: SQL for Analysts
 
-[Chapter 1](https://github.com/salacika/DE1SQL/tree/master/SQL1)
+[Chapter 1 - INTRO. LOCAL ENVIRONMENT. BASIC SQL. YOUR FIRST DATABASE. DUMPS.](https://github.com/salacika/DE1SQL/tree/master/SQL1)
 
 [Chapter 2](https://github.com/salacika/DE1SQL/tree/master/SQL2)
 
