@@ -268,9 +268,9 @@ Filter by multiple conditions
 
 #### IS NOT NULL
 
-Filtering out empty strings as well
+Filtering out nulls and empty strings
 
-`SELECT * FROM birdstrikes WHERE state IS NOT NULL AND bird_size IS NOT NULL AND state != '';`
+`SELECT * FROM birdstrikes WHERE state IS NOT NULL AND state != '';`
 
 #### IN
 
