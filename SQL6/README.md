@@ -1,4 +1,4 @@
-# Overview
+# Chapter 6 - Overview
 
 **Teaching**: 90 min
 

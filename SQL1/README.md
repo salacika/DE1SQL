@@ -5,7 +5,7 @@
 **Problem statement**
 1. As analyst, you are asked to perform analytics on data set stored in a database. 
 
-2. As analyst, you got data from various sources (eg. csv, access to an external db or db dump). You would like to setup your own database loading the data from external sources, so that you can perfrom analytics on it. 
+2. As analyst, you got data from various sources (eg. csv, access to an external db or db dump). You would like to setup your own database loading the data from external sources, so that you can perform analytics on it. 
 
 What do you need to know to perform these tasks?
 
@@ -190,7 +190,7 @@ Import a relational data set of your choosing into your local instance.
 Requirements:
 * find a data set worth to analyze later (prepares you for the term project)
 * no restriction on the type of data source, can be excel, csv, another db, sql file etc
-* pay attention on the relational nature of the set, advised to find a strucure of 3+ interlinked table 
+* pay attention on the relational nature of the set, advised to find a structure of 3+ interlinked table 
 * do not use this: https://www.mysqltutorial.org/mysql-sample-database.aspx (because we will use it later in the course)
 
 Hints: you can find various open datasets on the internet, like here: https://data.worldbank.org/

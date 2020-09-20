@@ -1,14 +1,15 @@
-# Overview
+# Chapter 4 - Overview
 
 **Teaching**: 90 min
 
 **Problem statement**
-1. In normalized database, the data is structured in a way to avoid data redundancy and support consistency. This strucure is not allways the best fit to analytics, most of the time you need to merge one or more tables to get the required data set. Joins is offering a solution for this problem.  
+In normalized database, the data is structured in a way to avoid data redundancy and support consistency. As analyst, this structure is not always the best fit for analytics. Most of the time you need to merge one or more tables to get the required data set. Joins is offering a solution for this problem.
 
 
 **Objectives**
+* Introducing a larger relational database
 * Understanding the difference between different joins
-* Exercising joins
+* Present examples and exercise joins
 
 
 
@@ -109,13 +110,13 @@ ON left_table.id = another_table.id;
 <br/>
 
 ### `Exercise3` 
-#### We want to how the emplyoees are performing. Join orders, customers and employees and return orderDate,lastName, firstName
+#### We want to how the employees are performing. Join orders, customers and employees and return orderDate,lastName, firstName
 
 <br/><br/>
 
 ## SELF JOIN
 
-Employee table represents a hierarhy, which can be flantend with a self join. The next query displays the Manager, Direct report pairs:
+Employee table represents a hierarchy, which can be flattened with a self join. The next query displays the Manager, Direct report pairs:
 
 ```
 SELECT 
@@ -154,7 +155,7 @@ LEFT JOIN orders o
 The previous example returns all customers including the customers who have no order. If a customer has no order, the values in the column orderNumber and status are NULL. Try the same query with INNER join.
 
 #### Difference between LEFT and RIGHT join
-Right join is the mirror of the left join, you can achive the same results with both. Rarely used.
+Right join is the mirror of the left join, you can achieve the same results with both. Rarely used.
 
 #### WHERE with joins
 ```
@@ -198,4 +199,6 @@ INNER join orders,orderdetails,products and customers. Return back:
 * city
 * country
 * orderDate
+
+SUBMIT SOLUTION INTO MODDLE.
 

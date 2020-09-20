@@ -3,12 +3,15 @@
 **Teaching**: 90 min
 
 **Problem statement**
-As analyst, ... 
+1. As analyst, you would like to make sure your data stored can be accessed only by authorized persons.
+2. As analyst, you would like to query your database to obtain data required for your analytics.
 
 
 **Objectives**
-* ..
-* ..
+* Understanding the options of altering a db
+* Introduction to database security
+* Understanding datatypes
+* Present examples and exercise querying databases 
 
 
 
@@ -32,6 +35,8 @@ As analyst, ...
 [Filtering with INT](#INT)  
 
 [Filtering with DATE](#DATE)  
+
+[Homework](#homework)  
 
 
 <br/><br/><br/>
@@ -148,10 +153,12 @@ Create a new column
 
 #### Using Limit
 
-List the first 10 records:
+List the first 10 records
+
 `SELECT * FROM birdstrikes LIMIT 10;`
 
-List the first 1 record, after the the first 10:
+List the first 1 record, after the the first 10
+
 `SELECT * FROM birdstrikes LIMIT 10,1;`
 
 
@@ -219,25 +226,15 @@ Select the lines where states is Alabama
 <a name="operators"/>
 ## Comparison Operators
 
+![Data types](/SQL2/ops.png)
 
-`=` equal
-
-`<>` not equal (standard SQL)
-
-`!=` not equal
-
-`<` less than
-
-`>` greater than
-
-`<=` less than or equal to
-
-`>=` greater than or equal to
 
 
 <br/><br/><br/>
 <a name="VARCHAR"/>
 ## Filtering with VARCHAR
+
+#### NOT EQUAL
 
 Select the lines where states is not Alabama
 
@@ -255,7 +252,7 @@ Note the case (in)sensitivity
 
 States starting with 'ala'
 
-`SELECT DISTINCT state FROM birdstrikes WHERE state LIKE 'ala%'`
+`SELECT DISTINCT state FROM birdstrikes WHERE state LIKE 'ala%';`
 
 States starting with 'North ' followed by any character, followed by an 'a', followed by anything
 
@@ -276,9 +273,9 @@ Filter by multiple conditions
 
 #### IS NOT NULL
 
-Filtering out empty strings as well
+Filtering out nulls and empty strings
 
-`SELECT * FROM birdstrikes WHERE state IS NOT NULL AND bird_size IS NOT NULL AND state != '';`
+`SELECT * FROM birdstrikes WHERE state IS NOT NULL AND state != '';`
 
 #### IN
 
@@ -306,15 +303,13 @@ Speed equal or more than 25000
 
 #### ROUND, SQRT
 
-`SELECT ROUND(SQRT(speed/2) * 10) AS synthetic_speed FROM birdstrikes`
+`SELECT ROUND(SQRT(speed/2) * 10) AS synthetic_speed FROM birdstrikes;`
 
 #### BETWEEN
 
-`SELECT * FROM birdstrikes where cost BETWEEN 20 AND 40`
+`SELECT * FROM birdstrikes where cost BETWEEN 20 AND 40;`
 
-#### IS NULL
 
-`SELECT * FROM birdstrikes WHERE speed IS NULL`
 
 
 <br/><br/>
@@ -328,27 +323,29 @@ Speed equal or more than 25000
 
 Date is "2000-01-02"
 
-`SELECT * FROM birdstrikes WHERE flight_date = "2000-01-02"`
-
-Date is less than "2000-01-02"
-
-`SELECT * FROM birdstrikes WHERE flight_date < "2000-01-02"`
-
-#### BETWEEN
+`SELECT * FROM birdstrikes WHERE flight_date = "2000-01-02";`
 
 All entries where flight_date is between "2000-01-01" AND "2000-01-03"
 
-`SELECT * FROM birdstrikes WHERE flight_date >= '2000-01-01' AND flight_date <= '2000-01-03'`
+`SELECT * FROM birdstrikes WHERE flight_date >= '2000-01-01' AND flight_date <= '2000-01-03';`
 
-Or using BETWEEN for range operations
+#### BETWEEN
 
-`SELECT * FROM birdstrikes where flight_date BETWEEN "2000-01-01" AND "2000-01-03"`
+`SELECT * FROM birdstrikes where flight_date BETWEEN "2000-01-01" AND "2000-01-03";`
 
 
 <br/><br/>
 ### `Exercise5` 
-### How many days ellapsed between now and flight dates happening in week 52? (Hint: used DATEDIFF, WEEKOFYEAR)
+### How many days elapsed between now and flight dates happening in week 52? (Hint: used DATEDIFF, WEEKOFYEAR)
 
+
+<br/><br/><br/>
+<a name="homework"/>
+# Homework
+
+* Submit into Moodle the solutions for Exercise 1 to 5. 
+* Make sure to submit both the SQL statements and answers to the questions
+* The required data format for submission is a .sql file
 
 
 
