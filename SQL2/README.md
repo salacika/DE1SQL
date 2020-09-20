@@ -298,15 +298,13 @@ Speed equal or more than 25000
 
 #### ROUND, SQRT
 
-`SELECT ROUND(SQRT(speed/2) * 10) AS synthetic_speed FROM birdstrikes`
+`SELECT ROUND(SQRT(speed/2) * 10) AS synthetic_speed FROM birdstrikes;`
 
 #### BETWEEN
 
-`SELECT * FROM birdstrikes where cost BETWEEN 20 AND 40`
+`SELECT * FROM birdstrikes where cost BETWEEN 20 AND 40;`
 
-#### IS NULL
 
-`SELECT * FROM birdstrikes WHERE speed IS NULL`
 
 
 <br/><br/>
@@ -320,21 +318,21 @@ Speed equal or more than 25000
 
 Date is "2000-01-02"
 
-`SELECT * FROM birdstrikes WHERE flight_date = "2000-01-02"`
+`SELECT * FROM birdstrikes WHERE flight_date = "2000-01-02";`
 
 Date is less than "2000-01-02"
 
-`SELECT * FROM birdstrikes WHERE flight_date < "2000-01-02"`
+`SELECT * FROM birdstrikes WHERE flight_date < "2000-01-02";`
 
 #### BETWEEN
 
 All entries where flight_date is between "2000-01-01" AND "2000-01-03"
 
-`SELECT * FROM birdstrikes WHERE flight_date >= '2000-01-01' AND flight_date <= '2000-01-03'`
+`SELECT * FROM birdstrikes WHERE flight_date >= '2000-01-01' AND flight_date <= '2000-01-03';`
 
 Or using BETWEEN for range operations
 
-`SELECT * FROM birdstrikes where flight_date BETWEEN "2000-01-01" AND "2000-01-03"`
+`SELECT * FROM birdstrikes where flight_date BETWEEN "2000-01-01" AND "2000-01-03";`
 
 
 <br/><br/>
