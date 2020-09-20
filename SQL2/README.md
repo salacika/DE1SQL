@@ -3,13 +3,15 @@
 **Teaching**: 90 min
 
 **Problem statement**
-As analyst, ... 
+1. As analyst, you would like to make sure your data stored can be accesed only by authorized persons.
+2. As analyst, you would like to query your database to obtain data required for your analytics.
 
 
 **Objectives**
-* ..
-* ..
-
+* Understanding the options of altering a db.
+* Introdcution to database security
+* Understanding datatypes
+* Exercising database queries
 
 
 <br/><br/><br/>
