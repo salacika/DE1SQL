@@ -118,31 +118,15 @@ Count number of distinct states
 ### How many distinct 'aircraft' we have in the database?
 <br/><br/>
 
-#### MAX, AVG, SUM
-
-The highest repair cost of a birdstrike accident
-
-`SELECT MAX(cost) FROM birdstrikes;`
-
-The average repair cost of a birdstrike accident
-
-`SELECT AVG(cost) FROM birdstrikes;`
+#### MAX, AVG, SUM 
 
 The sum of all repair costs of birdstrikes accidents
 
 `SELECT SUM(cost) FROM birdstrikes;`
 
-Aliassing
-
-`SELECT MAX(cost) as higest_cost FROM birdstrikes;`
-
 Speed in this database is measured in KNOTS. Let's transform to KMH. 1 KNOT = 1.852 KMH
 
 `SELECT (AVG(speed)*1.852) as avg_kmh FROM birdstrikes;`
-
-Aggregation with dates
-
-`SELECT MIN(reported_date),MAX(reported_date) from birdstrikes;`
 
 How many observation days we have in birdstrikes
 
