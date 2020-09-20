@@ -3,7 +3,7 @@
 **Teaching**: 90 min
 
 **Problem statement**
-1. As analyst, you would like to make sure your data stored can be accesed only by authorized persons.
+1. As analyst, you would like to make sure your data stored can be accessed only by authorized persons.
 2. As analyst, you would like to query your database to obtain data required for your analytics.
 
 
@@ -336,7 +336,7 @@ All entries where flight_date is between "2000-01-01" AND "2000-01-03"
 
 <br/><br/>
 ### `Exercise5` 
-### How many days ellapsed between now and flight dates happening in week 52? (Hint: used DATEDIFF, WEEKOFYEAR)
+### How many days elapsed between now and flight dates happening in week 52? (Hint: used DATEDIFF, WEEKOFYEAR)
 
 
 <br/><br/><br/>
@@ -345,7 +345,7 @@ All entries where flight_date is between "2000-01-01" AND "2000-01-03"
 
 * Submit into Moodle the solutions for Exercise 1 to 5. 
 * Make sure to submit both the SQL statements and answers to the questions
-* The requied data format for submission is a .sql file
+* The required data format for submission is a .sql file
 
 
 
