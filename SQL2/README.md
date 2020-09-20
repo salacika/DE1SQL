@@ -149,9 +149,11 @@ Create a new column
 #### Using Limit
 
 List the first 10 records
+
 `SELECT * FROM birdstrikes LIMIT 10;`
 
 List the first 1 record, after the the first 10
+
 `SELECT * FROM birdstrikes LIMIT 10,1;`
 
 
