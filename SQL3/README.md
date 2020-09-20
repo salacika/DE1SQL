@@ -11,7 +11,7 @@ As analyst, one the most important operation you do, is data aggregation. How SQ
 * Introduce the aggregation concepts in SQL
 * Introduce the most used aggregation functions
 * Introduce the functions related to grouping
-* Present examples and exercise  
+* Present examples and exercise aggregation and grouping
 
 
 
