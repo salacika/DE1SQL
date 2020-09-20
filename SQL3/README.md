@@ -82,19 +82,13 @@ FROM  birdstrikes
 ORDER BY cost_category;
 ```
 
-## Exercise 1
-
-Select the populations records where year is 2015, create a new field AS popsize_group to organize population size into
-
-* 'large' (> 50 million),
-
-* 'medium' (> 1 million), and
-
-* 'small' groups.
-
-Select only the country code, population size, and this new popsize_group as fields.
+<br/><br/>
+### `Exercise1` 
+### Do the same with speed. If speed is NULL or speed < 100 create a "LOW SPEED" category, otherwise, mark as "HIGH SPEED". Use IF instead of CASE!
 
 
+<br/><br/><br/>
+<a name="altering"/>
 ## Groupping and aggregation
 
 ## COUNT
