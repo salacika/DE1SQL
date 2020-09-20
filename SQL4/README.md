@@ -1,4 +1,4 @@
-# Overview
+# Chapter 4 - Overview
 
 **Teaching**: 90 min
 
@@ -8,7 +8,7 @@
 
 **Objectives**
 * Understanding the difference between different joins
-* Exercising joins
+* Present examples and exercise joins
 
 
 
