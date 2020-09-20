@@ -11,7 +11,7 @@
 * Understanding the options of altering a db
 * Introduction to database security
 * Understanding datatypes
-* Exercising database queries
+* Present examples and exercise querying databases 
 
 
 
