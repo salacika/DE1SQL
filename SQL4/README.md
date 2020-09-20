@@ -7,6 +7,7 @@
 
 
 **Objectives**
+* Introducing a larger relational database
 * Understanding the difference between different joins
 * Present examples and exercise joins
 
