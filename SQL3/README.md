@@ -95,23 +95,13 @@ ORDER BY cost_category;
 
 Counting the number of records
 
+`COUNT(*)` - counts the number of records
 `SELECT COUNT(*) FROM birdstrikes;`
 
-COUNT(*) - counts the number of records
-
-COUNT(column) - counts the number of not NULL records for the given column
-
-Check if in 'state' we actually have NULL or not (Remember last seminar!)
-
-`SELECT state FROM birdstrikes WHERE state IS NULL;`
-
-Let's try 'reported_date'
-
-`SELECT reported_date FROM birdstrikes WHERE reported_date IS NULL;`
-
-Now let's count 'reported_date'.  
-
+`COUNT(column)` - counts the number of not NULL records for the given column
 `SELECT COUNT(reported_date) FROM birdstrikes;`
+
+#### DISTINCT
 
 How do we list all distinct states? (Remember last seminar!)
 
