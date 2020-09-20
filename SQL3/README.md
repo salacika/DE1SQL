@@ -95,7 +95,7 @@ ORDER BY cost_category;
 
 Counting the number of records
 
-`SELECT COUNT(*) FROM birdstrikes`
+`SELECT COUNT(*) FROM birdstrikes;`
 
 COUNT(*) - counts the number of records
 
@@ -103,23 +103,23 @@ COUNT(column) - counts the number of not NULL records for the given column
 
 Check if in 'state' we actually have NULL or not (Remember last seminar!)
 
-`SELECT state FROM birdstrikes WHERE state IS NULL`
+`SELECT state FROM birdstrikes WHERE state IS NULL;`
 
 Let's try 'reported_date'
 
-`SELECT reported_date FROM birdstrikes WHERE reported_date IS NULL`
+`SELECT reported_date FROM birdstrikes WHERE reported_date IS NULL;`
 
 Now let's count 'reported_date'.  
 
-`SELECT COUNT(reported_date) FROM birdstrikes`
+`SELECT COUNT(reported_date) FROM birdstrikes;`
 
 How do we list all distinct states? (Remember last seminar!)
 
-`SELECT DISTINCT(state) FROM birdstrikes`
+`SELECT DISTINCT(state) FROM birdstrikes;`
 
 Count number of distinct states
 
-`SELECT COUNT(DISTINCT(state)) FROM birdstrikes`
+`SELECT COUNT(DISTINCT(state)) FROM birdstrikes;`
 
 <br/><br/>
 ### `Exercise2` 
@@ -130,31 +130,31 @@ Count number of distinct states
 
 The highest repair cost of a birdstrike accident
 
-`SELECT MAX(cost) FROM birdstrikes`
+`SELECT MAX(cost) FROM birdstrikes;`
 
 The average repair cost of a birdstrike accident
 
-`SELECT AVG(cost) FROM birdstrikes`
+`SELECT AVG(cost) FROM birdstrikes;`
 
 The sum of all repair costs of birdstrikes accidents
 
-`SELECT SUM(cost) FROM birdstrikes`
+`SELECT SUM(cost) FROM birdstrikes;`
 
 Aliassing
 
-`SELECT MAX(cost) as higest_cost FROM birdstrikes`
+`SELECT MAX(cost) as higest_cost FROM birdstrikes;`
 
 Speed in this database is measured in KNOTS. Let's transform to KMH. 1 KNOT = 1.852 KMH
 
-`SELECT (AVG(speed)*1.852) as avg_kmh FROM birdstrikes`
+`SELECT (AVG(speed)*1.852) as avg_kmh FROM birdstrikes;`
 
 Aggregation with dates
 
-`SELECT MIN(reported_date),MAX(reported_date) from birdstrikes`
+`SELECT MIN(reported_date),MAX(reported_date) from birdstrikes;`
 
 How many observation days we have in birdstrikes
 
-`SELECT DATEDIFF(MAX(reported_date),MIN(reported_date)) from birdstrikes`
+`SELECT DATEDIFF(MAX(reported_date),MIN(reported_date)) from birdstrikes;`
 
 
 <br/><br/>
@@ -168,7 +168,7 @@ How many observation days we have in birdstrikes
 
 What is the lowest speed by aircraft type?
 
-`SELECT MIN(speed), aircraft from birdstrikes group by aircraft`
+`SELECT MIN(speed), aircraft from birdstrikes group by aircraft;`
 
 
 <br/><br/>
@@ -185,23 +185,23 @@ What is the lowest speed by aircraft type?
 
 Multiple aggregate functions
 
-`SELECT state, aircraft, COUNT(*), MAX(cost), MIN(cost), AVG(cost) FROM birdstrikes WHERE state LIKE 'A%' GROUP BY state, aircraft ORDER BY state, aircraft`
+`SELECT state, aircraft, COUNT(*), MAX(cost), MIN(cost), AVG(cost) FROM birdstrikes WHERE state LIKE 'A%' GROUP BY state, aircraft ORDER BY state, aircraft;`
 
-`SELECT aircraft, state, MAX(cost) AS max_cost FROM birdstrikes GROUP BY state ORDER BY state`
+`SELECT aircraft, state, MAX(cost) AS max_cost FROM birdstrikes GROUP BY state ORDER BY state;`
 
 Let's fix it:
 
-`SELECT state, aircraft, MAX(cost) AS max_cost FROM birdstrikes GROUP BY state, aircraft ORDER BY state, aircraft`
+`SELECT state, aircraft, MAX(cost) AS max_cost FROM birdstrikes GROUP BY state, aircraft ORDER BY state, aircraft;`
 
 #### HAVING
 
 What if I want AVG speed for states which has 'island' on their name:
 
-`SELECT AVG(speed),state FROM birdstrikes GROUP BY state WHERE state LIKE '%island%'`
+`SELECT AVG(speed),state FROM birdstrikes GROUP BY state WHERE state LIKE '%island%';`
 
 Crashbummbang! The correct keyword after GROUP BY is HAVING
 
-`SELECT AVG(speed),state FROM birdstrikes GROUP BY state HAVING state LIKE '%island%'`
+`SELECT AVG(speed),state FROM birdstrikes GROUP BY state HAVING state LIKE '%island%';`
 
 
 <br/><br/>
@@ -209,6 +209,14 @@ Crashbummbang! The correct keyword after GROUP BY is HAVING
 ### What the highest AVG speed of the states with names less than 5 characters?
 <br/><br/>
 
+
+<br/><br/><br/>
+<a name="homework"/>
+# Homework
+
+* Submit into Moodle the solutions for Exercise 1 to 5. 
+* Make sure to submit both the SQL statements and answers to the questions
+* The required data format for submission is a .sql file
 
 
 
