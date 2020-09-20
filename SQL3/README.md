@@ -3,11 +3,17 @@
 **Teaching**: 90 min
 
 **Problem statement**
-1. As analyst ...
+As analyst, one the most important operation you do, is data aggregation. How SQL supports data aggregation?
 
 
 **Objectives**
-* ..
+* Learn about conditional logic
+* Introduce the aggregation concepts in SQL
+* Introduce the most used aggregation functions
+* Introduce the functions related to grouping
+* Present examples and exercise  
+
+
 
 
 
