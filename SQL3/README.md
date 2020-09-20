@@ -96,9 +96,11 @@ ORDER BY cost_category;
 Counting the number of records
 
 `COUNT(*)` - counts the number of records
+
 `SELECT COUNT(*) FROM birdstrikes;`
 
 `COUNT(column)` - counts the number of not NULL records for the given column
+
 `SELECT COUNT(reported_date) FROM birdstrikes;`
 
 #### DISTINCT
