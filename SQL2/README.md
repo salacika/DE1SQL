@@ -320,17 +320,11 @@ Date is "2000-01-02"
 
 `SELECT * FROM birdstrikes WHERE flight_date = "2000-01-02";`
 
-Date is less than "2000-01-02"
-
-`SELECT * FROM birdstrikes WHERE flight_date < "2000-01-02";`
-
-#### BETWEEN
-
 All entries where flight_date is between "2000-01-01" AND "2000-01-03"
 
 `SELECT * FROM birdstrikes WHERE flight_date >= '2000-01-01' AND flight_date <= '2000-01-03';`
 
-Or using BETWEEN for range operations
+#### BETWEEN
 
 `SELECT * FROM birdstrikes where flight_date BETWEEN "2000-01-01" AND "2000-01-03";`
 
