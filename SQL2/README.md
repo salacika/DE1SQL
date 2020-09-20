@@ -14,6 +14,7 @@
 * Exercising database queries
 
 
+
 <br/><br/><br/>
 
 # Table Content:
@@ -34,6 +35,8 @@
 [Filtering with INT](#INT)  
 
 [Filtering with DATE](#DATE)  
+
+[Homework](#homework)  
 
 
 <br/><br/><br/>
@@ -335,6 +338,14 @@ All entries where flight_date is between "2000-01-01" AND "2000-01-03"
 ### `Exercise5` 
 ### How many days ellapsed between now and flight dates happening in week 52? (Hint: used DATEDIFF, WEEKOFYEAR)
 
+
+<br/><br/><br/>
+<a name="homework"/>
+# Homework
+
+* Submit into Moodle the solutions for Exercise 1 to 5. 
+* Make sure to submitboth the SQL statements and answers to the questions
+* The requied data format for submission is a .sql file
 
 
 
