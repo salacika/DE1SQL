@@ -182,7 +182,7 @@ CREATE VIEW `Vintage_Cars` AS
 SELECT * FROM product_sales WHERE product_sales.Brand = 'Vintage Cars';
 ```
 
-`Note` the content of Views are generated on-the-fly. For performance reasons, in analytics, so called materialized views are prefered on large data set. This is not supported by MySQL, but there are several ways to implemented. Here is an example: https://fromdual.com/mysql-materialized-views
+`Note` the content of Views are generated on-the-fly. For performance reasons, in analytics, so called materialized views are preferred on large data set. This is not supported by MySQL, but there are several ways to implemented. Here is an example: https://fromdual.com/mysql-materialized-views
 
 
 
