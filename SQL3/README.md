@@ -91,7 +91,7 @@ ORDER BY cost_category;
 <a name="altering"/>
 ## Groupping and aggregation
 
-## COUNT
+#### COUNT
 
 Counting the number of records
 
@@ -99,9 +99,7 @@ Counting the number of records
 
 COUNT(*) - counts the number of records
 
-COUNT(column) - counts the number of not NULL records for the givven column
-
-### Exercise 1: Which columns in birdstrikes can have NULL values?
+COUNT(column) - counts the number of not NULL records for the given column
 
 Check if in 'state' we actually have NULL or not (Remember last seminar!)
 
@@ -123,9 +121,12 @@ Count number of distinct states
 
 `SELECT COUNT(DISTINCT(state)) FROM birdstrikes`
 
-### Exercise 2: How many distinct 'aircraft' we have in the database?
+<br/><br/>
+### `Exercise2` 
+### How many distinct 'aircraft' we have in the database?
+<br/><br/>
 
-## MAX, AVG, SUM
+#### MAX, AVG, SUM
 
 The highest repair cost of a birdstrike accident
 
@@ -156,17 +157,31 @@ How many observation days we have in birdstrikes
 `SELECT DATEDIFF(MAX(reported_date),MIN(reported_date)) from birdstrikes`
 
 
-### Exercise 3: List the lowest speed and aircraft where the implicated aircraft was 'C' and rename it to 'lowest_speed'. What is the resulting lowest speed?
+<br/><br/>
+### `Exercise3` 
+### List the lowest speed and aircraft where the implicated aircraft was 'C' and rename it to 'lowest_speed'. What is the resulting lowest speed?
+<br/><br/>
 
 
-## GROUP BY
+
+#### GROUP BY
 
 What is the lowest speed by aircraft type?
 
 `SELECT MIN(speed), aircraft from birdstrikes group by aircraft`
 
-### Exercise 4: Which phase_of_flight has the least of incidents? 
-### Exercice 5: What is the highest average cost by phase_of_flight?
+
+<br/><br/>
+### `Exercise3` 
+### Which phase_of_flight has the least of incidents? 
+<br/><br/>
+
+
+### `Exercise4` 
+### What is the highest average cost by phase_of_flight?
+<br/><br/>
+
+
 
 Multiple aggregate functions
 
@@ -178,7 +193,7 @@ Let's fix it:
 
 `SELECT state, aircraft, MAX(cost) AS max_cost FROM birdstrikes GROUP BY state, aircraft ORDER BY state, aircraft`
 
-## HAVING
+#### HAVING
 
 What if I want AVG speed for states which has 'island' on their name:
 
@@ -189,7 +204,12 @@ Crashbummbang! The correct keyword after GROUP BY is HAVING
 `SELECT AVG(speed),state FROM birdstrikes GROUP BY state HAVING state LIKE '%island%'`
 
 
-### Exercise  6: What the highest AVG speed of the states with names less than 5 characters?
+<br/><br/>
+### `Exercise5` 
+### What the highest AVG speed of the states with names less than 5 characters?
+<br/><br/>
+
+
 
 
 
