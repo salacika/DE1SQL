@@ -301,7 +301,7 @@ Extra points:
 - Materialized Views 
 - Events
 - Testing
-- Anything special not covered during the course but makes sense in the project context
+- Anything special not covered during the course but, makes sense in the project context
 
 ### Submission 
 Submit GitHub link to Moodle. 
