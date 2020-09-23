@@ -14,4 +14,4 @@ This repository contains the files for CEU’s Data Engineering 1: SQL for Analy
 
 [Chapter 6 - DATA WAREHOUSE ARCHITECTURE. VIEWS. TRIGGERS. ETL. DATA MARTS.](https://github.com/salacika/DE1SQL/tree/master/SQL6)
 
-[TERM PROJECT.](/tree/master/SQL6#homework)
+[TERM PROJECT](https://github.com/salacika/DE1SQL/tree/master/SQL6#homework)
