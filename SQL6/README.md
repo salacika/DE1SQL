@@ -251,7 +251,7 @@ SELECT * FROM product_sales WHERE product_sales.Brand = 'Vintage Cars';
 # Term project
 
 
-### Goal. 
+### Goal
 Linking the bit and pieces learnt during the course, so that students can see how all these fits together. 
 Exercise once more the SQL statements learnt during the course.
 Go beyond what we learn. Depending on the scope, student choose to submit, one might need to expand the knowledge acquired during the course. 
