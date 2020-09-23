@@ -10,6 +10,8 @@ In normalized database, the data is structured in a way to avoid data redundancy
 * Introducing a larger relational database
 * Understanding the difference between different joins
 * Present examples and exercise joins
+* Understanding the difference between Operational and Analytical data layer
+* Introducing Data Warehouse architectures
 
 
 
