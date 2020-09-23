@@ -21,6 +21,8 @@
 
 [Creating the analytical data store](#dw)
 
+[Events to schedule ETL jobs](#jobs)
+
 [Trigger as ETL](#etl)
 
 [Data marts with Views](#datamart)
@@ -43,34 +45,91 @@ Install [sample database](/SQL5/sampledatabase_create.sql?raw=true) script. Cred
 <a name="dw"/>
 ## Creating the analytical data store
 
-We will use a query created in Homework 3. This creates a denormalized snapshot of the operational tables for product_sales subject. 
+We will use a query created in Homework 3. This creates a denormalized snapshot of the operational tables for product_sales subject. We will embed the creation in a stored procedure. 
 
 ```
-DROP TABLE IF EXISTS product_sales;
+DROP PROCEDURE IF EXISTS CreateProductSalesStore;
 
-CREATE TABLE product_sales AS
-SELECT 
-   orders.orderNumber AS SalesId, 
-   orderdetails.priceEach AS Price, 
-   orderdetails.quantityOrdered AS Unit,
-   products.productName AS Product,
-   products.productLine As Brand,   
-   customers.city As City,
-   customers.country As Country,   
-   orders.orderDate AS Date,
-   WEEK(orders.orderDate) as WeekOfYear
-FROM
-    orders
-INNER JOIN
-    orderdetails USING (orderNumber)
-INNER JOIN
-    products USING (productCode)
-INNER JOIN
-    customers USING (customerNumber)
-ORDER BY 
-    orderNumber, 
-    orderLineNumber;
+DELIMITER //
+
+CREATE PROCEDURE CreateProductSalesStore()
+BEGIN
+
+	DROP TABLE IF EXISTS product_sales;
+
+	CREATE TABLE product_sales AS
+	SELECT 
+	   orders.orderNumber AS SalesId, 
+	   orderdetails.priceEach AS Price, 
+	   orderdetails.quantityOrdered AS Unit,
+	   products.productName AS Product,
+	   products.productLine As Brand,   
+	   customers.city As City,
+	   customers.country As Country,   
+	   orders.orderDate AS Date,
+	   WEEK(orders.orderDate) as WeekOfYear
+	FROM
+		orders
+	INNER JOIN
+		orderdetails USING (orderNumber)
+	INNER JOIN
+		products USING (productCode)
+	INNER JOIN
+		customers USING (customerNumber)
+	ORDER BY 
+		orderNumber, 
+		orderLineNumber;
+
+END //
+DELIMITER ;
+
+
+CALL CreateProductSalesStore();
 ```
+
+<br/><br/><br/>
+<a name="jobs"/>
+## Events to schedule ETL jobs
+
+Event engine runs scheduled jobs/tasks. We can us it for scheduling ETL processes. 
+
+Basics on how to check the state of the scheduler. Check if scheduler is running 
+
+`SHOW VARIABLES LIKE "event_scheduler";`
+
+Turn it on if not
+
+`SET GLOBAL event_scheduler = ON;`
+
+This is how you turn it OFF
+
+`SET GLOBAL event_scheduler = OFF;`
+
+
+Event which is calling CreateProductSalesStore every 1 minute in the next 1 hour. 
+```
+DELIMITER $$
+
+CREATE EVENT CreateProductSalesStoreEvent
+ON SCHEDULE EVERY 1 MINUTE
+STARTS CURRENT_TIMESTAMP
+ENDS CURRENT_TIMESTAMP + INTERVAL 1 HOUR
+DO
+	BEGIN
+		INSERT INTO messages SELECT CONCAT('event:',NOW());
+    		CALL CreateProductSalesStore();
+	END$$
+DELIMITER ;
+```
+
+Listing all events stored in the schema
+
+`SHOW EVENTS;`
+
+Deleting an event
+
+`DROP EVENT IF EXISTS CreateProductSalesStoreEvent;`
+
 
 <br/><br/><br/>
 <a name="etl"/>
@@ -191,6 +250,61 @@ SELECT * FROM product_sales WHERE product_sales.Brand = 'Vintage Cars';
 <a name="homework"/>
 # Term project
 
+
+### Goal
+Linking the bit and pieces learnt during the course, so that students can see how all these fits together. 
+Exercise once more the SQL statements learnt during the course.
+Go beyond what we learn. Depending on the scope, student choose to submit, one might need to expand the knowledge acquired during the course. 
+Learning the format of delivering such a project. (naming, packaging, versioning, documenting, testing etc.)
+
+### High level requirements
+**OPERATIONAL LAYER:** Create an operational data layer in MySQL. Import a relational data set of your choosing into your local instance. Find a data which makes sense to be transformed in analytical data layer for further analytics. In ideal case, you can use the outcome of HW1.
+
+**ANALYTICS:** Create a short plan of what kind of analytics can be potentially executed on this data set.  Plan how the analytical data layer, ETL, Data Mart would look like to support these analytics. (Remember ProductSales example during the class). 
+
+**ANALYTICAL LAYER:** Design a denormalized data structure using the operational layer. Create table in MySQL for this structure. 
+
+**ETL PIPLINE:** Create an ETL pipeline using Triggers, Stored procedures. Make sure to demonstrate every element of ETL (Extract, Transform, Load)
+
+**DATA MART:** Create Views as data marts. 
+
+*Optional: create Materialized Views with Events for some of the data marts. 
+
+
+
+
+### Delivery
+The project artifacts should be stored and handed over, using a GitHub public repo.
+
+I will give you the freedom of choosing naming conventions and structure, since this was not covered implicitly in the course. Yet, I would encourage you, to find some reading over the internet and whatever you choose, be consistent. 
+
+Testing is optional, for the same reason, we have not covered during the course. Yet, be aware that this is important part of a project delivery. 
+Documentation: use the possibilities offered by GIT markdown and comments in the sql files. 
+
+Reproducibility: the project should be reproducible in a straightforward manner. In other words, I should be able to run your code and obtain the same outcome as you. 
+
+### Grading criteria
+
+
+-	Fitness of the input dataset to the purpose **5 points**
+-	Complexity of the input data set **5 points**
+-	Execution of the operational data layer **10 points**
+-	Analytics plan **10 points**
+-	Execution of the analytical data layer **10 points**
+-	ETL **15 points**
+-	Data Marts **10 points**
+-	Delivery: Naming, structure **10 points**
+-	Delivery: Documentation **10 points**
+-	Reproducibility **15 points**
+
+Extra points:
+- Materialized Views 
+- Events
+- Testing
+- Anything special not covered during the course but, makes sense in the project context
+
+### Submission 
+Submit GitHub link to Moodle. 
 
 
 
