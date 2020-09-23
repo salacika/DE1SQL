@@ -250,15 +250,14 @@ SELECT * FROM product_sales WHERE product_sales.Brand = 'Vintage Cars';
 <a name="homework"/>
 # Term project
 
-Term Project for DE1
 
-1.	Goal. 
+### Goal. 
 Linking the bit and pieces learnt during the course, so that students can see how all these fits together. 
 Exercise once more the SQL statements learnt during the course.
 Go beyond what we learn. Depending on the scope, student choose to submit, one might need to expand the knowledge acquired during the course. 
 Learning the format of delivering such a project. (naming, packaging, versioning, documenting, testing etc.)
 
-2.	High level requirements
+#### High level requirements
 OPERATIONAL LAYER: Create an operational data layer in MySQL. Import a relational data set of your choosing into your local instance. Find a data which makes sense to be transformed in analytical data layer for further analytics. In ideal case, you can use the outcome of HW1.
 
 ANALYTICS: Create a short plan of what kind of analytics can be potentially executed on this data set.  Plan how the analytical data layer, ETL, Data Mart would look like to support these analytics. (Remember ProductSales example during the class). 
