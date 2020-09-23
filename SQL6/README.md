@@ -21,6 +21,8 @@
 
 [Creating the analytical data store](#dw)
 
+[Events to schedule ETL jobs](#jobs)
+
 [Trigger as ETL](#etl)
 
 [Data marts with Views](#datamart)
@@ -43,34 +45,86 @@ Install [sample database](/SQL5/sampledatabase_create.sql?raw=true) script. Cred
 <a name="dw"/>
 ## Creating the analytical data store
 
-We will use a query created in Homework 3. This creates a denormalized snapshot of the operational tables for product_sales subject. 
+We will use a query created in Homework 3. This creates a denormalized snapshot of the operational tables for product_sales subject. We will embed the creation in a stored procedure. 
 
 ```
-DROP TABLE IF EXISTS product_sales;
+DROP PROCEDURE IF EXISTS CreateProductSalesStore;
 
-CREATE TABLE product_sales AS
-SELECT 
-   orders.orderNumber AS SalesId, 
-   orderdetails.priceEach AS Price, 
-   orderdetails.quantityOrdered AS Unit,
-   products.productName AS Product,
-   products.productLine As Brand,   
-   customers.city As City,
-   customers.country As Country,   
-   orders.orderDate AS Date,
-   WEEK(orders.orderDate) as WeekOfYear
-FROM
-    orders
-INNER JOIN
-    orderdetails USING (orderNumber)
-INNER JOIN
-    products USING (productCode)
-INNER JOIN
-    customers USING (customerNumber)
-ORDER BY 
-    orderNumber, 
-    orderLineNumber;
+DELIMITER //
+
+CREATE PROCEDURE CreateProductSalesStore()
+BEGIN
+
+	DROP TABLE IF EXISTS product_sales;
+
+	CREATE TABLE product_sales AS
+	SELECT 
+	   orders.orderNumber AS SalesId, 
+	   orderdetails.priceEach AS Price, 
+	   orderdetails.quantityOrdered AS Unit,
+	   products.productName AS Product,
+	   products.productLine As Brand,   
+	   customers.city As City,
+	   customers.country As Country,   
+	   orders.orderDate AS Date,
+	   WEEK(orders.orderDate) as WeekOfYear
+	FROM
+		orders
+	INNER JOIN
+		orderdetails USING (orderNumber)
+	INNER JOIN
+		products USING (productCode)
+	INNER JOIN
+		customers USING (customerNumber)
+	ORDER BY 
+		orderNumber, 
+		orderLineNumber;
+
+END //
+DELIMITER ;
+
+
+CALL CreateProductSalesStore();
 ```
+
+<br/><br/><br/>
+<a name="jobs"/>
+## Events to schedule ETL jobs
+
+Event engine runs scheduled jobs/tasks. We can us it for scheduling ETL processes. 
+
+Basics on how to check the state of the scheduler
+```
+-- check if scheduler is running 
+SHOW VARIABLES LIKE "event_scheduler";
+-- turn it on if not
+SET GLOBAL event_scheduler = ON;
+-- this is how you turn it OFF
+SET GLOBAL event_scheduler = OFF;
+```
+
+Event which is calling CreateProductSalesStore every 1 minute in the next 1 hour. 
+```
+DELIMITER $$
+
+CREATE EVENT CreateProductSalesStoreEvent
+ON SCHEDULE EVERY 1 MINUTE
+STARTS CURRENT_TIMESTAMP
+ENDS CURRENT_TIMESTAMP + INTERVAL 1 HOUR
+DO
+	BEGIN
+		INSERT INTO messages SELECT CONCAT('event:',NOW());
+    		CALL CreateProductSalesStore();
+	END$$
+DELIMITER ;
+```
+
+Listing all events stored in the schema
+`SHOW EVENTS;`
+
+Deleting an event
+`DROP EVENT IF EXISTS CreateProductSalesStoreEvent;`
+
 
 <br/><br/><br/>
 <a name="etl"/>
