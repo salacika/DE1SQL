@@ -252,10 +252,10 @@ SELECT * FROM product_sales WHERE product_sales.Brand = 'Vintage Cars';
 
 
 ### Goal
-Linking the bit and pieces learnt during the course, so that students can see how all these fits together. 
-Exercise once more the SQL statements learnt during the course.
-Go beyond what we learn. Depending on the scope, student choose to submit, one might need to expand the knowledge acquired during the course. 
-Learning the format of delivering such a project. (naming, packaging, versioning, documenting, testing etc.)
+* Linking the bit and pieces learnt during the course, so that students can see how all these fits together
+* Exercise once more the SQL statements covered in the course
+* Go beyond what we learn. Depending on the scope, student choose to submit, one might need to expand the knowledge acquired during the course
+* Learning the format of delivering such a project (naming, packaging, versioning, documenting, testing etc.)
 
 ### High level requirements
 **OPERATIONAL LAYER:** Create an operational data layer in MySQL. Import a relational data set of your choosing into your local instance. Find a data which makes sense to be transformed in analytical data layer for further analytics. In ideal case, you can use the outcome of HW1.
