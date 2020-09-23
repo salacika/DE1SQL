@@ -286,16 +286,16 @@ Reproducibility: the project should be reproducible in a straightforward manner.
 ### Grading criteria
 
 
--	Fitness of the input dataset to the purpose 
--	Complexity of the input data set
--	Execution of the operational data layer
--	Analytics plan
--	Execution of the analytical data layer
--	ETL
--	Data Marts
--	Delivery: Naming, structure
--	Delivery: Documentation
--	Reproducibility
+-	Fitness of the input dataset to the purpose **5 points**
+-	Complexity of the input data set **5 points**
+-	Execution of the operational data layer **10 points**
+-	Analytics plan **10 points**
+-	Execution of the analytical data layer **10 points**
+-	ETL **15 points**
+-	Data Marts **10 points**
+-	Delivery: Naming, structure **10 points**
+-	Delivery: Documentation **10 points**
+-	Reproducibility **15 points**
 
 Extra points:
 - Materialized Views 
