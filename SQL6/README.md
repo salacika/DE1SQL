@@ -94,14 +94,19 @@ CALL CreateProductSalesStore();
 Event engine runs scheduled jobs/tasks. We can us it for scheduling ETL processes. 
 
 Basics on how to check the state of the scheduler
-```
--- check if scheduler is running 
-SHOW VARIABLES LIKE "event_scheduler";
--- turn it on if not
-SET GLOBAL event_scheduler = ON;
--- this is how you turn it OFF
-SET GLOBAL event_scheduler = OFF;
-```
+
+Check if scheduler is running 
+
+`SHOW VARIABLES LIKE "event_scheduler";`
+
+Turn it on if not
+
+`SET GLOBAL event_scheduler = ON;`
+
+This is how you turn it OFF
+
+`SET GLOBAL event_scheduler = OFF;`
+
 
 Event which is calling CreateProductSalesStore every 1 minute in the next 1 hour. 
 ```
@@ -120,9 +125,11 @@ DELIMITER ;
 ```
 
 Listing all events stored in the schema
+
 `SHOW EVENTS;`
 
 Deleting an event
+
 `DROP EVENT IF EXISTS CreateProductSalesStoreEvent;`
 
 
