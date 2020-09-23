@@ -6,10 +6,8 @@
 1. As analyst, you would like to create a dedicated analytical data layer for your analytics. How would you do that?
 
 **Objectives**
-* Understanding the difference between Operational and Analytical data layer
-* Introducing Data Warehouse architectures
 * Building a denormalized analytical data store 
-* Building an ETL pipeline using MySQL Triggers 
+* Building an ETL pipeline using MySQL Triggers and Events
 * Building data marts with MySQL View
 
 
