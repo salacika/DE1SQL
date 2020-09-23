@@ -257,29 +257,32 @@ Exercise once more the SQL statements learnt during the course.
 Go beyond what we learn. Depending on the scope, student choose to submit, one might need to expand the knowledge acquired during the course. 
 Learning the format of delivering such a project. (naming, packaging, versioning, documenting, testing etc.)
 
-#### High level requirements
-OPERATIONAL LAYER: Create an operational data layer in MySQL. Import a relational data set of your choosing into your local instance. Find a data which makes sense to be transformed in analytical data layer for further analytics. In ideal case, you can use the outcome of HW1.
+### High level requirements
+**OPERATIONAL LAYER:** Create an operational data layer in MySQL. Import a relational data set of your choosing into your local instance. Find a data which makes sense to be transformed in analytical data layer for further analytics. In ideal case, you can use the outcome of HW1.
 
-ANALYTICS: Create a short plan of what kind of analytics can be potentially executed on this data set.  Plan how the analytical data layer, ETL, Data Mart would look like to support these analytics. (Remember ProductSales example during the class). 
+**ANALYTICS:** Create a short plan of what kind of analytics can be potentially executed on this data set.  Plan how the analytical data layer, ETL, Data Mart would look like to support these analytics. (Remember ProductSales example during the class). 
 
-ANALYTICAL LAYER: Design a denormalized data structure using the operational layer. Create table in MySQL for this structure. 
+**ANALYTICAL LAYER:** Design a denormalized data structure using the operational layer. Create table in MySQL for this structure. 
 
-ETL PIPLINE: Create an ETL pipeline using Triggers, Stored procedures. Make sure to demonstrate every element of ETL (Extract, Transform, Load)
+**ETL PIPLINE:** Create an ETL pipeline using Triggers, Stored procedures. Make sure to demonstrate every element of ETL (Extract, Transform, Load)
 
-DATA MART: Create Views as data marts. 
+**DATA MART:** Create Views as data marts. 
 *Optional: create Materialized Views with Events for some of the data marts. 
 
 
 
 
-3.	Delivery
+### Delivery
 The project artifacts should be stored and handed over, using a GitHub public repo.
+
 I will give you the freedom of choosing naming conventions and structure, since this was not covered implicitly in the course. Yet, I would encourage you, to find some reading over the internet and whatever you choose, be consistent. 
+
 Testing is optional, for the same reason, we have not covered during the course. Yet, be aware that this is important part of a project delivery. 
 Documentation: use the possibilities offered by GIT markdown and comments in the sql files. 
+
 Reproducibility: the project should be reproducible in a straightforward manner. In other words, I should be able to run your code and obtain the same outcome as you. 
 
-4.	Grading criteria
+### Grading criteria
 
 
 -	Fitness of the input dataset to the purpose 
@@ -299,7 +302,7 @@ Extra points:
 - Testing
 - Anything special not covered during the course but makes sense in the project context
 
-5.	Submission 
+### Submission 
 Submit GitHub link to Moodle. 
 
 
