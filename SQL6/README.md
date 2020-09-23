@@ -93,9 +93,7 @@ CALL CreateProductSalesStore();
 
 Event engine runs scheduled jobs/tasks. We can us it for scheduling ETL processes. 
 
-Basics on how to check the state of the scheduler
-
-Check if scheduler is running 
+Basics on how to check the state of the scheduler. Check if scheduler is running 
 
 `SHOW VARIABLES LIKE "event_scheduler";`
 
