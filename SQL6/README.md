@@ -267,6 +267,7 @@ Learning the format of delivering such a project. (naming, packaging, versioning
 **ETL PIPLINE:** Create an ETL pipeline using Triggers, Stored procedures. Make sure to demonstrate every element of ETL (Extract, Transform, Load)
 
 **DATA MART:** Create Views as data marts. 
+
 *Optional: create Materialized Views with Events for some of the data marts. 
 
 
