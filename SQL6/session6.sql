@@ -1,30 +1,72 @@
 
-DROP TABLE IF EXISTS product_sales;
+--  ANALYTICAL DATA STORE
 
-CREATE TABLE product_sales AS
-SELECT 
-   orders.orderNumber AS SalesId, 
-   orderdetails.priceEach AS Price, 
-   orderdetails.quantityOrdered AS Unit,
-   products.productName AS Product,
-   products.productLine As Brand,   
-   customers.city As City,
-   customers.country As Country,   
-   orders.orderDate AS Date,
-   WEEK(orders.orderDate) as WeekOfYear
-FROM
-    orders
-INNER JOIN
-    orderdetails USING (orderNumber)
-INNER JOIN
-    products USING (productCode)
-INNER JOIN
-    customers USING (customerNumber)
-ORDER BY 
-    orderNumber, 
-    orderLineNumber;
+DROP PROCEDURE IF EXISTS CreateProductSalesStore;
+
+DELIMITER //
+
+CREATE PROCEDURE CreateProductSalesStore()
+BEGIN
+
+	DROP TABLE IF EXISTS product_sales;
+
+	CREATE TABLE product_sales AS
+	SELECT 
+	   orders.orderNumber AS SalesId, 
+	   orderdetails.priceEach AS Price, 
+	   orderdetails.quantityOrdered AS Unit,
+	   products.productName AS Product,
+	   products.productLine As Brand,   
+	   customers.city As City,
+	   customers.country As Country,   
+	   orders.orderDate AS Date,
+	   WEEK(orders.orderDate) as WeekOfYear
+	FROM
+		orders
+	INNER JOIN
+		orderdetails USING (orderNumber)
+	INNER JOIN
+		products USING (productCode)
+	INNER JOIN
+		customers USING (customerNumber)
+	ORDER BY 
+		orderNumber, 
+		orderLineNumber;
+
+END //
+DELIMITER ;
+
+
+CALL CreateProductSalesStore();
+
     
+-- EVENTS
+SHOW VARIABLES LIKE "event_scheduler";
 
+-- on
+SET GLOBAL event_scheduler = ON;
+-- off
+SET GLOBAL event_scheduler = OFF;
+
+
+DELIMITER $$
+
+CREATE EVENT CreateProductSalesStoreEvent
+ON SCHEDULE EVERY 1 MINUTE
+STARTS CURRENT_TIMESTAMP
+ENDS CURRENT_TIMESTAMP + INTERVAL 1 HOUR
+DO
+	BEGIN
+	INSERT INTO messages SELECT CONCAT('event:',NOW());
+    CALL CreateProductSalesStore();
+	END$$
+DELIMITER ;
+
+SHOW EVENTS;
+
+DROP EVENT IF EXISTS CreateProductSalesStoreEvent;
+
+-- TRIGGER AS ETL
 
 
 -- empty log table
@@ -87,7 +129,7 @@ SELECT * FROM messages;
 SELECT * FROM product_sales WHERE product_sales.SalesId = 16;
 
 
-
+-- VIEWS AS DATAMARTS
 
 
 DROP VIEW IF EXISTS USA;
