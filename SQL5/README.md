@@ -15,8 +15,7 @@ How do you propose to solve these problems?
 * Understanding the difference of processing data in the database vs outside of of database engine
 * Understanding the advantages and disadvantages of stored procedures
 * Example with fixing data
-* Understanding the difference between Operational and Analytical data layer
-* Introducing Data Warehouse architectures
+
 
 
 
