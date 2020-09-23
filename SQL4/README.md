@@ -3,6 +3,7 @@
 **Teaching**: 90 min
 
 **Problem statement**
+
 In normalized database, the data is structured in a way to avoid data redundancy and support consistency. As analyst, this structure is not always the best fit for analytics. Most of the time you need to merge one or more tables to get the required data set. Joins is offering a solution for this problem.
 
 
