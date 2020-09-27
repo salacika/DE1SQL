@@ -185,7 +185,7 @@ Reverse ordering
 
 <br/><br/>
 ### `Exercise2` 
-### What is the date of the newest birstrike in this database?
+### What is flight_date of the latest birstrike in this database?
 <br/><br/>
 
 
