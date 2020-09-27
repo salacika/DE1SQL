@@ -11,9 +11,9 @@ What do you need to know to perform these tasks?
 
 **Objectives**
 * Setting the context: evolution of digital persistency 1950-2010
-* Introducing the basic terms in context of SQL
+* Introducing the basic terms, in context of SQL
 * Writing the first SQL
-* Setting local MYSQL / Workbench (Expected to be done prior the course)
+* Setting local MYSQL / Workbench (Expected to be done prior to the course)
 * Understanding how to work in Workbench
 * Creating and exploring the first MySQL database
 * Understanding how to backup and restore a database
