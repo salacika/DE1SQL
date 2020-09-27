@@ -341,7 +341,7 @@ All entries where flight_date is between "2000-01-01" AND "2000-01-03"
 
 <br/><br/><br/>
 <a name="homework"/>
-# Homework
+# Homework 2
 
 * Submit into Moodle the solutions for Exercise 1 to 5. 
 * Make sure to submit both the SQL statements and answers to the questions
