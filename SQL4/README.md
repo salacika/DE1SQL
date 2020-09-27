@@ -192,7 +192,7 @@ LEFT JOIN orderDetails d
 
 <br/><br/><br/>
 <a name="homework"/>
-# Homework
+# Homework 4
 INNER join orders,orderdetails,products and customers. Return back: 
 * orderNumber
 * priceEach
