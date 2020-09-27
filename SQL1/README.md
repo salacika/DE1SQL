@@ -55,11 +55,11 @@ GROUP BY suppliers.SupplierID;
 
 #### Query 3
 ```
-SELECT o.OrderDate,
-       o.OrderID,
-       o.ShipperID,
-       ROUND( SUM(od.Quantity * p.Price), 0) AS Basket,
-	   IF(od.Quantity < 30,'SMALLQ','HIGHQ') 
+SELECT 	o.OrderDate,
+       	o.OrderID,
+       	o.ShipperID,
+       	ROUND( SUM(od.Quantity * p.Price), 0) AS Basket,
+	CASE WHEN od.Quantity < 30 THEN 'SMALLQ' ELSE 'HIGHQ' END as QuantityLabel
 FROM Orders AS o
      LEFT JOIN OrderDetails AS od ON od.OrderID = o.OrderID
      INNER JOIN ( SELECT * FROM Products WHERE Price >= 100 ) AS p on p.ProductID = od.ProductID
