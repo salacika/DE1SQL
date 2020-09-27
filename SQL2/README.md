@@ -204,7 +204,7 @@ Unique pairs
 
 <br/><br/>
 ### `Exercise3` 
-### What was the cost of the 100th most expensive damage?
+### What was the cost of the 50th most expensive damage?
 <br/><br/>
 
 
