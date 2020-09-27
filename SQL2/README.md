@@ -299,7 +299,7 @@ Speed equals 350
 
 Speed equal or more than 25000
 
-`SELECT * FROM birdstrikes WHERE speed >= 25000;`
+`SELECT * FROM birdstrikes WHERE speed >= 10000;`
 
 #### ROUND, SQRT
 
