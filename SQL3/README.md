@@ -127,7 +127,7 @@ How many observation days we have in birdstrikes
 
 <br/><br/>
 ### `Exercise3` 
-### List the lowest speed and aircraft where the implicated aircraft was 'C' and rename it to 'lowest_speed'. What is the resulting lowest speed?
+### What was the lowest speed of aircrafts starting with 'H'
 <br/><br/>
 
 
@@ -137,22 +137,23 @@ How many observation days we have in birdstrikes
 
 #### GROUP BY
 
-What is the lowest speed by aircraft type?
+What is the highest speed by aircraft type?
 
-`SELECT MIN(speed), aircraft from birdstrikes group by aircraft;`
+`SELECT MIN(speed), aircraft FROM birdstrikes GROUP BY aircraft;`
 
 Which state for which aircraft type paid the most repair cost?
+
 `SELECT state, aircraft, SUM(cost) AS sum FROM birdstrikes WHERE state !='' GROUP BY state, aircraft ORDER BY sum DESC;`
 
 
 <br/><br/>
-### `Exercise3` 
+### `Exercise4` 
 ### Which phase_of_flight has the least of incidents? 
 <br/><br/>
 
 
-### `Exercise4` 
-### What is the highest average cost by phase_of_flight?
+### `Exercise5` 
+### What is the rounded highest average cost by phase_of_flight?
 <br/><br/>
 
 
@@ -168,7 +169,7 @@ Crashbummbang! The correct keyword after GROUP BY is HAVING
 
 
 <br/><br/>
-### `Exercise5` 
+### `Exercise6` 
 ### What the highest AVG speed of the states with names less than 5 characters?
 <br/><br/>
 
@@ -177,7 +178,7 @@ Crashbummbang! The correct keyword after GROUP BY is HAVING
 <a name="homework"/>
 # Homework 3
 
-* Submit into Moodle the solutions for Exercise 1 to 5. 
+* Submit into Moodle the solutions for Exercise 1 to 6. 
 * Make sure to submit both the SQL statements and answers to the questions
 * The required data format for submission is a .sql file
 
