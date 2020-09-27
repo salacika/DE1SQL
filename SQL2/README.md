@@ -3,8 +3,8 @@
 **Teaching**: 90 min
 
 **Problem statement**
-1. As analyst, you would like to make sure your data stored can be accessed only by authorized persons.
-2. As analyst, you would like to query your database to obtain data required for your analytics.
+1. As analyst, you would like to make sure your data stored, can be accessed only by authorized persons.
+2. As analyst, you would like to query your database, to obtain data required for your analytics.
 
 
 **Objectives**
@@ -185,7 +185,7 @@ Reverse ordering
 
 <br/><br/>
 ### `Exercise2` 
-### What is the date of the newest birstrike in this database?
+### What is flight_date of the latest birstrike in this database?
 <br/><br/>
 
 
@@ -204,7 +204,7 @@ Unique pairs
 
 <br/><br/>
 ### `Exercise3` 
-### What was the cost of the 100th most expensive damage?
+### What was the cost of the 50th most expensive damage?
 <br/><br/>
 
 
@@ -275,7 +275,7 @@ Filter by multiple conditions
 
 Filtering out nulls and empty strings
 
-`SELECT * FROM birdstrikes WHERE state IS NOT NULL AND state != '';`
+`SELECT DISTINCT(state) FROM birdstrikes WHERE state IS NOT NULL AND state != '' ORDER BY state;`
 
 #### IN
 
@@ -299,7 +299,7 @@ Speed equals 350
 
 Speed equal or more than 25000
 
-`SELECT * FROM birdstrikes WHERE speed >= 25000;`
+`SELECT * FROM birdstrikes WHERE speed >= 10000;`
 
 #### ROUND, SQRT
 
@@ -336,7 +336,8 @@ All entries where flight_date is between "2000-01-01" AND "2000-01-03"
 
 <br/><br/>
 ### `Exercise5` 
-### How many days elapsed between now and flight dates happening in week 52? (Hint: used DATEDIFF, WEEKOFYEAR)
+### How many days elapsed between the current date and the flights happening in week 52, for incidents from Colorado? (Hint: use NOW, DATEDIFF, WEEKOFYEAR)
+
 
 
 <br/><br/><br/>

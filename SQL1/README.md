@@ -112,15 +112,7 @@ USE firstdb;
 
 #### Loading CSV into a table
 
-Execute
-```
-SHOW VARIABLES LIKE "secure_file_priv";
-```
-
-Copy https://github.com/salacika/DE1SQL/blob/master/SQL1/birdstrikes_small.csv in the folder resulted in the previous command. 
-
-Then execute
-
+Let's create a table:
 ```
 CREATE TABLE birdstrikes 
 (id INTEGER NOT NULL,
@@ -134,7 +126,17 @@ reported_date DATE,
 bird_size VARCHAR(16),
 cost INTEGER NOT NULL,
 speed INTEGER,PRIMARY KEY(id));
+```
 
+This table is empty, we need to fill in with data. This time we will load a csv file into the table. For security reason, CSV loading is limited, so you need to copy the CSV file in a place indicated by this command:
+```
+SHOW VARIABLES LIKE "secure_file_priv";
+```
+
+Copy https://github.com/salacika/DE1SQL/blob/master/SQL1/birdstrikes_small.csv in the folder resulted in the previous command. 
+
+Then load CSV data into the table with this command:
+```
 LOAD DATA INFILE 'c:/ProgramData/MySQL/MySQL Server 8.0/Uploads/birdstrikes_small.csv' 
 INTO TABLE birdstrikes 
 FIELDS TERMINATED BY ';' 
