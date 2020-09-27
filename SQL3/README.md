@@ -153,7 +153,7 @@ Which state for which aircraft type paid the most repair cost?
 
 
 ### `Exercise5` 
-### What is the highest average cost by phase_of_flight?
+### What is the rounded highest average cost by phase_of_flight?
 <br/><br/>
 
 
