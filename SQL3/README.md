@@ -137,7 +137,7 @@ How many observation days we have in birdstrikes
 
 #### GROUP BY
 
-What is the lowest speed by aircraft type?
+What is the highest speed by aircraft type?
 
 `SELECT MIN(speed), aircraft FROM birdstrikes GROUP BY aircraft;`
 
