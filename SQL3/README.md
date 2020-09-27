@@ -175,7 +175,7 @@ Crashbummbang! The correct keyword after GROUP BY is HAVING
 
 <br/><br/><br/>
 <a name="homework"/>
-# Homework
+# Homework 3
 
 * Submit into Moodle the solutions for Exercise 1 to 5. 
 * Make sure to submit both the SQL statements and answers to the questions
