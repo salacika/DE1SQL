@@ -3,8 +3,8 @@
 **Teaching**: 90 min
 
 **Problem statement**
-1. As analyst, you would like to make sure your data stored can be accessed only by authorized persons.
-2. As analyst, you would like to query your database to obtain data required for your analytics.
+1. As analyst, you would like to make sure your data stored, can be accessed only by authorized persons.
+2. As analyst, you would like to query your database, to obtain data required for your analytics.
 
 
 **Objectives**
