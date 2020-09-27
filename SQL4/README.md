@@ -176,7 +176,7 @@ WHERE
 
 #### ON 
 
-In the next query, the WHERE clause is added to ON, yet, it will have a different meaning. In this case, the query returns all orders but only the order 10123 will have line items associated with it as in the following picture:
+In the next query, the WHERE clause is added to ON, yet, it will have a different meaning. In this case, the query returns all orders but only the order 10123 will have line items associated with it as in the following statement:
 ```
 SELECT 
     o.orderNumber, 
