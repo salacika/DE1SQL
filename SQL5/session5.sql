@@ -32,6 +32,8 @@ CALL GetOfficeByCountry('USA');
 CALL GetOfficeByCountry('France'); 
 CALL GetOfficeByCountry();
 
+-- Exercise1: Create a stored procedure which displays the first X entries of payment table. X is IN parameter for the procedure.
+
 -- OUT
 
 DROP PROCEDURE IF EXISTS GetOrderCountByStatus;
@@ -53,6 +55,9 @@ DELIMITER ;
 CALL GetOrderCountByStatus('Shipped',@total);
 SELECT @total;
 
+-- Exercise2: Create a stored procedure which returns the amount for Xth entry of payment table. X is IN parameter for the procedure. Display the returned amount.
+
+
 -- INOUT
 
 DROP PROCEDURE IF EXISTS SetCounter;
@@ -73,7 +78,7 @@ CALL SetCounter(@counter,1);
 SELECT @counter;
 CALL SetCounter(@counter,1); 
 SELECT @counter;
-CALL SetCounter(@counter,1); 
+CALL SetCounter(@counter,-1); 
 SELECT @counter;
 
 -- IF
@@ -104,6 +109,8 @@ DELIMITER ;
 
 CALL GetCustomerLevel(447, @level);
 SELECT @level;
+
+-- Exercise3:  Create a stored procedure which returns category of a given row. Row number is IN parameter, while category is OUT parameter. Display the returned category. CAT1 - amount > 100.000, CAT2 - amount > 10.000, CAT3 - amount <= 10.000
 
 -- LOOP
 
