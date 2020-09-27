@@ -275,7 +275,7 @@ Filter by multiple conditions
 
 Filtering out nulls and empty strings
 
-`SELECT * FROM birdstrikes WHERE state IS NOT NULL AND state != '';`
+`SELECT DISTINCT(state) FROM birdstrikes WHERE state IS NOT NULL AND state != '' ORDER BY state;`
 
 #### IN
 
