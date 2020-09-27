@@ -336,7 +336,8 @@ All entries where flight_date is between "2000-01-01" AND "2000-01-03"
 
 <br/><br/>
 ### `Exercise5` 
-### How many days elapsed between now and flight dates happening in week 52? (Hint: used DATEDIFF, WEEKOFYEAR)
+### How many days elapsed between the current date and the flights happening in week 52, for incidents from Colorado? (Hint: use NOW, DATEDIFF, WEEKOFYEAR)
+
 
 
 <br/><br/><br/>
