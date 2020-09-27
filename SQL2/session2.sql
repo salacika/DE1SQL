@@ -1,7 +1,7 @@
 
+USE birdstrikes;
+
 -- ALTERING DB
-
-
 -- copy table (structure)
 CREATE TABLE new_birdstrikes LIKE birdstrikes;
 SHOW TABLES;
@@ -76,15 +76,15 @@ SELECT state, cost FROM birdstrikes ORDER BY cost;
 SELECT state, cost FROM birdstrikes ORDER BY state, cost ASC;
 SELECT state, cost FROM birdstrikes ORDER BY cost DESC;
 
--- Exercise2: What is the date of the newest birstrike in this database?
+-- Exercise2: What is flight_date of the latest birstrike in this database?
 
 -- unique values
 SELECT DISTINCT damage FROM birdstrikes;
 
 -- unique pairs
-SELECT DISTINCT airline, damage FROM birdstrikes;
+SELECT DISTINCT airline, damage FROM birdstrikes ORDER BY airline;
 
--- Exercise3: What was the cost of the 100th most expensive damage?
+-- Exercise3: What was the cost of the 50th most expensive damage?
 
 -- filtering
 SELECT * FROM birdstrikes WHERE state = 'Alabama';
@@ -116,7 +116,7 @@ SELECT * FROM birdstrikes WHERE state = 'Alabama' OR state = 'Missouri';
 
 -- IS NOT NULL
 -- filtering out nulls and empty strings
-SELECT * FROM birdstrikes WHERE state IS NOT NULL AND state != '';
+SELECT DISTINCT(state) FROM birdstrikes WHERE state IS NOT NULL AND state != '' ORDER BY state;
 
 -- IN
 -- what if I need 'Alabama', 'Missouri','New York','Alaska'? Should we concatenate 4 AND filters?
@@ -134,7 +134,7 @@ SELECT DISTINCT(state) FROM birdstrikes WHERE LENGTH(state) = 5;
 SELECT * FROM birdstrikes WHERE speed = 350;
 
 -- speed equal or more than 25000
-SELECT * FROM birdstrikes WHERE speed >= 25000;
+SELECT * FROM birdstrikes WHERE speed >= 10000;
 
 -- ROUND, SQRT
 SELECT ROUND(SQRT(speed/2) * 10) AS synthetic_speed FROM birdstrikes;
@@ -157,7 +157,9 @@ SELECT * FROM birdstrikes WHERE flight_date >= '2000-01-01' AND flight_date <= '
 -- BETWEEN
 SELECT * FROM birdstrikes where flight_date BETWEEN "2000-01-01" AND "2000-01-03";
 
--- Exercise5: How many days elapsed between now and flight dates happening in week 52? (Hint: used DATEDIFF, WEEKOFYEAR)
+-- Exercise5:  How many days elapsed between the current date and the flights happening in week 52, for incidents from Colorado? (Hint: use NOW, DATEDIFF, WEEKOFYEAR)
+
+
 
 
 

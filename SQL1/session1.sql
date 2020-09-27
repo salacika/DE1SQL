@@ -20,9 +20,6 @@ DROP SCHEMA IF EXISTS firstdb;
 CREATE SCHEMA birdstrikes;
 USE birdstrikes ;
 
--- the place from where is allowed to load a CSV
-SHOW VARIABLES LIKE "secure_file_priv";
-
 -- create an empty table
 CREATE TABLE birdstrikes 
 (id INTEGER NOT NULL,
@@ -36,6 +33,9 @@ reported_date DATE,
 bird_size VARCHAR(16),
 cost INTEGER NOT NULL,
 speed INTEGER,PRIMARY KEY(id));
+
+-- the place from where is allowed to load a CSV
+SHOW VARIABLES LIKE "secure_file_priv";
 
 -- load data into that table (change the path if needed)
 LOAD DATA INFILE 'c:/ProgramData/MySQL/MySQL Server 8.0/Uploads/birdstrikes_small.csv' 
@@ -64,7 +64,8 @@ SELECT * FROM birdstrikes;
 SELECT cost FROM birdstrikes;
 SELECT airline,cost FROM birdstrikes;
 
-
+-- second schema for dump
+CREATE SCHEMA second;
 
 
 
