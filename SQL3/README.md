@@ -139,7 +139,7 @@ How many observation days we have in birdstrikes
 
 What is the lowest speed by aircraft type?
 
-`SELECT MIN(speed), aircraft from birdstrikes group by aircraft;`
+`SELECT MIN(speed), aircraft FROM birdstrikes GROUP BY aircraft;`
 
 Which state for which aircraft type paid the most repair cost?
 `SELECT state, aircraft, SUM(cost) AS sum FROM birdstrikes WHERE state !='' GROUP BY state, aircraft ORDER BY sum DESC;`
