@@ -71,7 +71,7 @@ SELECT airline,cost FROM birdstrikes;
 -- second schema for dump
 CREATE SCHEMA second;
 
-
+-- rate the session
 
 
 
