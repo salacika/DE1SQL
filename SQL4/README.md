@@ -203,5 +203,5 @@ INNER join orders,orderdetails,products and customers. Return back:
 * country
 * orderDate
 
-SUBMIT SOLUTION INTO MODDLE.
-
+* Upload on GitHub in HW4 folder the solution
+* Submit GitHub link to moodle when you are ready
