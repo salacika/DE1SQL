@@ -196,7 +196,10 @@ Requirements:
 
 Hints: you can find various open datasets on the internet, like here: https://data.worldbank.org/
 
-SUBMIT SOLUTION INTO MODDLE. 
+Create a public GitHub repo. Save your artifacts (possible sources like csv, sql file ) in a folder called HW1.
+
+### Submission 
+Submit GitHub link to Moodle. 
 
 
 
