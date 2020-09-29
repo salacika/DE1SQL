@@ -272,7 +272,7 @@ SELECT * FROM product_sales WHERE product_sales.Brand = 'Vintage Cars';
 
 
 ### Delivery
-The project artifacts should be stored and handed over, using a GitHub public repo.
+The project artifacts should be stored and handed over in a folder "Term" on your GitHub repo.
 
 I will give you the freedom of choosing naming conventions and structure, since this was not covered implicitly in the course. Yet, I would encourage you, to find some reading over the internet and whatever you choose, be consistent. 
 
@@ -302,7 +302,7 @@ Extra points:
 - Anything special not covered during the course but, makes sense in the project context
 
 ### Submission 
-Submit GitHub link to Moodle. 
+Submit GitHub link to Moodle when you are ready. 
 
 
 
