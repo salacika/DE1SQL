@@ -205,7 +205,7 @@ Select certain field(s)
 General feedback:
 * Some of you uploaded only some source files. This is just the first step! You also have to load these files into your local MySQL by creating the appropiate sql script. Then upload this script to GitHub together with your source files.
 
-* Other just updated one csv. One csv file wont make relational dataset.
+* Other just updated one csv. Well, one csv file, won't make relational dataset.
 
 
 
