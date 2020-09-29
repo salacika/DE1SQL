@@ -198,7 +198,11 @@ Select certain field(s)
 * Create a public GitHub repo. Save your artifacts (possible sources like csv, sql file ) in a folder called HW1.
 * Submit GitHub link to moodle when you are ready
 
-** UPDATE (29.09.2020): Many of you uploaded only some source files. This is just the first step! You also have to load these files into your local MySQL by creating the appropiate sql script. Then upload this script to GitHub together with your source files.
+** UPDATE (29.09.2020):
+General feedback:
+* Some of you uploaded only some source files. This is just the first step! You also have to load these files into your local MySQL by creating the appropiate sql script. Then upload this script to GitHub together with your source files.
+
+* Other just updated one csv. One csv file wont make relational dataset.
 
 
 
