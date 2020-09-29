@@ -194,7 +194,7 @@ LEFT JOIN orderDetails d
 <a name="homework"/>
 # Homework 4
 
-INNER join orders,orderdetails,products and customers. Return back: 
+* INNER join orders,orderdetails,products and customers. Return back: 
     - orderNumber
     
     - priceEach
