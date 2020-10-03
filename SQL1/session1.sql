@@ -41,7 +41,7 @@ SHOW VARIABLES LIKE "secure_file_priv";
 LOAD DATA INFILE 'c:/ProgramData/MySQL/MySQL Server 8.0/Uploads/birdstrikes_small.csv' 
 INTO TABLE birdstrikes 
 FIELDS TERMINATED BY ';' 
-LINES TERMINATED BY '\n' 
+LINES TERMINATED BY '\r\n' 
 IGNORE 1 LINES 
 (id, aircraft, flight_date, damage, airline, state, phase_of_flight, @v_reported_date, bird_size, cost, @v_speed)
 SET
