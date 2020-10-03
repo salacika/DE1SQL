@@ -193,15 +193,23 @@ LEFT JOIN orderDetails d
 <br/><br/><br/>
 <a name="homework"/>
 # Homework 4
-INNER join orders,orderdetails,products and customers. Return back: 
-* orderNumber
-* priceEach
-* quantityOrdered
-* productName
-* productLine
-* city
-* country
-* orderDate
 
-SUBMIT SOLUTION INTO MODDLE.
+* INNER join orders,orderdetails,products and customers. Return back: 
+    - orderNumber
+    
+    - priceEach
+    
+    - quantityOrdered
+    
+    - productName
+    
+    - productLine
+    
+    - city
+    
+    - country
+    
+    - orderDate
 
+* Upload the solution on GitHub in folder called HW4 
+* Submit GitHub link to moodle when you are ready

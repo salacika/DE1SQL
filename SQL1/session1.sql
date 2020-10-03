@@ -32,7 +32,8 @@ phase_of_flight VARCHAR(32),
 reported_date DATE,
 bird_size VARCHAR(16),
 cost INTEGER NOT NULL,
-speed INTEGER,PRIMARY KEY(id));
+speed INTEGER,
+PRIMARY KEY(id));
 
 -- the place from where is allowed to load a CSV
 SHOW VARIABLES LIKE "secure_file_priv";
@@ -45,8 +46,11 @@ LINES TERMINATED BY '\r\n'
 IGNORE 1 LINES 
 (id, aircraft, flight_date, damage, airline, state, phase_of_flight, @v_reported_date, bird_size, cost, @v_speed)
 SET
-reported_date = nullif(@v_reported_date, ''),
-speed = nullif(@v_speed, '');
+speed = nullif(@v_speed, ''),
+reported_date = nullif(@v_reported_date, '');
+
+
+
 
 
 -- EXPLORING DB
