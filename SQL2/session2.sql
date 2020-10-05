@@ -1,6 +1,14 @@
 
 USE birdstrikes;
 
+SHOW TABLES;
+
+DESCRIBE birdstrikes.birdstrikes;
+
+
+
+
+
 -- ALTERING DB
 -- copy table (structure)
 CREATE TABLE new_birdstrikes LIKE birdstrikes;
@@ -42,7 +50,7 @@ SELECT * FROM employee;
 -- USERS AND PRIVILEGES
 
 -- create user
-CREATE USER 'laszlosallo'@'%' IDENTIFIED BY 'laszlosallo1';
+CREATE USER 'laszlosallo'@'%' IDENTIFIED BY 'laszlosallo';
 
 -- full rights on one table
 GRANT ALL ON birdstrikes.employee TO 'laszlosallo'@'%';
@@ -53,6 +61,7 @@ GRANT SELECT (state) ON birdstrikes.birdstrikes TO 'laszlosallo'@'%';
 -- delete user
 DROP USER 'laszlosallo'@'%';
 
+DESCRIBE birdstrikes;
 
 -- SELECTS
 
@@ -61,6 +70,8 @@ SELECT *, speed/2 FROM birdstrikes;
 
 -- aliasing
 SELECT *, speed/2 AS halfspeed FROM birdstrikes;
+
+
 
 -- using Limit
 -- list the first 10 records
@@ -80,6 +91,8 @@ SELECT state, cost FROM birdstrikes ORDER BY cost DESC;
 
 -- unique values
 SELECT DISTINCT damage FROM birdstrikes;
+
+SELECT DISTINCT state FROM birdstrikes;
 
 -- unique pairs
 SELECT DISTINCT airline, damage FROM birdstrikes ORDER BY airline;
@@ -142,6 +155,7 @@ SELECT ROUND(SQRT(speed/2) * 10) AS synthetic_speed FROM birdstrikes;
 -- BETWEEN
 SELECT * FROM birdstrikes where cost BETWEEN 20 AND 40;
 
+-- bird_size IS NOT NULL
 
 -- Exercise4: What state figures in the 2nd record, if you filter out all records which have no state and no bird_size specified?
 
