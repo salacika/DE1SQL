@@ -186,18 +186,26 @@ Select certain field(s)
 <a name="homework"/>
 # Homework 1
 
-Import a relational data set of your choosing into your local instance. 
+* Import a relational data set of your choosing into your local instance. 
 
-Requirements:
-* find a data set worth to analyze later (prepares you for the term project)
-* no restriction on the type of data source, can be excel, csv, another db, sql file etc
-* pay attention on the relational nature of the set, advised to find a structure of 3+ interlinked table 
-* do not use this: https://www.mysqltutorial.org/mysql-sample-database.aspx (because we will use it later in the course)
+* Requirements:
+	* find a data set worth to analyze later (prepares you for the term project)
+	* no restriction on the type of data source, can be excel, csv, another db, sql file etc
+	* pay attention on the relational nature of the set, advised to find a structure of 3+ interlinked table 
+	* do not use this: https://www.mysqltutorial.org/mysql-sample-database.aspx (because we will use it later in the course)
+	* hint: you can find various open datasets on the internet, like here: https://data.worldbank.org/
 
-Hints: you can find various open datasets on the internet, like here: https://data.worldbank.org/
+* Create a public GitHub repo. Save your artifacts (possible sources like csv, sql file ) in a folder called HW1.
+* Submit GitHub link to moodle when you are ready
 
-SUBMIT SOLUTION INTO MODDLE. 
+<br><br>
 
+** UPDATE (29.09.2020)
+
+General feedback:
+* Some of you uploaded only some source files. This is just the first step! You also have to load these files into your local MySQL by creating the appropiate sql script. Then upload this script to GitHub together with your source files.
+
+* Other just updated one csv. Well, one csv file, won't make relational dataset.
 
 
 

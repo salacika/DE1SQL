@@ -344,7 +344,8 @@ All entries where flight_date is between "2000-01-01" AND "2000-01-03"
 <a name="homework"/>
 # Homework 2
 
-* Submit into Moodle the solutions for Exercise 1 to 5. 
+* Upload the solution of exercise 1 to 5 on GitHub in folder called HW2
+* Submit GitHub link to moodle when you are ready
 * Make sure to submit both the SQL statements and answers to the questions
 * The required data format for submission is a .sql file
 
