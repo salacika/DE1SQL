@@ -1,4 +1,6 @@
 
+USE classicmodels;
+
 --  ANALYTICAL DATA STORE
 
 DROP PROCEDURE IF EXISTS CreateProductSalesStore;
