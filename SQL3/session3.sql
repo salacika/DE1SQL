@@ -25,15 +25,12 @@ ORDER BY cost_category;
 -- COUNT(*)
 SELECT COUNT(*) FROM birdstrikes;
 
+
 -- COUNT(column)
 SELECT COUNT(reported_date) FROM birdstrikes;
 
 
--- DISTINCT
-
--- distinct states
-SELECT DISTINCT(state) FROM birdstrikes;
-
+-- DISTINCT COUNT
 -- how many distinct states we have
 SELECT COUNT(DISTINCT(state)) FROM birdstrikes;
 

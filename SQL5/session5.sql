@@ -2,16 +2,22 @@
 -- basic
 DROP PROCEDURE IF EXISTS GetAllProducts;
 
+
 DELIMITER //
 
 CREATE PROCEDURE GetAllProducts()
 BEGIN
 	SELECT *  FROM products;
+    SELECT *  FROM orders;
 END //
 
 DELIMITER ;
 
+
 CALL GetAllProducts();
+
+
+
 
 -- IN
 DROP PROCEDURE IF EXISTS GetOfficeByCountry;
@@ -53,7 +59,10 @@ END$$
 DELIMITER ;
 
 CALL GetOrderCountByStatus('Shipped',@total);
+
+CALL anotherProc(@total);
 SELECT @total;
+
 
 -- Exercise2: Create a stored procedure which returns the amount for Xth entry of payment table. X is IN parameter for the procedure. Display the returned amount.
 
