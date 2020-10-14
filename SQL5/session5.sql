@@ -1,4 +1,6 @@
 
+USE classicmodels;
+
 -- basic
 DROP PROCEDURE IF EXISTS GetAllProducts;
 
@@ -114,6 +116,25 @@ SELECT @level;
 
 -- LOOP
 
+USE classicmodels;
+
+DROP PROCEDURE IF EXISTS LoopDemo;
+
+DELIMITER $$
+CREATE PROCEDURE LoopDemo()
+BEGIN
+      
+	myloop: LOOP 
+		SELECT * FROM offices;
+	END LOOP myloop;
+    
+END$$
+DELIMITER ;
+
+CALL LoopDemo();
+
+-- LEAVE myloop;
+
 DROP PROCEDURE IF EXISTS LoopDemo;
 
 DELIMITER $$
@@ -138,7 +159,11 @@ DELIMITER ;
 
 CALL LoopDemo();
 
-CREATE TABLE messages (message varchar(100) NOT NULL);
+
+-- debug
+
+
+CREATE TABLE IF NOT EXISTS messages (message varchar(100) NOT NULL);
 
 DROP PROCEDURE IF EXISTS LoopDemo;
 
@@ -165,7 +190,57 @@ DELIMITER ;
 
 SELECT * FROM messages;
 
+CALL LoopDemo();
+
+
+
 -- CURSOR
+
+DROP PROCEDURE IF EXISTS CursorDemo;
+
+DELIMITER $$
+CREATE PROCEDURE CursorDemo()
+BEGIN
+	
+    DECLARE phone varchar(50) DEFAULT "blabla";
+    DECLARE finished INTEGER DEFAULT 0;
+    
+    DECLARE curPhone CURSOR FOR SELECT customers.phone FROM classicmodels.customers;
+        
+	DECLARE CONTINUE HANDLER  FOR NOT FOUND SET finished = 1;
+
+	OPEN curPhone;
+    
+	TRUNCATE messages;
+	myloop: LOOP 
+	           
+		FETCH curPhone INTO phone;
+        INSERT INTO messages SELECT CONCAT('phone:',phone);
+        
+		IF finished = 1 THEN LEAVE myloop;
+		END IF;
+         
+	END LOOP myloop;
+END$$
+DELIMITER ;
+
+SELECT * FROM messages;
+
+CALL CursorDemo();
+
+-- Exercise: Loop through orders table. Fetch orderNumber + shippedDate. Write in both fields into messages as one line.alter
+
+-- Extra exercise: take a look at the next example with FixUSPhones on Git. Try to solve the Homework. 
+
+CREATE TABLE new_order LIKE orders;
+
+DROP TABLE new_order;
+
+CREATE TABLE new_order AS SELECT * FROM orders;
+
+-- Exercise: Create a stored procedure which creates a table called "product_sales" using the select from HW4.
+
+
 
 DROP PROCEDURE IF EXISTS FixUSPhones; 
 
@@ -189,7 +264,7 @@ BEGIN
 
 	OPEN curPhone;
     
-    	-- create a copy of the customer table 
+	-- create a copy of the customer table 
 	DROP TABLE IF EXISTS classicmodels.fixed_customers;
 	CREATE TABLE classicmodels.fixed_customers LIKE classicmodels.customers;
 	INSERT fixed_customers SELECT * FROM classicmodels.customers;
