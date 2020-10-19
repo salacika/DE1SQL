@@ -144,6 +144,8 @@ CALL LoopDemo();
 
 -- LEAVE myloop;
 
+-- Exercise: Create a loop which counts to 5 and displays the actual count in each step as SELECT (eg. SELECT x) 
+
 DROP PROCEDURE IF EXISTS LoopDemo;
 
 DELIMITER $$
@@ -158,8 +160,7 @@ BEGIN
 		SET  x = x + 1;
 		SELECT x;
            
-		IF  (x = 5) THEN
-			LEAVE myloop;
+		IF  (x = 5) THEN LEAVE myloop;
 		END  IF;
          
 	END LOOP myloop;
