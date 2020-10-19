@@ -90,7 +90,7 @@ DELIMITER ;
 
 
 
--- Exercise1: Copy the birdstrikes structure into a new tabe called birdstrikes2. Insert into birdstrikes2 the line where id is 100.
+-- Exercise1: Copy the birdstrikes structure into a new tabe called birdstrikes2. Insert into birdstrikes2 the line where id is 10.
 -- Hints:
 -- Use the samples from Chapter2 for copy
 -- For insert user the format like: INSERT INTO bla SELECT blabla
@@ -142,6 +142,10 @@ SELECT * FROM messages;
 
 SELECT * FROM product_sales WHERE product_sales.SalesId = 16;
 
+-- DELETE FROM classicmodels.product_sales WHERE SalesId=16;
+-- DELETE FROM classicmodels.orderdetails WHERE orderNumber=16;
+-- DELETE FROM classicmodels.orders WHERE orderNumber=16;
+
 
 -- VIEWS AS DATAMARTS
 
@@ -159,6 +163,6 @@ CREATE VIEW `USA` AS
     
 SELECT * FROM USA;
 
--- Exercise2: Create a view, which contains product_sales rows of 2003 and 2005
+-- Exercise2: Create a view, which contains product_sales rows of 2003 and 2005. How many row has the resulting view?
 
 
