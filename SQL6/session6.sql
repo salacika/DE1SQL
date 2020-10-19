@@ -148,13 +148,16 @@ SELECT * FROM product_sales WHERE product_sales.SalesId = 16;
 DROP VIEW IF EXISTS Vintage_Cars;
 
 CREATE VIEW `Vintage_Cars` AS
-SELECT * FROM product_sales WHERE product_sales.Brand = 'Vintage Cars';
+	SELECT * FROM product_sales WHERE product_sales.Brand = 'Vintage Cars';
 
+SELECT * FROM Vintage_Cars;
 
 DROP VIEW IF EXISTS USA;
 
 CREATE VIEW `USA` AS
-SELECT * FROM product_sales WHERE country = 'USA';
+	SELECT * FROM product_sales WHERE country = 'USA';
+    
+SELECT * FROM USA;
 
 -- Exercise2: Create a view, which contains product_sales rows of 2003 and 2005
 
