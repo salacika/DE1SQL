@@ -154,7 +154,7 @@ DELIMITER ;
 ### Copy the birdstrikes structure into a new tabe called birdstrikes2. Insert into birdstrikes2 the line where id is 10.
 ### Hints:
 ### Use the samples from Chapter2 for copy
-### For insert user the format like: INSERT INTO bla SELECT blabla
+### For insert use the format like: INSERT INTO bla SELECT blabla
 <br/><br/>
 
 
