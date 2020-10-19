@@ -68,25 +68,43 @@ SHOW EVENTS;
 
 DROP EVENT IF EXISTS CreateProductSalesStoreEvent;
 
+
+
+
+
+
+
+
 -- TRIGGER AS ETL
-
-
--- empty log table
-TRUNCATE messages;
-    
-    
-DROP TRIGGER IF EXISTS after_order_insert; 
 
 DELIMITER $$
 
-CREATE TRIGGER after_order_insert
-AFTER INSERT
-ON orderdetails FOR EACH ROW
+CREATE TRIGGER trigger_namex
+    AFTER INSERT ON table_namex FOR EACH ROW
 BEGIN
-   
-	-- log the order number of the newley inserted order
-    INSERT INTO messages SELECT CONCAT('new orderNumber: ', NEW.orderNumber);
+    -- statements
+    -- NEW.orderNumber, NEW.productCode etc
+END$$    
 
+DELIMITER ;
+
+
+
+-- Exercise1: Copy the birdstrikes structure into a new tabe called birdstrikes2. Insert into birdstrikes2 the line where id is 100.
+-- Hints:
+-- Use the samples from Chapter2 for copy
+-- For insert user the format like: INSERT INTO bla SELECT blabla
+
+USE classicmodels;
+   
+DROP TRIGGER IF EXISTS after_order_insert; 
+
+DELIMITER $$
+CREATE TRIGGER after_order_insert
+AFTER INSERT ON orderdetails FOR EACH ROW
+BEGIN
+   	-- log the order number of the newley inserted order
+    INSERT INTO messages SELECT CONCAT('new orderNumber: ', NEW.orderNumber);
    
 	-- archive the order and assosiated table entries to order_store
   	INSERT INTO product_sales
@@ -100,21 +118,13 @@ BEGIN
 	   customers.country As Country,   
 	   orders.orderDate AS Date,
 	   WEEK(orders.orderDate) as WeekOfYear
-	FROM
-		orders
-	INNER JOIN
-		orderdetails USING (orderNumber)
-	INNER JOIN
-		products USING (productCode)
-	INNER JOIN
-		customers USING (customerNumber)
+	FROM orders
+	INNER JOIN orderdetails USING (orderNumber)
+	INNER JOIN products USING (productCode)
+	INNER JOIN customers USING (customerNumber)
 	WHERE orderNumber = NEW.orderNumber
-	ORDER BY 
-		orderNumber, 
-		orderLineNumber;
-        
+	ORDER BY orderNumber, orderLineNumber;
 END $$
-
 DELIMITER ;
 
 
@@ -122,6 +132,8 @@ DELIMITER ;
 SELECT * FROM product_sales ORDER BY SalesId;
 
 SELECT COUNT(*) FROM product_sales;
+
+TRUNCATE messages;
 
 INSERT INTO orders  VALUES(16,'2020-10-01','2020-10-01','2020-10-01','Done','',131);
 INSERT INTO orderdetails  VALUES(16,'S18_1749','1','10',1);
@@ -133,22 +145,17 @@ SELECT * FROM product_sales WHERE product_sales.SalesId = 16;
 
 -- VIEWS AS DATAMARTS
 
+DROP VIEW IF EXISTS Vintage_Cars;
+
+CREATE VIEW `Vintage_Cars` AS
+SELECT * FROM product_sales WHERE product_sales.Brand = 'Vintage Cars';
+
 
 DROP VIEW IF EXISTS USA;
 
 CREATE VIEW `USA` AS
 SELECT * FROM product_sales WHERE country = 'USA';
 
-
-DROP VIEW IF EXISTS Year_2004;
-
-CREATE VIEW `Year_2004` AS
-SELECT * FROM product_sales WHERE product_sales.Date LIKE '2004%';
-
-DROP VIEW IF EXISTS Vintage_Cars;
-
-CREATE VIEW `Vintage_Cars` AS
-SELECT * FROM product_sales WHERE product_sales.Brand = 'Vintage Cars';
-
+-- Exercise2: Create a view, which contains product_sales rows of 2003 and 2005
 
 
