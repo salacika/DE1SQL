@@ -133,6 +133,31 @@ Deleting an event
 <a name="etl"/>
 ## Trigger as ETL
 
+
+Format:
+
+```
+DELIMITER $$
+
+CREATE TRIGGER trigger_namex
+    AFTER INSERT ON table_namex FOR EACH ROW
+BEGIN
+    -- statements
+    -- NEW.orderNumber, NEW.productCode etc
+END$$    
+
+DELIMITER ;
+```
+
+<br/><br/>
+### `Exercise1` 
+### Copy the birdstrikes structure into a new tabe called birdstrikes2. Insert into birdstrikes2 the line where id is 10.
+### Hints:
+### Use the samples from Chapter2 for copy
+### For insert use the format like: INSERT INTO bla SELECT blabla
+<br/><br/>
+
+
 Empty log table:
 
 `TRUNCATE messages;`
@@ -215,21 +240,7 @@ Check product_sales again, you should have orderNumber 16:
 
 With views we can define sections of the datastore and prepare them for a BI operation such as reporting.
 
-View of sales in USA:
-```
-DROP VIEW IF EXISTS USA;
 
-CREATE VIEW `USA` AS
-SELECT * FROM product_sales WHERE country = 'USA';
-```
-
-View of sales in 2004:
-```
-DROP VIEW IF EXISTS Year_2004;
-
-CREATE VIEW `Year_2004` AS
-SELECT * FROM product_sales WHERE product_sales.Date LIKE '2004%';
-```
 
 View of sales for a specific brand (Vintage_Cars)
 ```
@@ -239,10 +250,22 @@ CREATE VIEW `Vintage_Cars` AS
 SELECT * FROM product_sales WHERE product_sales.Brand = 'Vintage Cars';
 ```
 
+
+View of sales in USA:
+```
+DROP VIEW IF EXISTS USA;
+
+CREATE VIEW `USA` AS
+SELECT * FROM product_sales WHERE country = 'USA';
+```
+
 `Note` the content of Views are generated on-the-fly. For performance reasons, in analytics, so called materialized views are preferred on large data set. This is not supported by MySQL, but there are several ways to implemented. Here is an example: https://fromdual.com/mysql-materialized-views
 
 
-
+<br/><br/>
+### `Exercise2` 
+### Create a view, which contains product_sales rows of 2003 and 2005.
+<br/><br/>
 
 <br/><br/><br/>
 <a name="homework"/>
