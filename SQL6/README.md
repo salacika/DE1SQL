@@ -133,6 +133,28 @@ Deleting an event
 <a name="etl"/>
 ## Trigger as ETL
 
+
+Format:
+
+```
+DELIMITER $$
+
+CREATE TRIGGER trigger_namex
+    AFTER INSERT ON table_namex FOR EACH ROW
+BEGIN
+    -- statements
+    -- NEW.orderNumber, NEW.productCode etc
+END$$    
+
+DELIMITER ;
+```
+
+<br/><br/>
+### `Exercise1` 
+### Copy the birdstrikes structure into a new tabe called birdstrikes2. Insert into birdstrikes2 the line where id is 100.
+<br/><br/>
+
+
 Empty log table:
 
 `TRUNCATE messages;`
