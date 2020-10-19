@@ -240,21 +240,7 @@ Check product_sales again, you should have orderNumber 16:
 
 With views we can define sections of the datastore and prepare them for a BI operation such as reporting.
 
-View of sales in USA:
-```
-DROP VIEW IF EXISTS USA;
 
-CREATE VIEW `USA` AS
-SELECT * FROM product_sales WHERE country = 'USA';
-```
-
-View of sales in 2004:
-```
-DROP VIEW IF EXISTS Year_2004;
-
-CREATE VIEW `Year_2004` AS
-SELECT * FROM product_sales WHERE product_sales.Date LIKE '2004%';
-```
 
 View of sales for a specific brand (Vintage_Cars)
 ```
@@ -264,10 +250,22 @@ CREATE VIEW `Vintage_Cars` AS
 SELECT * FROM product_sales WHERE product_sales.Brand = 'Vintage Cars';
 ```
 
+
+View of sales in USA:
+```
+DROP VIEW IF EXISTS USA;
+
+CREATE VIEW `USA` AS
+SELECT * FROM product_sales WHERE country = 'USA';
+```
+
 `Note` the content of Views are generated on-the-fly. For performance reasons, in analytics, so called materialized views are preferred on large data set. This is not supported by MySQL, but there are several ways to implemented. Here is an example: https://fromdual.com/mysql-materialized-views
 
 
-
+<br/><br/>
+### `Exercise2` 
+### Create a view, which contains product_sales rows of 2003 and 2005.
+<br/><br/>
 
 <br/><br/><br/>
 <a name="homework"/>
