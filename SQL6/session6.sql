@@ -156,6 +156,6 @@ DROP VIEW IF EXISTS USA;
 CREATE VIEW `USA` AS
 SELECT * FROM product_sales WHERE country = 'USA';
 
--- Exercise2: Create a view, which contains product_sales rows of 2003 and 2005
+-- Exercise2: Create a view, which contains product_sales rowsbirdstrikes of 2003 and 2005
 
 
