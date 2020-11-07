@@ -124,7 +124,6 @@ SELECT @level;
 -- Exercise3:  Create a stored procedure which returns category of a given row. Row number is IN parameter, while category is OUT parameter. Display the returned category. CAT1 - amount > 100.000, CAT2 - amount > 10.000, CAT3 - amount <= 10.000
 
 -- LOOP
-
 USE classicmodels;
 
 DROP PROCEDURE IF EXISTS LoopDemo;
@@ -135,14 +134,15 @@ BEGIN
       
 	myloop: LOOP 
 		SELECT * FROM offices;
+        LEAVE myloop;
 	END LOOP myloop;
-    
-END$$
+ END$$
 DELIMITER ;
-
 CALL LoopDemo();
 
 -- LEAVE myloop;
+
+-- Exercise: Create a loop which counts to 5 and displays the actual count in each step as SELECT (eg. SELECT x) 
 
 DROP PROCEDURE IF EXISTS LoopDemo;
 
@@ -158,8 +158,7 @@ BEGIN
 		SET  x = x + 1;
 		SELECT x;
            
-		IF  (x = 5) THEN
-			LEAVE myloop;
+		IF  (x = 5) THEN LEAVE myloop;
 		END  IF;
          
 	END LOOP myloop;
@@ -197,9 +196,11 @@ BEGIN
 END$$
 DELIMITER ;
 
+CALL LoopDemo();
+
 SELECT * FROM messages;
 
-CALL LoopDemo();
+
 
 
 
@@ -213,16 +214,11 @@ BEGIN
 	
     DECLARE phone varchar(50) DEFAULT "blabla";
     DECLARE finished INTEGER DEFAULT 0;
-    
     DECLARE curPhone CURSOR FOR SELECT customers.phone FROM classicmodels.customers;
-        
-	DECLARE CONTINUE HANDLER  FOR NOT FOUND SET finished = 1;
-
+    DECLARE CONTINUE HANDLER  FOR NOT FOUND SET finished = 1;
 	OPEN curPhone;
-    
-	TRUNCATE messages;
+    TRUNCATE messages;
 	myloop: LOOP 
-	           
 		FETCH curPhone INTO phone;
         INSERT INTO messages SELECT CONCAT('phone:',phone);
         
