@@ -295,7 +295,7 @@ SELECT * FROM product_sales WHERE country = 'USA';
 
 
 ### Delivery
-The project artifacts should be stored and handed over in a folder "Term" on your GitHub repo.
+The project artifacts should be stored and handed over in a folder "Term DE1" on your GitHub repo.
 
 I will give you the freedom of choosing naming conventions and structure, since this was not covered implicitly in the course. Yet, I would encourage you, to find some reading over the internet and whatever you choose, be consistent. 
 
